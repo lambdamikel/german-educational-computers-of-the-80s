@@ -70,13 +70,17 @@
 \setlength{\emergencystretch}{3em} % prevent overfull lines
 \providecommand{\tightlist}{%
   \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
-\usepackage{xurl}
-\usepackage{microtype}
+\usepackage{xurl}            % allow URLs to break at any character
+\usepackage{microtype}       % subtle spacing/protrusion to reduce overfull boxes
 \usepackage{newunicodechar}
 \newunicodechar{→}{\ensuremath{\rightarrow}}
 \newunicodechar{≈}{\ensuremath{\approx}}
 \newunicodechar{×}{\ensuremath{\times}}
+\newunicodechar{≠}{\ensuremath{\neq}}
+% Figure images: cap size so portrait photos never run off the page.
 \setkeys{Gin}{width=0.72\linewidth,height=0.42\textheight,keepaspectratio}
+% Last-resort horizontal slack so stubborn long lines don't overrun the margin.
+\setlength{\emergencystretch}{3em}
 \usepackage{bookmark}
 \IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
 \urlstyle{same}
@@ -117,15 +121,22 @@
 MasterLab}\label{the-busch-microtronic-the-kosmos-cp1-and-the-philips-masterlab}
 
 \emph{Original German articles by \textbf{Michael Wessel}, published in
-LOAD \#10 (2024) and LOAD \#11 (2025) --- the magazine of the VzEkC e.V.
-(original PDFs linked under References). English translation and
-combined edition by \textbf{Claude (Anthropic, Opus 4.8)}.}
+LOAD \#10 (2024) {[}8{]} and LOAD \#11 (2025) {[}9{]} --- the magazine
+of the VzEkC e.V. English translation and combined edition by
+\textbf{Claude (Anthropic, Opus 4.8)}.}
 
 \begin{quote}
 This is a revised, all-in-one English edition that merges the two
 original LOAD articles into a single piece. It also incorporates recent
 developments (2025--2026) that were not yet available when the German
 originals were written.
+
+A print-ready PDF (US Letter) is
+\href{educational-computers-in-germany-in-the-1980s.pdf}{included in
+this repository}. The faithful, unmerged per-article translations are
+under \href{translations/}{\texttt{translations/}}. Citations in square
+brackets {[}N{]} refer to the numbered
+\hyperref[references]{References}.
 \end{quote}
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
@@ -155,7 +166,7 @@ documented, that these CPU trainers at least inspired the German
 educational computers. Jörg Vallen --- who from autumn 1979 was
 substantially involved in developing the Microtronic as part of his
 diploma thesis --- summed up the need for a new category in the preamble
-of his thesis:
+of his thesis {[}3{]}:
 
 \begin{quote}
 "At the time development of an experimentation and educational computer
@@ -173,7 +184,7 @@ non-specialists without basic knowledge."
 
 Later, Hans Vallen --- then head of the Busch company and father of Jörg
 Vallen --- used the term "computer driving school" to characterize the
-Microtronic. So what defines an educational and experimentation
+Microtronic {[}6{]}. So what defines an educational and experimentation
 computer? Four points stand out:
 
 \begin{itemize}
@@ -200,10 +211,10 @@ computer? Four points stand out:
   to entry. With the exception of the Sinclair ZX80/81, these still cost
   around DM 700 and up, plus peripherals, software and books --- and
   that only changed with the price collapse of 1984. By contrast, the
-  Microtronic was advertised in 1981 at DM 379, falling to DM 299 by
-  1984. For comparison: a VC-20 still cost DM 798 at the end of 1981 ---
-  a full week\textquotesingle s salary, given an average German annual
-  income of DM 30,900.
+  Microtronic was advertised in 1981 {[}7{]} at DM 379, falling to DM
+  299 by 1984. For comparison: a VC-20 still cost DM 798 at the end of
+  1981 --- a full week\textquotesingle s salary, given an average German
+  annual income of DM 30,900.
 \item
   \textbf{Availability.} CPU trainers were hard for ordinary consumers
   to obtain --- often kit-only and known only to readers of electronics
@@ -244,7 +255,10 @@ A comparison and an overall conclusion follow at the end.
 \subsection{1. The Busch Microtronic
 (1981)}\label{1-the-busch-microtronic-1981}
 
-\pandocbounded{\includegraphics[keepaspectratio,alt={The Busch Microtronic --- here shown with the modern PicoRAM 2090 SD-card expansion.}]{images/microtronic-picoram.jpg}}
+\pandocbounded{\includegraphics[keepaspectratio,alt={Busch Microtronic with PicoRAM 2090}]{images/microtronic-picoram.jpg}}
+
+\emph{Figure 1. The Busch Microtronic, shown with the modern PicoRAM
+2090 SD-card expansion {[}14{]}.}
 
 Busch electronics kits had been available in Germany since 1976; until
 October 1981 they were distributed under the name "ELOtronic" by the
@@ -274,15 +288,15 @@ TMS1600. The instruction set, originally 20 instructions, was expanded
 to 41 in the second development phase --- again with Jörg Vallen
 instrumental: as the first application developer, following "eat your
 own dog food!", he identified deficits and further desirable
-instructions (random numbers, multiplication, division). The thesis also
-reveals that originally a TMS1xxx development system with EPROMs was
-used (possibly an HE-2), and that the finished operating system was
-handed over to TI "on a floppy disk". As program memory, the developers
-connected a 2114 SRAM chip via the TMS1600 "GPIO port" --- although the
-TMS family, as a "computer on a chip", provides for no external memory
-at all. The 1 KByte of 4-bit words of the 2114 is used as program
-memory; the SRAM on the TMS1600 holds the 32 4-bit Microtronic registers
-and monitor variables.
+instructions (random numbers, multiplication, division). The thesis
+{[}3{]} also reveals that originally a TMS1xxx development system with
+EPROMs was used (possibly an HE-2), and that the finished operating
+system was handed over to TI "on a floppy disk". As program memory, the
+developers connected a 2114 SRAM chip via the TMS1600 "GPIO port" ---
+although the TMS family, as a "computer on a chip", provides for no
+external memory at all. The 1 KByte of 4-bit words of the 2114 is used
+as program memory; the SRAM on the TMS1600 holds the 32 4-bit
+Microtronic registers and monitor variables.
 
 \textbf{Harvard architecture.} The program memory comprises 256
 addresses (0x00--0xFF), and each instruction is three nibbles (12 bits).
@@ -324,21 +338,24 @@ supported (immediate and register-direct); jump targets are always
 immediate, so they cannot be computed --- indirect and computed jumps,
 and thus recursion, require relatively complicated trickery. (The author
 nonetheless succeeded in implementing a recursive Towers of Hanoi on the
-Microtronic.) None of this harms the overall impression of a universal
-computer; the manual programs are throughout quite general --- the NIM
-game actually computes the optimal winning strategy. Interpreting the
-instruction set costs time, though: a typical maximum is about 114
-instructions per second, dropping to about 40 with the display on; some
-programs (e.g. dividing 9999 by 1) take up to 8 seconds.
+Microtronic {[}10{]}.) None of this harms the overall impression of a
+universal computer; the manual programs are throughout quite general ---
+the NIM game actually computes the optimal winning strategy.
+Interpreting the instruction set costs time, though: a typical maximum
+is about 114 instructions per second, dropping to about 40 with the
+display on; some programs (e.g. dividing 9999 by 1) take up to 8
+seconds.
 
-\textbf{Manual.} The two-volume manual, written by Jörg Vallen and
-lovingly illustrated with the "Buschi" mascot, is didactically
+\textbf{Manual.} The two-volume manual {[}1{]}, written by Jörg Vallen
+and lovingly illustrated with the "Buschi" mascot, is didactically
 excellent: Part 1 introduces the Microtronic, Part 2 covers more complex
 programs, circuits and experiments with additional Busch kits.
 Highlights include a moon-landing game, a perpetual calendar, biorhythm
 calculation, a calculator, tic-tac-toe and sine computation; the
 electronics section covers timers, tone/music generators, model-railway
-control, a frequency counter and a reaction-time meter. A clever
+control, a frequency counter and a reaction-time meter. An English
+translation of this classic manual (Part 1) is now underway {[}2{]},
+making it accessible to a wider, non-German-speaking audience. A clever
 \textbf{trick} works around the low \textasciitilde3--4 Hz GPIO sampling
 rate: input 4 clocks the firmware\textquotesingle s background real-time
 clock, which can register frequencies up to 60 Hz, so externally
@@ -351,68 +368,87 @@ is leisurely (a full dump takes \textasciitilde220 s ≈ 14 baud); the
 transistors (e.g. for Fischertechnik robots). There is no dedicated
 expansion bus --- everything goes through the normal GPIOs. Modern
 extensions by the author include an Arduino-based speech synthesizer and
-a "2095" SD-card emulator (building on Martin Sauter\textquotesingle s
-2017 protocol decode), and especially \textbf{PicoRAM 2090}, a Raspberry
-Pico-based RAM emulator with SD card that replaces the 2114, adds
-bank-switched memory expansion and an extensive I/O expansion (speech,
-sound, OLED text/graphics, battery-backed clock). It is addressed
-through 64 "redundant", ineffective instructions (such as
+a
+\href{https://github.com/lambdamikel/microtronic-2095-arduino-emulator}{2095
+SD-card emulator} {[}15{]} (building on Martin Sauter\textquotesingle s
+2017 protocol decode), and especially
+\href{https://github.com/lambdamikel/picoram2090}{\textbf{PicoRAM 2090}}
+{[}14{]}, a Raspberry Pico-based RAM emulator with SD card that replaces
+the 2114, adds bank-switched memory expansion and an extensive I/O
+expansion (speech, sound, OLED text/graphics, battery-backed clock). It
+is addressed through 64 "redundant", ineffective instructions (such as
 \texttt{MOV\ \textless{}x\textgreater{}\ →\ \textless{}x\textgreater{}},
 a NOP-like register-to-self copy) that never occur in normal programs;
 PicoRAM repurposes them as new side effects. PicoRAM 2090 won the
 RetroChallenge 2023/10 Grand Prize. A range of emulators also exists ---
 the first written by the author in 1985 on a Schneider CPC 464 in BASIC;
-a C/Linux emulator by Ingo D. Rullhusen; a Macintosh app; and
-Arduino-based hardware emulators from 2016 onward, including the
-"Microtronic 2nd / Next Generation" re-editions built into a Busch
-"2070" console (Hackaday "Reinvented Retro Contest" winner, 2021).
+a \href{https://freeshell.de/~d01c/micsim_0.1.0.tar.xz}{C/Linux
+emulator} by Ingo D. Rullhusen {[}31{]}; a
+\href{https://download.cnet.com/2090-emulator/3000-2072_4-47314.html}{Macintosh
+app} by Stephan Kleinert {[}32{]}; and
+\href{https://github.com/lambdamikel/Busch-2090}{Arduino-based hardware
+emulators} {[}13{]} from 2016 onward, including the "Microtronic 2nd /
+Next Generation" re-editions built into a Busch "2070" console (Hackaday
+"Reinvented Retro Contest" winner, 2021).
 
-\pandocbounded{\includegraphics[keepaspectratio,alt={The Busch Microtronic with the original 2095 cassette interface and a DIY speech synthesizer.}]{images/microtronic-2095.jpg}}
+\pandocbounded{\includegraphics[keepaspectratio,alt={Busch Microtronic with 2095 cassette interface and speech synthesizer}]{images/microtronic-2095.jpg}}
+
+\emph{Figure 2. The Busch Microtronic with the original 2095 cassette
+interface and a DIY speech synthesizer.}
 
 \textbf{Recent developments (2025--2026).} The author has also used the
-Microtronic as the brain of larger systems: a recursive Towers of Hanoi
-solver drives a physical pan/tilt \textbf{Hanoi robot} and, most
-recently, animates the solution on a \textbf{64×32 RGB LED matrix} ---
-via a microcontroller that reads the Microtronic\textquotesingle s moves
-over a simple 4-bit GPIO protocol (see the \emph{towers-of-hanoi}
-repository; a video of the recursive solver running on the Microtronic
-is at youtu.be/SwUh-Cs\_eZE). And, most significantly of all, the
-original Microtronic firmware ROM was finally recovered and brought back
-to life on new hardware: the \textbf{Microtronic Phoenix}, described in
-the appendix.
+Microtronic as the brain of larger systems: a recursive
+\href{https://github.com/lambdamikel/towers-of-hanoi}{Towers of Hanoi}
+{[}10{]} solver drives a physical pan/tilt \textbf{Hanoi robot} and,
+most recently, animates the solution on a \textbf{64×32 RGB LED matrix}
+--- via a microcontroller that reads the Microtronic\textquotesingle s
+moves over a simple 4-bit GPIO protocol (a video of the recursive solver
+running on the Microtronic is available {[}36{]}). And, most
+significantly of all, the original Microtronic firmware ROM was finally
+recovered and brought back to life on new hardware: the
+\href{https://github.com/lambdamikel/microtronic-phoenix}{\textbf{Microtronic
+Phoenix}} {[}16{]}, described in the appendix.
 
 \textbf{Björn Rathje\textquotesingle s projects.} The most ambitious and
 impressive \emph{contemporary software} projects for the Microtronic ---
 the author\textquotesingle s own Towers of Hanoi notwithstanding ;-) ---
-come from \textbf{Björn Rathje} (github.com/rab-berlin). Working purely
-in the Microtronic\textquotesingle s tiny 256-instruction machine
-language, he has produced a remarkable body of work that pushes the
-little 4-bit machine far beyond what its 1981 manuals imagined:
+come from \href{https://github.com/rab-berlin}{\textbf{Björn Rathje}}
+{[}20{]}. Working purely in the Microtronic\textquotesingle s tiny
+256-instruction machine language, he has produced a remarkable body of
+work that pushes the little 4-bit machine far beyond what its 1981
+manuals imagined:
 
 \begin{itemize}
 \tightlist
 \item
-  \textbf{Monarch2090} --- a faithful simulation of the legendary
-  \emph{Rotomat Monarch} (1972) slot machine on the Microtronic; the
-  standout piece, and the most elaborate.
+  \href{https://github.com/rab-berlin/Monarch2090}{\textbf{Monarch2090}}
+  {[}21{]} --- a faithful simulation of the legendary \emph{Rotomat
+  Monarch} (1972) slot machine on the Microtronic; the standout piece,
+  and the most elaborate.
 \item
-  \textbf{Kniffel2090} --- Yahtzee (Kniffel) for the Microtronic.
+  \href{https://github.com/rab-berlin/Kniffel2090}{\textbf{Kniffel2090}}
+  --- Yahtzee (Kniffel) for the Microtronic.
 \item
-  \textbf{Mensch2090} --- "Mensch ärgere dich nicht" (the German Ludo /
-  "Sorry!"-style board game).
+  \href{https://github.com/rab-berlin/Mensch2090}{\textbf{Mensch2090}}
+  --- "Mensch ärgere dich nicht" (the German Ludo / "Sorry!"-style board
+  game).
 \item
-  \textbf{Invaders2090} --- Space Invaders on the Microtronic.
+  \href{https://github.com/rab-berlin/Invaders2090}{\textbf{Invaders2090}}
+  --- Space Invaders on the Microtronic.
 \item
-  \textbf{Life2090} --- Conway\textquotesingle s Game of Life.
+  \href{https://github.com/rab-berlin/Life2090}{\textbf{Life2090}} ---
+  Conway\textquotesingle s Game of Life.
 \item
-  \textbf{BerlinUhr2090} --- the Berlin "set-theory clock"
-  (Mengenlehre-Uhr) rendered on the Microtronic.
+  \href{https://github.com/rab-berlin/BerlinUhr2090}{\textbf{BerlinUhr2090}}
+  --- the Berlin "set-theory clock" (Mengenlehre-Uhr) rendered on the
+  Microtronic.
 \item
-  \textbf{Film2090} --- "the Microtronic goes to Hollywood": a playful
-  animation/film project.
+  \href{https://github.com/rab-berlin/Film2090}{\textbf{Film2090}} ---
+  "the Microtronic goes to Hollywood": a playful animation/film project.
 \item
-  \textbf{ESP2090} --- a modern take pairing the Microtronic world with
-  an ESP32 and MicroPython.
+  \href{https://github.com/rab-berlin/ESP2090}{\textbf{ESP2090}} --- a
+  modern take pairing the Microtronic world with an ESP32 and
+  MicroPython.
 \end{itemize}
 
 That a 4-bit, 500 kHz machine with 1 KB of program memory can host a
@@ -424,7 +460,10 @@ set and to Rathje\textquotesingle s ingenuity.
 
 \subsection{2. The Kosmos CP1 (1983)}\label{2-the-kosmos-cp1-1983}
 
-\pandocbounded{\includegraphics[keepaspectratio,alt={The Kosmos CP1, with its spiral-bound manual and the green quick-reference card.}]{images/cp1.jpg}}
+\pandocbounded{\includegraphics[keepaspectratio,alt={Kosmos CP1 with manual and quick-reference card}]{images/cp1.jpg}}
+
+\emph{Figure 3. The Kosmos CP1, with its spiral-bound manual and the
+green quick-reference card.}
 
 The Kosmos CP1 was released in 1983 at an introductory price of DM 198,
 as a complement to Kosmos electronics kits (for example the "Elektronik
@@ -446,9 +485,9 @@ activations.
 \textbf{Intel 8049}, accompanied by an 8155 serving as 2 KByte 8-bit
 SRAM and for I/O. (Some units use the non-mask-programmed 8749 with an
 external EPROM instead --- possibly early versions.) The 8049 is clocked
-at 6 MHz. Notably, the foreword of the manual was written by Prof. Karl
-Steinbuch, a prominent information-processing professor at the
-University of Karlsruhe, though his influence on the design is not
+at 6 MHz. Notably, the foreword of the manual {[}4{]} was written by
+Prof. Karl Steinbuch, a prominent information-processing professor at
+the University of Karlsruhe, though his influence on the design is not
 documented. The CP1 is not programmed in the
 microcontroller\textquotesingle s machine language (MCS-48) but in a
 virtual machine language executed by an interpreter; the 2 KB firmware
@@ -510,42 +549,51 @@ Microtronic, the CP1 has a dedicated expansion bus: the CP2 cassette
 interface, the CP3 memory/port expansion, the CP4 relay module (model
 railways, Fischertechnik robots) and the CP5 (eight LEDs + amplifiers on
 output 2, eight slide switches on input 1) can all be combined. The
-manual is lovingly and didactically high-quality, using the "Computron"
-character to carry out the CPU operations; its programs resemble the
-Microtronic\textquotesingle s (NIM, moon landing, dice, Senso, number
-guessing) and kit-based projects (timers, reaction testers, blinking
-lights, tone generators, alarms, model-railway control). Compared with
-the Microtronic, some programs are less general --- e.g. the
-CP1\textquotesingle s NIM is hard-coded for 15 sticks / 3 removable and
-uses external buttons for input, since the keyboard cannot be read by
-programs. Both software and hardware (Arduino-based) emulations and
-re-implementations exist; since the firmware is available and the parts
-are standard, faithful re-implementations are easy (e.g. "MiniPC"
-emulates the 8049 and runs the original firmware), and an Arduino-based
-CP2 cassette emulator has been developed.
+manual {[}4{]} is lovingly and didactically high-quality, using the
+"Computron" character to carry out the CPU operations; its programs
+resemble the Microtronic\textquotesingle s (NIM, moon landing, dice,
+Senso, number guessing) and kit-based projects (timers, reaction
+testers, blinking lights, tone generators, alarms, model-railway
+control). Compared with the Microtronic, some programs are less general
+--- e.g. the CP1\textquotesingle s NIM is hard-coded for 15 sticks / 3
+removable and uses external buttons for input, since the keyboard cannot
+be read by programs. Both software and hardware (Arduino-based)
+emulations and re-implementations exist; since the firmware is available
+and the parts are standard, faithful re-implementations are easy (e.g.
+\href{https://www.g-heinrichs.de/wordpress/index.php/informatik/minipc/}{MiniPC}
+{[}26{]} emulates the 8049 and runs the original firmware), and an
+\href{https://github.com/asig/kosmos_tape_emulator}{Arduino-based CP2
+cassette emulator} {[}23{]} has been developed.
 
 \textbf{Recent developments (2025--2026).} The same recursive Towers of
 Hanoi also runs on the CP1, which can likewise drive the 64×32
 LED-matrix renderer. To make writing and loading CP1 programs painless,
-the author built a small \textbf{CP1 development toolchain}: a real
-assembler (mnemonics, labels), and --- after digitizing a genuine CP2
-cassette save and reverse-engineering the previously undocumented
-CP1/CP2 FSK tape format --- a tool that turns a program into a
-\textbf{cassette WAV} you simply play into the CP2, so programs load
-without any hand-keying (see the \emph{kosmos-cp1-devel-toolchain}
-repository; a video of the recursive Towers of Hanoi running on the CP1
-is at youtu.be/SXnRAB-B1f0). This builds on a lively CP1 community ---
-the \textbf{asig/kosmos-cp1} emulator (with an integrated assembler and
-an SD-card tape emulator), the
-\textbf{RalphBln/kosmos-cp1-arduino-cassette-emulator}, and the
-\textbf{moosy/kosmos-cp1-toolchain} are all valuable companions.
+the author built a small
+\href{https://github.com/lambdamikel/kosmos-cp1-devel-toolchain}{\textbf{CP1
+development toolchain}} {[}11{]}: a real assembler (mnemonics, labels),
+and --- after digitizing a genuine CP2 cassette save and
+reverse-engineering the previously undocumented CP1/CP2 FSK tape format
+--- a tool that turns a program into a \textbf{cassette WAV} you simply
+play into the CP2, so programs load without any hand-keying (a video of
+the recursive Towers of Hanoi running on the CP1 is available {[}37{]}).
+This builds on a lively CP1 community --- the
+\href{https://github.com/asig/kosmos-cp1}{asig/kosmos-cp1} {[}22{]}
+emulator (with an integrated assembler and an SD-card tape emulator),
+the
+\href{https://github.com/RalphBln/kosmos-cp1-arduino-cassette-emulator}{RalphBln
+cassette emulator} {[}24{]}, and the
+\href{https://github.com/moosy/kosmos-cp1-toolchain}{moosy CP1
+toolchain} {[}25{]} are all valuable companions.
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
 \subsection{3. The Philips MasterLab
 (1983)}\label{3-the-philips-masterlab-1983}
 
-\pandocbounded{\includegraphics[keepaspectratio,alt={The Philips MasterLab and its "Microcomputer Master Lab" manual.}]{images/masterlab.jpg}}
+\pandocbounded{\includegraphics[keepaspectratio,alt={Philips MasterLab and its manual}]{images/masterlab.jpg}}
+
+\emph{Figure 4. The Philips MasterLab and its "Microcomputer Master Lab"
+manual.}
 
 Philips was at the time probably the second-largest supplier of
 experimentation kits on the German market, behind the leader Kosmos. In
@@ -557,9 +605,10 @@ decided in 1982). The 6000 kits, and thus the MasterLab, had been
 developed by Philips\textquotesingle s educational-materials department
 together with the "Institut für Lehrerfortbildung" (Institute for
 Teacher Training) in Hamburg --- in particular by Mr. Erhard Meyer,
-author of the manual, whose initials "E.M." also appear in the firmware
-EPROM ("COPYRIGHT 1982,1983 (C) GAMA, E.M., \ldots"). What seems certain
-is that the MasterLab\textquotesingle s birthplace lies in Hamburg.
+author of the manual {[}5{]}, whose initials "E.M." also appear in the
+firmware EPROM ("COPYRIGHT 1982,1983 (C) GAMA, E.M., \ldots"). What
+seems certain is that the MasterLab\textquotesingle s birthplace lies in
+Hamburg.
 
 \textbf{External attributes.} The MasterLab is a feast for the eyes ---
 a shapely silver case with a transparent Plexiglas hood, colorful keys,
@@ -579,11 +628,11 @@ which run an interpreted higher-level language, the MasterLab is
 programmed \textbf{directly in INS8070 machine language} --- it is
 therefore more a classic CPU trainer than an "educational computer", and
 consequently far faster: the author measured \textbf{147,050
-instructions/second}, making it almost 1300× the Microtronic and almost
-80× the CP1. On power-up the monitor shows a friendly "HALLO" --- making
-clear the display is good for more than hex; in fact every segment of
-every digit can be addressed individually (as the scrolling-text demo
-shows).
+instructions/second}, making it roughly 1,290× the Microtronic and about
+46× the CP1 (see the benchmark below). On power-up the monitor shows a
+friendly "HALLO" --- making clear the display is good for more than hex;
+in fact every segment of every digit can be addressed individually (as
+the scrolling-text demo shows).
 
 \textbf{Button-controlled GPIOs.} The buttons SA, SB and LEDs F1, F2, F3
 are the GPIOs, brought out as a header and transistor-buffered --- so
@@ -607,37 +656,41 @@ the SP key; the monitor resembles comparable trainers (e.g. the
 Multitech MPF-1), with A/D for address/data, ME+/ME- to step the
 address, SV/LD for cassette, and CPU to inspect/modify registers ("CPU
 6" = accumulator, "CPU 0" = PC). Breakpoints and single-step are absent,
-but a HALT can be inserted manually. The manual is a deep, comprehensive
-introduction to INS8070 programming --- the CPU even offers 16-bit
-operations (the multiply combines A and E into a 16-bit register
-multiplied by the 16-bit T register, giving a 32-bit A,E,T result; a
-divide exists too), a stack pointer, two pointer registers (SP1, SP2)
-for indexed addressing, interrupts, and a wealth of addressing modes
-(immediate, absolute, implied, direct, indirect, indexed, relative).
-Firmware CALL routines ease programming (display control, 2-/4-digit hex
-input, decimal/hex conversion). The biggest shortcoming is the limited
-experimentation capability --- the manual only demonstrates a
-loudspeaker, a lamp and a simple photoresistor light barrier; more GPIOs
-would have helped. The direct, firmware-free coupling of the GPIOs to
-the CPU is nonetheless brilliant. The learning material is far more
-complex, comprehensive and technical than the others\textquotesingle{}
---- a steeper curve, clearly aimed at adults / teacher training, and
-presented bone-dry --- but the MasterLab is the only one offering a
-complete, realistic, practical path to microprocessor programming.
+but a HALT can be inserted manually. The manual {[}5{]} is a deep,
+comprehensive introduction to INS8070 programming --- the CPU even
+offers 16-bit operations (the multiply combines A and E into a 16-bit
+register multiplied by the 16-bit T register, giving a 32-bit A,E,T
+result; a divide exists too), a stack pointer, two pointer registers
+(SP1, SP2) for indexed addressing, interrupts, and a wealth of
+addressing modes (immediate, absolute, implied, direct, indirect,
+indexed, relative). Firmware CALL routines ease programming (display
+control, 2-/4-digit hex input, decimal/hex conversion). The biggest
+shortcoming is the limited experimentation capability --- the manual
+only demonstrates a loudspeaker, a lamp and a simple photoresistor light
+barrier; more GPIOs would have helped. The direct, firmware-free
+coupling of the GPIOs to the CPU is nonetheless brilliant. The learning
+material is far more complex, comprehensive and technical than the
+others\textquotesingle{} --- a steeper curve, clearly aimed at adults /
+teacher training, and presented bone-dry --- but the MasterLab is the
+only one offering a complete, realistic, practical path to
+microprocessor programming.
 
-\pandocbounded{\includegraphics[keepaspectratio,alt={The Philips MasterLab with an attached experiment box.}]{images/masterlab-expbox.jpg}}
+\pandocbounded{\includegraphics[keepaspectratio,alt={Philips MasterLab with an attached experiment box}]{images/masterlab-expbox.jpg}}
+
+\emph{Figure 5. The Philips MasterLab with an attached experiment box.}
 
 \textbf{Recent developments (2025--2026).} Two projects have since
-appeared. Thorsten Brehm ("MacFly") built a complete MasterLab
-\textbf{emulator} in JavaScript/HTML-CSS (November 2024), playable
-online (github.com/ThorstenBr/MasterLab-MC6400) --- the emulator used as
-a reference while developing the vector display below. And the author
-built a \textbf{vector-graphics display} for the MasterLab: a program
-drives an X-Y oscilloscope to show a rotating 3-D wireframe (cube,
-torus, sphere) via a homemade R-2R DAC on the expansion bus --- turning
-the INS8070\textquotesingle s speed and the expansion bus into a small
-vector-graphics engine (see the \emph{philips-mc6400-vector-graphics}
-repository).
+appeared. Thorsten Brehm ("MacFly") built a complete
+\href{https://github.com/ThorstenBr/MasterLab-MC6400}{MasterLab
+\textbf{emulator}} {[}29{]} in JavaScript/HTML-CSS (November 2024),
+playable online --- the emulator used as a reference while developing
+the vector display below. And the author built a
+\href{https://github.com/lambdamikel/philips-mc6400-vector-graphics}{\textbf{vector-graphics
+display}} {[}12{]} for the MasterLab: a program drives an X-Y
+oscilloscope to show a rotating 3-D wireframe (cube, torus, sphere) via
+a homemade R-2R DAC on the expansion bus --- turning the
+INS8070\textquotesingle s speed and the expansion bus into a small
+vector-graphics engine.
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
@@ -657,8 +710,7 @@ the MasterLab runs INS8070 \textbf{native machine code} at 4 MHz.
 {\def\LTcaptype{none} % do not increment counter
 \begin{longtable}[]{@{}lllrr@{}}
 \toprule\noalign{}
-Computer (CPU) & Clock & Execution model & Instructions/sec &
-Relative \\
+Computer (CPU) & Clock & Model & Instr/sec & Relative \\
 \midrule\noalign{}
 \endhead
 \bottomrule\noalign{}
@@ -667,8 +719,8 @@ Busch Microtronic (TMS1600, 4-bit) & 500 kHz & interpreted VM & ≈ 114 &
 1× \\
 Kosmos CP1 (Intel 8049, 8-bit) & 6 MHz & interpreted VM & ≈ 3,200 & ≈
 28× \\
-Philips MasterLab (INS8070, 8-bit) & 4 MHz & native machine code & ≈
-147,050 & ≈ 1,290× \\
+Philips MasterLab (INS8070, 8-bit) & 4 MHz & native code & ≈ 147,050 & ≈
+1,290× \\
 \end{longtable}
 }
 
@@ -676,19 +728,8 @@ So the MasterLab is roughly \textbf{1,290×} faster than the Microtronic
 and about \textbf{46×} faster than the CP1 --- the payoff of running
 native code instead of an interpreter. The Microtronic drops further
 still (to ≈ 40 ips) with the display switched on. The benchmark runs are
-shown in these videos:
-
-\begin{itemize}
-\tightlist
-\item
-  Microtronic --- "The MIPS Monster":
-  \url{https://www.youtube.com/watch?v=e8KJ-cnX9bU}
-\item
-  Kosmos CP1 --- "Another 1983 MIPS Monster":
-  \url{https://www.youtube.com/watch?v=5lR29-H8SQQ}
-\item
-  Philips MasterLab: \url{https://youtu.be/T0yymKe42YQ}
-\end{itemize}
+shown on video for the Microtronic {[}33{]}, the Kosmos CP1 {[}34{]},
+and the Philips MasterLab {[}35{]}.
 
 \subsubsection{Overall scoring}\label{overall-scoring}
 
@@ -759,60 +800,198 @@ in other countries.
 
 \subsection{References}\label{references}
 
-\textbf{Original German articles (open-access PDFs).} "Der große
-Vergleichstest der Lerncomputer -- Teil 1", \emph{LOAD} \#10 (2024), pp.
-72--75 ---
-\url{https://www.classic-computing.de/wp-content/uploads/2024/10/load10web.pdf}
-· continued in \emph{LOAD} \#11 (2025), pp. 72--81 ---
-\url{https://www.classic-computing.de/wp-content/uploads/2025/10/load11web.pdf}
-· all back issues: \url{https://www.classic-computing.de/load-online/}
+\subsubsection{Primary sources and
+manuals}\label{primary-sources-and-manuals}
 
-\begin{itemize}
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
 \tightlist
 \item
-  Jörg Vallen, diploma thesis (preamble) ---
-  github.com/lambdamikel/Busch-2090
-  (\texttt{manuals/joerg-vallen-diplom.pdf})
+  Busch Microtronic 2090 manual (German, two volumes), Jörg Vallen ---
+  \url{https://github.com/lambdamikel/Busch-2090/tree/master/manuals}
 \item
-  \emph{Spielmittel} 4 (1984), 16, pp. 58--60; \emph{mc --- Die
-  Mikrocomputer-Zeitschrift}, Nov/Dec 1981, p. 78
+  English translation of the Busch Microtronic 2090 manual (Part 1), M.
+  Wessel ---
+  \url{https://github.com/lambdamikel/microtronic-2090-manuals-english}
 \item
-  Kosmos CP1 manual --- archive.org/details/cp-1-manual · CP1 info ---
-  8bit-homecomputermuseum.at
+  Jörg Vallen, diploma thesis (1980), preamble and development history
+  ---
+  \url{https://github.com/lambdamikel/Busch-2090/blob/master/manuals/joerg-vallen-diplom.pdf}
 \item
-  MasterLab info --- norbert.old.no/kits/6400/6400.html · MasterLab
-  emulator (Thorsten Brehm) --- github.com/ThorstenBr/MasterLab-MC6400
+  Kosmos CP1 "Computer Praxis" manual ---
+  \url{https://archive.org/details/cp-1-manual}
 \item
-  "Towers of Hanoi" on the CP1 and Microtronic ---
-  github.com/lambdamikel/towers-of-hanoi
+  Philips 6400 "Microcomputer Master Lab" instruction manual ---
+  \url{https://www.manualslib.com/manual/714710/Philips-6400-Series.html}
 \item
-  CP1 development toolchain (assembler + reverse-engineered cassette
-  codec) --- github.com/lambdamikel/kosmos-cp1-devel-toolchain
+  Hans Vallen, "Computer-Fahrschule", \emph{Spielmittel} 4 (1984), 16,
+  pp. 58--60 ---
+  \url{https://github.com/lambdamikel/Busch-2090/blob/master/manuals/spielmittel-article1.jpg}
 \item
-  MasterLab vector-graphics display (X-Y oscilloscope) ---
-  github.com/lambdamikel/philips-mc6400-vector-graphics
+  \emph{mc --- Die Mikrocomputer-Zeitschrift}, Nov/Dec 1981, p. 78
+  (first Microtronic advertisement) ---
+  \url{https://hschuetz.selfhost.eu/mc-zeitschriften/1981/mc-1981-04.pdf}
+\end{enumerate}
+
+\subsubsection{The original LOAD articles (this
+edition\textquotesingle s
+sources)}\label{the-original-load-articles-this-editions-sources}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{7}
+\tightlist
 \item
-  Microtronic Phoenix --- github.com/lambdamikel/microtronic-phoenix
+  M. Wessel, "Der große Vergleichstest der Lerncomputer -- Teil 1",
+  \emph{LOAD} \#10 (2024), pp. 72--75 ---
+  \url{https://www.classic-computing.de/wp-content/uploads/2024/10/load10web.pdf}
 \item
-  Emulators: MiniPC (G. Heinrichs); cp1-sim (Java);
-  asig/kosmos\_tape\_emulator (CP2); Microtronic emulators by I.
-  Rullhusen and others
+  M. Wessel, the Kosmos CP1 and Busch Microtronic articles, \emph{LOAD}
+  \#11 (2025), pp. 72--81 ---
+  \url{https://www.classic-computing.de/wp-content/uploads/2025/10/load11web.pdf}
+  (all back issues: \url{https://www.classic-computing.de/load-online/})
+\end{enumerate}
+
+\subsubsection{The author\textquotesingle s
+projects}\label{the-authors-projects}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{9}
+\tightlist
 \item
-  Björn Rathje\textquotesingle s Microtronic projects ---
-  github.com/rab-berlin (Monarch2090, Kniffel2090, Mensch2090,
-  Invaders2090, Life2090, BerlinUhr2090, Film2090, ESP2090)
+  Towers of Hanoi for educational computers (CP1, Microtronic, robot,
+  LED matrix) --- \url{https://github.com/lambdamikel/towers-of-hanoi}
 \item
-  Speed benchmarks (GPIO-toggle, instructions/sec): Microtronic ---
-  youtube.com/watch?v=e8KJ-cnX9bU · Kosmos CP1 ---
-  youtube.com/watch?v=5lR29-H8SQQ · Philips MasterLab ---
-  youtu.be/T0yymKe42YQ
+  Kosmos CP1 development toolchain (assembler + reverse-engineered
+  CP1/CP2 cassette codec) ---
+  \url{https://github.com/lambdamikel/kosmos-cp1-devel-toolchain}
 \item
-  Towers of Hanoi (recursive) running on the machines: Microtronic ---
-  youtu.be/SwUh-Cs\_eZE · Kosmos CP1 --- youtu.be/SXnRAB-B1f0
+  Philips MC6400 vector graphics (X-Y oscilloscope 3-D wireframes) ---
+  \url{https://github.com/lambdamikel/philips-mc6400-vector-graphics}
 \item
-  Author\textquotesingle s YouTube channel ---
-  youtube.com/playlist?list=PLvdXKcHrGqhe\_Snxh4nh8RMDz2SiUDCHH
-\end{itemize}
+  Busch-2090 Microtronic emulator for Arduino ---
+  \url{https://github.com/lambdamikel/Busch-2090}
+\item
+  PicoRAM 2090 (RP2040-based 2114 RAM + I/O expansion) ---
+  \url{https://github.com/lambdamikel/picoram2090}
+\item
+  Microtronic 2095 cassette-interface emulator (Arduino) ---
+  \url{https://github.com/lambdamikel/microtronic-2095-arduino-emulator}
+\item
+  The Microtronic Phoenix (emulator running the original 1981 firmware)
+  --- \url{https://github.com/lambdamikel/microtronic-phoenix}
+\item
+  Microtronic firmware ROM "archaeology" ---
+  \url{https://hackaday.io/project/197415-microtronic-firmware-rom-archaeology}
+\item
+  Microtronic Phoenix development notes (Jason T. Jacques) ---
+  \url{https://jsonj.co.uk/project/microtronic/}
+\item
+  Microtronic drum computer (RetroChallenge RC 2021/10 winner) ---
+  \url{https://hackaday.io/project/180252-a-retro-authentic-microtronic-rc-202110-winner}
+\end{enumerate}
+
+\subsubsection{Björn Rathje\textquotesingle s Microtronic
+projects}\label{bjuxf6rn-rathjes-microtronic-projects}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{19}
+\tightlist
+\item
+  Björn Rathje --- overview of all projects ---
+  \url{https://github.com/rab-berlin}
+\item
+  Monarch2090 --- \emph{Rotomat Monarch} (1972) slot-machine simulation
+  --- \url{https://github.com/rab-berlin/Monarch2090}
+\end{enumerate}
+
+\subsubsection{Kosmos CP1 emulators and
+tools}\label{kosmos-cp1-emulators-and-tools}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{21}
+\tightlist
+\item
+  asig/kosmos-cp1 --- CP1 emulator with integrated assembler ---
+  \url{https://github.com/asig/kosmos-cp1}
+\item
+  asig/kosmos\_tape\_emulator --- Arduino CP2 SD-card cassette emulator
+  --- \url{https://github.com/asig/kosmos_tape_emulator}
+\item
+  RalphBln/kosmos-cp1-arduino-cassette-emulator ---
+  \url{https://github.com/RalphBln/kosmos-cp1-arduino-cassette-emulator}
+\item
+  moosy/kosmos-cp1-toolchain ---
+  \url{https://github.com/moosy/kosmos-cp1-toolchain}
+\item
+  MiniPC --- CP1 emulator (Georg Heinrichs) ---
+  \url{https://www.g-heinrichs.de/wordpress/index.php/informatik/minipc/}
+\item
+  cp1-sim --- Java CP1 emulator ---
+  \url{https://sourceforge.net/projects/cp1-sim/}
+\item
+  Kosmos CP1 at the 8-bit Home Computer Museum ---
+  \url{http://www.8bit-homecomputermuseum.at/computer/kosmos_computer_praxis_cp1.html}
+\end{enumerate}
+
+\subsubsection{Philips MasterLab}\label{philips-masterlab}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{28}
+\tightlist
+\item
+  MasterLab emulator (Thorsten Brehm, "MacFly"), JavaScript/HTML ---
+  \url{https://github.com/ThorstenBr/MasterLab-MC6400}
+\item
+  Philips/Schuco MasterLab 6400 information page (Norbert) ---
+  \url{https://norbert.old.no/kits/6400/6400.html}
+\end{enumerate}
+
+\subsubsection{Other Microtronic
+emulators}\label{other-microtronic-emulators}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{30}
+\tightlist
+\item
+  micsim --- Microtronic emulator for Linux (Ingo D. Rullhusen) ---
+  \url{https://freeshell.de/~d01c/micsim_0.1.0.tar.xz}
+\item
+  2090 Emulator for Mac (Stephan Kleinert) ---
+  \url{https://download.cnet.com/2090-emulator/3000-2072_4-47314.html}
+\end{enumerate}
+
+\subsubsection{Videos}\label{videos}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{32}
+\tightlist
+\item
+  Speed benchmark --- Busch Microtronic ("The MIPS Monster") ---
+  \url{https://www.youtube.com/watch?v=e8KJ-cnX9bU}
+\item
+  Speed benchmark --- Kosmos CP1 ("Another 1983 MIPS Monster") ---
+  \url{https://www.youtube.com/watch?v=5lR29-H8SQQ}
+\item
+  Speed benchmark --- Philips MasterLab ---
+  \url{https://youtu.be/T0yymKe42YQ}
+\item
+  Recursive Towers of Hanoi on the Busch Microtronic ---
+  \url{https://youtu.be/SwUh-Cs_eZE}
+\item
+  Recursive Towers of Hanoi on the Kosmos CP1 ---
+  \url{https://youtu.be/SXnRAB-B1f0}
+\item
+  Author\textquotesingle s YouTube channel (educational \&
+  experimentation computers) ---
+  \url{https://www.youtube.com/playlist?list=PLvdXKcHrGqhe_Snxh4nh8RMDz2SiUDCHH}
+\end{enumerate}
 
 \subsection{About the author}\label{about-the-author}
 
@@ -820,14 +999,17 @@ Dr. Michael Wessel is a computer scientist and has worked in Silicon
 Valley, California, since 2010. He owes his professional career to the
 Busch Microtronic, which he received from his parents for Christmas in
 1983. He has collected home computers since 2001 and is known in the
-scene as \emph{LambdaMikel} and \emph{MicrotronicHamburg}.
+scene as \emph{LambdaMikel} and \emph{MicrotronicHamburg} {[}38{]}.
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
 \subsection{Appendix: The Microtronic
 Phoenix}\label{appendix-the-microtronic-phoenix}
 
-\pandocbounded{\includegraphics[keepaspectratio,alt={A new build running the original firmware: the Microtronic Phoenix.}]{images/phoenix.jpg}}
+\pandocbounded{\includegraphics[keepaspectratio,alt={The Microtronic Phoenix, running the original firmware}]{images/phoenix.jpg}}
+
+\emph{Figure 6. A new build running the original firmware: the
+Microtronic Phoenix {[}16{]}.}
 
 All Microtronic emulators published up to 2025 are complete
 re-implementations: the Microtronic\textquotesingle s behavior
@@ -845,28 +1027,29 @@ non-destructive procedure was known.
 
 \subsubsection{Reading out the firmware}\label{reading-out-the-firmware}
 
-This has now changed through our team\textquotesingle s work. In early
-2024, on the occasion of a YouTube video about the "Radio Shack Science
-Fair Microcomputer Trainer" (SFMT), the author was contacted by Jason T.
-Jacques and "Decle", who had successfully read out the ROM of that very
-SFMT. The SFMT uses the "little brother" of the TMS1600 --- the TMS1100.
-Might it therefore be possible to read the Microtronic firmware with the
-same method? It was not quite that simple. But over the following months
-our team developed a procedure that ultimately yielded the read-out
-Microtronic ROM. For this, the TMS1600 --- like the TMS1100 before it
---- had to be put into its so-called test mode. The details of the
-TMS1600 test mode were not known, and there was no documented case on
-the internet; our experiments first had to determine which TMS1600 I/O
-pins activate this mode on reset. We also found that the protocol for
-serially (bit-by-bit) reading the ROM differs markedly from the
-documented TMS1100 protocol. This Microtronic-ROM "archaeology" thus
-required several weeks of intensive work and extensive experimentation.
-Despite all efforts, a few bits in the ROM image remained ambiguous,
-because the read-out process was not 100\% deterministic; these were
-corrected manually by Jason through extensive firmware analysis and
-"sharp thinking", using "Decle"\textquotesingle s TMS1600 disassembler
-(he had also previously built the Arduino-based hardware and software
-for reading the SFMT\textquotesingle s TMS1xxx firmware).
+This has now changed through our team\textquotesingle s work {[}17{]}.
+In early 2024, on the occasion of a YouTube video about the "Radio Shack
+Science Fair Microcomputer Trainer" (SFMT), the author was contacted by
+Jason T. Jacques and "Decle", who had successfully read out the ROM of
+that very SFMT. The SFMT uses the "little brother" of the TMS1600 ---
+the TMS1100. Might it therefore be possible to read the Microtronic
+firmware with the same method? It was not quite that simple. But over
+the following months our team developed a procedure that ultimately
+yielded the read-out Microtronic ROM. For this, the TMS1600 --- like the
+TMS1100 before it --- had to be put into its so-called test mode. The
+details of the TMS1600 test mode were not known, and there was no
+documented case on the internet; our experiments first had to determine
+which TMS1600 I/O pins activate this mode on reset. We also found that
+the protocol for serially (bit-by-bit) reading the ROM differs markedly
+from the documented TMS1100 protocol. This Microtronic-ROM "archaeology"
+thus required several weeks of intensive work and extensive
+experimentation. Despite all efforts, a few bits in the ROM image
+remained ambiguous, because the read-out process was not 100\%
+deterministic; these were corrected manually by Jason through extensive
+firmware analysis and "sharp thinking", using "Decle"\textquotesingle s
+TMS1600 disassembler (he had also previously built the Arduino-based
+hardware and software for reading the SFMT\textquotesingle s TMS1xxx
+firmware).
 
 \subsubsection{The Phoenix}\label{the-phoenix}
 
@@ -876,10 +1059,11 @@ we wanted to see it running again, on new hardware. That was also the
 only way to verify that we had indeed read out a working, authentic ROM
 (the read-out being somewhat "fuzzy"). So we built the
 Microtronic\textquotesingle s software brain a new body --- the
-\textbf{Microtronic Phoenix}. It has been flying again since February
-2025 and is made available to the public for replication. It is an
-ATmega-based hardware emulator that runs the original Microtronic ROM by
-means of a TMS1600 emulator.
+\href{https://github.com/lambdamikel/microtronic-phoenix}{\textbf{Microtronic
+Phoenix}} {[}16{]}. It has been flying again since February 2025 and is
+made available to the public for replication. It is an ATmega-based
+hardware emulator that runs the original Microtronic ROM by means of a
+TMS1600 emulator {[}18{]}.
 
 As soon as the firmware was available, in autumn 2024, Jason had already
 rebuilt the Microtronic on a breadboard using the original hardware
@@ -918,25 +1102,27 @@ Neo also gives access to the EEPROM. On the original, PGM 1/PGM 2 access
 the 2095 cassette interface to load/save programs; we did not rebuild
 the cassette interface (the Phoenix cannot generate the 32 kHz tone
 clock the 2095 needs, although it runs the same PGM 1/PGM 2 ROM routines
---- but the 2095 SD-card emulator can be used). More practical is to use
-PGM 1/ PGM 2 in Neo mode to access the EEPROM, loading/saving a full
-memory image via "slot" numbers 0--41 as "program names" (back in the
-day one noted the cassette counter reading instead). But how can the
-Phoenix firmware access the EEPROM, given the original ROM has no such
-code? A trick: the active firmware can be switched at any time by
-pressing reset, and both modes always see the same memory contents ---
-so a program can be loaded from EEPROM under Neo and then switched to
-Phoenix mode, and run in either. This is handy for development too:
-develop in Phoenix mode and switch to Neo for speed, or develop in Neo
-(more direct EEPROM access) and switch to Phoenix for the most authentic
-behavior. A further advantage of Neo is that the virtual machine
-language (or the redundant instructions) can easily be adapted for
-one\textquotesingle s own experiments --- it is, after all, a simple
-Arduino "C" program (not so easy with the original firmware). Thus a
-Microtronic variant was developed that acts as a MIDI drum computer /
-"drum sequencer", requiring extensive instruction-set extensions and
-machine-language changes; this "Microtronic drum computer" won a prize
-in the RetroChallenge RC 2021/10.
+--- but the
+\href{https://github.com/lambdamikel/microtronic-2095-arduino-emulator}{2095
+SD-card emulator} {[}15{]} can be used). More practical is to use PGM
+1/PGM 2 in Neo mode to access the EEPROM, loading/saving a full memory
+image via "slot" numbers 0--41 as "program names" (back in the day one
+noted the cassette counter reading instead). But how can the Phoenix
+firmware access the EEPROM, given the original ROM has no such code? A
+trick: the active firmware can be switched at any time by pressing
+reset, and both modes always see the same memory contents --- so a
+program can be loaded from EEPROM under Neo and then switched to Phoenix
+mode, and run in either. This is handy for development too: develop in
+Phoenix mode and switch to Neo for speed, or develop in Neo (more direct
+EEPROM access) and switch to Phoenix for the most authentic behavior. A
+further advantage of Neo is that the virtual machine language (or the
+redundant instructions) can easily be adapted for one\textquotesingle s
+own experiments --- it is, after all, a simple Arduino "C" program (not
+so easy with the original firmware). Thus a Microtronic variant was
+developed that acts as a MIDI drum computer / "drum sequencer",
+requiring extensive instruction-set extensions and machine-language
+changes; this "Microtronic drum computer" won a prize in the
+RetroChallenge RC 2021/10 {[}19{]}.
 
 Despite all these extensions and advantages, nothing will be dearer to
 the Microtronic fan than the original. With the Phoenix we now have,

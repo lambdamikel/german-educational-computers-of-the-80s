@@ -1,7 +1,11 @@
-\usepackage{xurl}
-\usepackage{microtype}
+\usepackage{xurl}            % allow URLs to break at any character
+\usepackage{microtype}       % subtle spacing/protrusion to reduce overfull boxes
 \usepackage{newunicodechar}
 \newunicodechar{→}{\ensuremath{\rightarrow}}
 \newunicodechar{≈}{\ensuremath{\approx}}
 \newunicodechar{×}{\ensuremath{\times}}
+\newunicodechar{≠}{\ensuremath{\neq}}
+% Figure images: cap size so portrait photos never run off the page.
 \setkeys{Gin}{width=0.72\linewidth,height=0.42\textheight,keepaspectratio}
+% Last-resort horizontal slack so stubborn long lines don't overrun the margin.
+\setlength{\emergencystretch}{3em}
