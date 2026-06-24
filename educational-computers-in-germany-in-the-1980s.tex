@@ -383,9 +383,9 @@ PicoRAM repurposes them as new side effects. PicoRAM 2090 won the
 RetroChallenge 2023/10 Grand Prize. A range of emulators also exists ---
 the first written by the author in 1985 on a Schneider CPC 464 in BASIC;
 a \href{https://freeshell.de/~d01c/micsim_0.1.0.tar.xz}{C/Linux
-emulator} by Ingo D. Rullhusen {[}31{]}; a
+emulator} by Ingo D. Rullhusen {[}32{]}; a
 \href{https://download.cnet.com/2090-emulator/3000-2072_4-47314.html}{Macintosh
-app} by Stephan Kleinert {[}32{]}; and
+app} by Stephan Kleinert {[}33{]}; and
 \href{https://github.com/lambdamikel/Busch-2090}{Arduino-based hardware
 emulators} {[}13{]} from 2016 onward, including the "Microtronic 2nd /
 Next Generation" re-editions built into a Busch "2070" console (Hackaday
@@ -403,7 +403,7 @@ Microtronic as the brain of larger systems: a recursive
 most recently, animates the solution on a \textbf{64×32 RGB LED matrix}
 --- via a microcontroller that reads the Microtronic\textquotesingle s
 moves over a simple 4-bit GPIO protocol (a video of the recursive solver
-running on the Microtronic is available {[}36{]}). And, most
+running on the Microtronic is available {[}37{]}). And, most
 significantly of all, the original Microtronic firmware ROM was finally
 recovered and brought back to life on new hardware: the
 \href{https://github.com/lambdamikel/microtronic-phoenix}{\textbf{Microtronic
@@ -561,9 +561,14 @@ be read by programs. Both software and hardware (Arduino-based)
 emulations and re-implementations exist; since the firmware is available
 and the parts are standard, faithful re-implementations are easy (e.g.
 \href{https://www.g-heinrichs.de/wordpress/index.php/informatik/minipc/}{MiniPC}
-{[}26{]} emulates the 8049 and runs the original firmware), and an
+{[}26{]} emulates the 8049 and runs the original firmware, while a
+\href{https://sourceforge.net/projects/cp1-sim/}{Java-based emulator}
+{[}27{]} reimplements the virtual machine directly), and an
 \href{https://github.com/asig/kosmos_tape_emulator}{Arduino-based CP2
-cassette emulator} {[}23{]} has been developed.
+cassette emulator} {[}23{]} has been developed. Further background on
+the CP1 is collected at the
+\href{http://www.8bit-homecomputermuseum.at/computer/kosmos_computer_praxis_cp1.html}{8-bit
+Home Computer Museum} {[}28{]}.
 
 \textbf{Recent developments (2025--2026).} The same recursive Towers of
 Hanoi also runs on the CP1, which can likewise drive the 64×32
@@ -575,7 +580,7 @@ and --- after digitizing a genuine CP2 cassette save and
 reverse-engineering the previously undocumented CP1/CP2 FSK tape format
 --- a tool that turns a program into a \textbf{cassette WAV} you simply
 play into the CP2, so programs load without any hand-keying (a video of
-the recursive Towers of Hanoi running on the CP1 is available {[}37{]}).
+the recursive Towers of Hanoi running on the CP1 is available {[}38{]}).
 This builds on a lively CP1 community --- the
 \href{https://github.com/asig/kosmos-cp1}{asig/kosmos-cp1} {[}22{]}
 emulator (with an integrated assembler and an SD-card tape emulator),
@@ -608,7 +613,9 @@ Teacher Training) in Hamburg --- in particular by Mr. Erhard Meyer,
 author of the manual {[}5{]}, whose initials "E.M." also appear in the
 firmware EPROM ("COPYRIGHT 1982,1983 (C) GAMA, E.M., \ldots"). What
 seems certain is that the MasterLab\textquotesingle s birthplace lies in
-Hamburg.
+Hamburg; more on its origins is collected on the
+\href{https://norbert.old.no/kits/6400/6400.html}{Philips/Schuco 6400
+information page} {[}30{]}.
 
 \textbf{External attributes.} The MasterLab is a feast for the eyes ---
 a shapely silver case with a transparent Plexiglas hood, colorful keys,
@@ -679,7 +686,7 @@ microprocessor programming.
 
 \emph{Figure 5. The Philips MasterLab with an attached experiment box.}
 
-\textbf{Recent developments (2025--2026).} Two projects have since
+\textbf{Recent developments (2025--2026).} Several projects have since
 appeared. Thorsten Brehm ("MacFly") built a complete
 \href{https://github.com/ThorstenBr/MasterLab-MC6400}{MasterLab
 \textbf{emulator}} {[}29{]} in JavaScript/HTML-CSS (November 2024),
@@ -691,6 +698,27 @@ oscilloscope to show a rotating 3-D wireframe (cube, torus, sphere) via
 a homemade R-2R DAC on the expansion bus --- turning the
 INS8070\textquotesingle s speed and the expansion bus into a small
 vector-graphics engine.
+
+Crucially, the perennial problem of \emph{getting programs into the
+machine} now has a modern solution:
+\href{https://github.com/lambdamikel/picoram-ultimate}{\textbf{PicoRAM
+Ultimate}} {[}31{]}, a Raspberry Pi Pico--based SD-card RAM emulator for
+the MasterLab (a sibling of the Microtronic\textquotesingle s PicoRAM
+2090). It plugs into the expansion bus and stands in for the
+MasterLab\textquotesingle s RAM, loading and saving complete program
+images directly from an SD card. That turns the old chore of hand-keying
+--- or waiting on the slow software cassette --- into a file exchange: a
+demo such as the vector-graphics engine above can be dropped onto the SD
+card on a PC and loaded into the MasterLab in seconds, and programs can
+be archived and shared as ordinary files. PicoRAM Ultimate did not exist
+when the original article was written; today it is the most convenient
+way to develop for, and experiment with, the MasterLab.
+
+\pandocbounded{\includegraphics[keepaspectratio,alt={PicoRAM Ultimate connected to the Philips MasterLab}]{images/picoram-ultimate-masterlab.jpg}}
+
+\emph{Figure 6. PicoRAM Ultimate (right) connected to the Philips
+MasterLab via the expansion bus; the MasterLab\textquotesingle s display
+shows its "HALLO" power-up greeting {[}31{]}.}
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
@@ -728,8 +756,8 @@ So the MasterLab is roughly \textbf{1,290×} faster than the Microtronic
 and about \textbf{46×} faster than the CP1 --- the payoff of running
 native code instead of an interpreter. The Microtronic drops further
 still (to ≈ 40 ips) with the display switched on. The benchmark runs are
-shown on video for the Microtronic {[}33{]}, the Kosmos CP1 {[}34{]},
-and the Philips MasterLab {[}35{]}.
+shown on video for the Microtronic {[}34{]}, the Kosmos CP1 {[}35{]},
+and the Philips MasterLab {[}36{]}.
 
 \subsubsection{Overall scoring}\label{overall-scoring}
 
@@ -949,6 +977,10 @@ tools}\label{kosmos-cp1-emulators-and-tools}
 \item
   Philips/Schuco MasterLab 6400 information page (Norbert) ---
   \url{https://norbert.old.no/kits/6400/6400.html}
+\item
+  PicoRAM Ultimate --- Raspberry Pi Pico SD-card RAM emulator for the
+  MasterLab (and other trainers) ---
+  \url{https://github.com/lambdamikel/picoram-ultimate}
 \end{enumerate}
 
 \subsubsection{Other Microtronic
@@ -956,7 +988,7 @@ emulators}\label{other-microtronic-emulators}
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
-\setcounter{enumi}{30}
+\setcounter{enumi}{31}
 \tightlist
 \item
   micsim --- Microtronic emulator for Linux (Ingo D. Rullhusen) ---
@@ -970,7 +1002,7 @@ emulators}\label{other-microtronic-emulators}
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
-\setcounter{enumi}{32}
+\setcounter{enumi}{33}
 \tightlist
 \item
   Speed benchmark --- Busch Microtronic ("The MIPS Monster") ---
@@ -999,7 +1031,7 @@ Dr. Michael Wessel is a computer scientist and has worked in Silicon
 Valley, California, since 2010. He owes his professional career to the
 Busch Microtronic, which he received from his parents for Christmas in
 1983. He has collected home computers since 2001 and is known in the
-scene as \emph{LambdaMikel} and \emph{MicrotronicHamburg} {[}38{]}.
+scene as \emph{LambdaMikel} and \emph{MicrotronicHamburg} {[}39{]}.
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
@@ -1008,7 +1040,7 @@ Phoenix}\label{appendix-the-microtronic-phoenix}
 
 \pandocbounded{\includegraphics[keepaspectratio,alt={The Microtronic Phoenix, running the original firmware}]{images/phoenix.jpg}}
 
-\emph{Figure 6. A new build running the original firmware: the
+\emph{Figure 7. A new build running the original firmware: the
 Microtronic Phoenix {[}16{]}.}
 
 All Microtronic emulators published up to 2025 are complete

@@ -194,8 +194,8 @@ NOP-like register-to-self copy) that never occur in normal programs; PicoRAM rep
 them as new side effects. PicoRAM 2090 won the RetroChallenge 2023/10 Grand Prize. A range
 of emulators also exists — the first written by the author in 1985 on a Schneider CPC 464 in
 BASIC; a [C/Linux emulator](https://freeshell.de/~d01c/micsim_0.1.0.tar.xz) by Ingo D.
-Rullhusen [31]; a [Macintosh app](https://download.cnet.com/2090-emulator/3000-2072_4-47314.html)
-by Stephan Kleinert [32]; and
+Rullhusen [32]; a [Macintosh app](https://download.cnet.com/2090-emulator/3000-2072_4-47314.html)
+by Stephan Kleinert [33]; and
 [Arduino-based hardware emulators](https://github.com/lambdamikel/Busch-2090) [13] from 2016
 onward, including the "Microtronic 2nd / Next Generation" re-editions built into a Busch
 "2070" console (Hackaday "Reinvented Retro Contest" winner, 2021).
@@ -209,7 +209,7 @@ of larger systems: a recursive [Towers of Hanoi](https://github.com/lambdamikel/
 solver drives a physical pan/tilt **Hanoi robot** and, most recently, animates the solution
 on a **64×32 RGB LED matrix** — via a microcontroller that reads the Microtronic's moves
 over a simple 4-bit GPIO protocol (a video of the recursive solver running on the
-Microtronic is available [36]). And, most significantly of all, the original Microtronic
+Microtronic is available [37]). And, most significantly of all, the original Microtronic
 firmware ROM was finally recovered and brought back to life on new hardware: the
 [**Microtronic Phoenix**](https://github.com/lambdamikel/microtronic-phoenix) [16],
 described in the appendix.
@@ -323,9 +323,12 @@ and uses external buttons for input, since the keyboard cannot be read by progra
 software and hardware (Arduino-based) emulations and re-implementations exist; since the
 firmware is available and the parts are standard, faithful re-implementations are easy
 (e.g. [MiniPC](https://www.g-heinrichs.de/wordpress/index.php/informatik/minipc/) [26]
-emulates the 8049 and runs the original firmware), and an
+emulates the 8049 and runs the original firmware, while a
+[Java-based emulator](https://sourceforge.net/projects/cp1-sim/) [27] reimplements the
+virtual machine directly), and an
 [Arduino-based CP2 cassette emulator](https://github.com/asig/kosmos_tape_emulator) [23] has
-been developed.
+been developed. Further background on the CP1 is collected at the
+[8-bit Home Computer Museum](http://www.8bit-homecomputermuseum.at/computer/kosmos_computer_praxis_cp1.html) [28].
 
 **Recent developments (2025–2026).** The same recursive Towers of Hanoi also runs on the
 CP1, which can likewise drive the 64×32 LED-matrix renderer. To make writing and loading
@@ -334,7 +337,7 @@ CP1 programs painless, the author built a small
 a real assembler (mnemonics, labels), and — after digitizing a genuine CP2 cassette save and
 reverse-engineering the previously undocumented CP1/CP2 FSK tape format — a tool that turns
 a program into a **cassette WAV** you simply play into the CP2, so programs load without any
-hand-keying (a video of the recursive Towers of Hanoi running on the CP1 is available [37]).
+hand-keying (a video of the recursive Towers of Hanoi running on the CP1 is available [38]).
 This builds on a lively CP1 community — the
 [asig/kosmos-cp1](https://github.com/asig/kosmos-cp1) [22] emulator (with an integrated
 assembler and an SD-card tape emulator), the
@@ -359,7 +362,8 @@ MasterLab, had been developed by Philips's educational-materials department toge
 the "Institut für Lehrerfortbildung" (Institute for Teacher Training) in Hamburg — in
 particular by Mr. Erhard Meyer, author of the manual [5], whose initials "E.M." also appear
 in the firmware EPROM ("COPYRIGHT 1982,1983 (C) GAMA, E.M., …"). What seems certain is that
-the MasterLab's birthplace lies in Hamburg.
+the MasterLab's birthplace lies in Hamburg; more on its origins is collected on the
+[Philips/Schuco 6400 information page](https://norbert.old.no/kits/6400/6400.html) [30].
 
 **External attributes.** The MasterLab is a feast for the eyes — a shapely silver case with
 a transparent Plexiglas hood, colorful keys, and a seven-segment LED display of **eight**
@@ -415,7 +419,7 @@ programming.
 
 *Figure 5. The Philips MasterLab with an attached experiment box.*
 
-**Recent developments (2025–2026).** Two projects have since appeared. Thorsten Brehm
+**Recent developments (2025–2026).** Several projects have since appeared. Thorsten Brehm
 ("MacFly") built a complete
 [MasterLab **emulator**](https://github.com/ThorstenBr/MasterLab-MC6400) [29] in
 JavaScript/HTML-CSS (November 2024), playable online — the emulator used as a reference
@@ -424,6 +428,23 @@ while developing the vector display below. And the author built a
 for the MasterLab: a program drives an X-Y oscilloscope to show a rotating 3-D wireframe
 (cube, torus, sphere) via a homemade R-2R DAC on the expansion bus — turning the INS8070's
 speed and the expansion bus into a small vector-graphics engine.
+
+Crucially, the perennial problem of *getting programs into the machine* now has a modern
+solution: [**PicoRAM Ultimate**](https://github.com/lambdamikel/picoram-ultimate) [31], a
+Raspberry Pi Pico–based SD-card RAM emulator for the MasterLab (a sibling of the
+Microtronic's PicoRAM 2090). It plugs into the expansion bus and stands in for the
+MasterLab's RAM, loading and saving complete program images directly from an SD card. That
+turns the old chore of hand-keying — or waiting on the slow software cassette — into a
+file exchange: a demo such as the vector-graphics engine above can be dropped onto the SD
+card on a PC and loaded into the MasterLab in seconds, and programs can be archived and
+shared as ordinary files. PicoRAM Ultimate did not exist when the original article was
+written; today it is the most convenient way to develop for, and experiment with, the
+MasterLab.
+
+![PicoRAM Ultimate connected to the Philips MasterLab](images/picoram-ultimate-masterlab.jpg)
+
+*Figure 6. PicoRAM Ultimate (right) connected to the Philips MasterLab via the expansion
+bus; the MasterLab's display shows its "HALLO" power-up greeting [31].*
 
 ---
 
@@ -447,7 +468,7 @@ language (and the Microtronic is only 4-bit at 500 kHz), whereas the MasterLab r
 So the MasterLab is roughly **1,290×** faster than the Microtronic and about **46×** faster
 than the CP1 — the payoff of running native code instead of an interpreter. The Microtronic
 drops further still (to ≈ 40 ips) with the display switched on. The benchmark runs are shown
-on video for the Microtronic [33], the Kosmos CP1 [34], and the Philips MasterLab [35].
+on video for the Microtronic [34], the Kosmos CP1 [35], and the Philips MasterLab [36].
 
 ### Overall scoring
 
@@ -550,27 +571,28 @@ technical history that did not exist in this form in other countries.
 
 29. MasterLab emulator (Thorsten Brehm, "MacFly"), JavaScript/HTML — <https://github.com/ThorstenBr/MasterLab-MC6400>
 30. Philips/Schuco MasterLab 6400 information page (Norbert) — <https://norbert.old.no/kits/6400/6400.html>
+31. PicoRAM Ultimate — Raspberry Pi Pico SD-card RAM emulator for the MasterLab (and other trainers) — <https://github.com/lambdamikel/picoram-ultimate>
 
 ### Other Microtronic emulators
 
-31. micsim — Microtronic emulator for Linux (Ingo D. Rullhusen) — <https://freeshell.de/~d01c/micsim_0.1.0.tar.xz>
-32. 2090 Emulator for Mac (Stephan Kleinert) — <https://download.cnet.com/2090-emulator/3000-2072_4-47314.html>
+32. micsim — Microtronic emulator for Linux (Ingo D. Rullhusen) — <https://freeshell.de/~d01c/micsim_0.1.0.tar.xz>
+33. 2090 Emulator for Mac (Stephan Kleinert) — <https://download.cnet.com/2090-emulator/3000-2072_4-47314.html>
 
 ### Videos
 
-33. Speed benchmark — Busch Microtronic ("The MIPS Monster") — <https://www.youtube.com/watch?v=e8KJ-cnX9bU>
-34. Speed benchmark — Kosmos CP1 ("Another 1983 MIPS Monster") — <https://www.youtube.com/watch?v=5lR29-H8SQQ>
-35. Speed benchmark — Philips MasterLab — <https://youtu.be/T0yymKe42YQ>
-36. Recursive Towers of Hanoi on the Busch Microtronic — <https://youtu.be/SwUh-Cs_eZE>
-37. Recursive Towers of Hanoi on the Kosmos CP1 — <https://youtu.be/SXnRAB-B1f0>
-38. Author's YouTube channel (educational & experimentation computers) — <https://www.youtube.com/playlist?list=PLvdXKcHrGqhe_Snxh4nh8RMDz2SiUDCHH>
+34. Speed benchmark — Busch Microtronic ("The MIPS Monster") — <https://www.youtube.com/watch?v=e8KJ-cnX9bU>
+35. Speed benchmark — Kosmos CP1 ("Another 1983 MIPS Monster") — <https://www.youtube.com/watch?v=5lR29-H8SQQ>
+36. Speed benchmark — Philips MasterLab — <https://youtu.be/T0yymKe42YQ>
+37. Recursive Towers of Hanoi on the Busch Microtronic — <https://youtu.be/SwUh-Cs_eZE>
+38. Recursive Towers of Hanoi on the Kosmos CP1 — <https://youtu.be/SXnRAB-B1f0>
+39. Author's YouTube channel (educational & experimentation computers) — <https://www.youtube.com/playlist?list=PLvdXKcHrGqhe_Snxh4nh8RMDz2SiUDCHH>
 
 ## About the author
 
 Dr. Michael Wessel is a computer scientist and has worked in Silicon Valley, California,
 since 2010. He owes his professional career to the Busch Microtronic, which he received from
 his parents for Christmas in 1983. He has collected home computers since 2001 and is known
-in the scene as *LambdaMikel* and *MicrotronicHamburg* [38].
+in the scene as *LambdaMikel* and *MicrotronicHamburg* [39].
 
 ---
 
@@ -578,7 +600,7 @@ in the scene as *LambdaMikel* and *MicrotronicHamburg* [38].
 
 ![The Microtronic Phoenix, running the original firmware](images/phoenix.jpg)
 
-*Figure 6. A new build running the original firmware: the Microtronic Phoenix [16].*
+*Figure 7. A new build running the original firmware: the Microtronic Phoenix [16].*
 
 All Microtronic emulators published up to 2025 are complete re-implementations: the
 Microtronic's behavior (operating system and virtual machine language) is emulated as
