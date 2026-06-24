@@ -79,7 +79,7 @@ educational and experimentation computer? Four points stand out:
 German educational computers are a fascinating and magnificent piece of technical history
 that did not exist in this form in other countries.
 
-## How this article is structured
+## Outline
 
 This article presents three representatives of the German educational/experimentation
 category, **in historical order**, each in its own section:
