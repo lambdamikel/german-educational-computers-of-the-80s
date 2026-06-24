@@ -704,8 +704,9 @@ machine} now has a modern solution:
 \href{https://github.com/lambdamikel/picoram-ultimate}{\textbf{PicoRAM
 Ultimate}} {[}31{]}, a Raspberry Pi Pico--based SD-card RAM emulator for
 the MasterLab (a sibling of the Microtronic\textquotesingle s PicoRAM
-2090). It plugs into the expansion bus and stands in for the
-MasterLab\textquotesingle s RAM, loading and saving complete program
+2090). It plugs directly into the MasterLab\textquotesingle s two 2114
+SRAM sockets via a ribbon cable and stands in for the
+machine\textquotesingle s RAM, loading and saving complete program
 images directly from an SD card. That turns the old chore of hand-keying
 --- or waiting on the slow software cassette --- into a file exchange: a
 demo such as the vector-graphics engine above can be dropped onto the SD
@@ -717,8 +718,9 @@ way to develop for, and experiment with, the MasterLab.
 \pandocbounded{\includegraphics[keepaspectratio,alt={PicoRAM Ultimate connected to the Philips MasterLab}]{images/picoram-ultimate-masterlab.jpg}}
 
 \emph{Figure 6. PicoRAM Ultimate (right) connected to the Philips
-MasterLab via the expansion bus; the MasterLab\textquotesingle s display
-shows its "HALLO" power-up greeting {[}31{]}.}
+MasterLab --- it plugs directly into the machine\textquotesingle s two
+2114 SRAM sockets via the ribbon cable; the MasterLab\textquotesingle s
+display shows its "HALLO" power-up greeting {[}31{]}.}
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 

@@ -432,8 +432,9 @@ speed and the expansion bus into a small vector-graphics engine.
 Crucially, the perennial problem of *getting programs into the machine* now has a modern
 solution: [**PicoRAM Ultimate**](https://github.com/lambdamikel/picoram-ultimate) [31], a
 Raspberry Pi Pico–based SD-card RAM emulator for the MasterLab (a sibling of the
-Microtronic's PicoRAM 2090). It plugs into the expansion bus and stands in for the
-MasterLab's RAM, loading and saving complete program images directly from an SD card. That
+Microtronic's PicoRAM 2090). It plugs directly into the MasterLab's two 2114 SRAM sockets
+via a ribbon cable and stands in for the machine's RAM, loading and saving complete program
+images directly from an SD card. That
 turns the old chore of hand-keying — or waiting on the slow software cassette — into a
 file exchange: a demo such as the vector-graphics engine above can be dropped onto the SD
 card on a PC and loaded into the MasterLab in seconds, and programs can be archived and
@@ -443,8 +444,9 @@ MasterLab.
 
 ![PicoRAM Ultimate connected to the Philips MasterLab](images/picoram-ultimate-masterlab.jpg)
 
-*Figure 6. PicoRAM Ultimate (right) connected to the Philips MasterLab via the expansion
-bus; the MasterLab's display shows its "HALLO" power-up greeting [31].*
+*Figure 6. PicoRAM Ultimate (right) connected to the Philips MasterLab — it plugs directly
+into the machine's two 2114 SRAM sockets via the ribbon cable; the MasterLab's display
+shows its "HALLO" power-up greeting [31].*
 
 ---
 
