@@ -195,10 +195,10 @@ them as new side effects. PicoRAM 2090 won the RetroChallenge 2023/10 Grand Priz
 of emulators also exists — the first written by the author in 1985 on a Schneider CPC 464 in
 BASIC; a [C/Linux emulator](https://freeshell.de/~d01c/micsim_0.1.0.tar.xz) by Ingo D.
 Rullhusen [32]; a [Macintosh app](https://download.cnet.com/2090-emulator/3000-2072_4-47314.html)
-by Stephan Kleinert [33]; and
+by Stephan Kleinert [33]; and the author's own
 [Arduino-based hardware emulators](https://github.com/lambdamikel/Busch-2090) [13] from 2016
-onward, including the "Microtronic 2nd / Next Generation" re-editions built into a Busch
-"2070" console (Hackaday "Reinvented Retro Contest" winner, 2021).
+onward, including the author's "Microtronic 2nd / Next Generation" re-editions built into a
+Busch "2070" console (Hackaday "Reinvented Retro Contest" winner, 2021).
 
 ![Busch Microtronic with 2095 cassette interface and speech synthesizer](images/microtronic-2095.jpg)
 
