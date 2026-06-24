@@ -551,7 +551,7 @@ technical history that did not exist in this form in other countries.
 15. Microtronic 2095 cassette-interface emulator (Arduino) — <https://github.com/lambdamikel/microtronic-2095-arduino-emulator>
 16. The Microtronic Phoenix (emulator running the original 1981 firmware) — <https://github.com/lambdamikel/microtronic-phoenix>
 17. Microtronic firmware ROM "archaeology" — <https://hackaday.io/project/197415-microtronic-firmware-rom-archaeology>
-18. Microtronic Phoenix development notes (Jason T. Jacques) — <https://jsonj.co.uk/project/microtronic/>
+18. Jason T. Jacques, "Disassembling the Microtronic 2090" — detailed write-up of the TMS1600 ROM extraction, disassembly, and breadboard recreation — <https://jsonj.co.uk/project/microtronic/>
 19. Microtronic drum computer (RetroChallenge RC 2021/10 winner) — <https://hackaday.io/project/180252-a-retro-authentic-microtronic-rc-202110-winner>
 
 ### Björn Rathje's Microtronic projects
@@ -588,6 +588,12 @@ technical history that did not exist in this form in other countries.
 37. Recursive Towers of Hanoi on the Busch Microtronic — <https://youtu.be/SwUh-Cs_eZE>
 38. Recursive Towers of Hanoi on the Kosmos CP1 — <https://youtu.be/SXnRAB-B1f0>
 39. Author's YouTube channel (educational & experimentation computers) — <https://www.youtube.com/playlist?list=PLvdXKcHrGqhe_Snxh4nh8RMDz2SiUDCHH>
+
+### Press and further reading
+
+40. Microtronic Phoenix project page and build logs (Hackaday.io) — <https://hackaday.io/project/202835-microtronic-phoenix>
+41. "The Microtronic Phoenix Computer System", *Hackaday* (15 Sep 2025) — <https://hackaday.com/2025/09/15/the-microtronic-phoenix-computer-system/>
+42. "The Four-Bit Busch Microtronic Lives Again as the Microtronic Phoenix", *Hackster.io* — <https://www.hackster.io/news/the-four-bit-busch-microtronic-lives-again-as-the-microtronic-phoenix-complete-with-original-rom-2a5c7ccecba7>
 
 ## About the author
 
@@ -633,7 +639,11 @@ work and extensive experimentation. Despite all efforts, a few bits in the ROM i
 remained ambiguous, because the read-out process was not 100% deterministic; these were
 corrected manually by Jason through extensive firmware analysis and "sharp thinking", using
 "Decle"'s TMS1600 disassembler (he had also previously built the Arduino-based hardware and
-software for reading the SFMT's TMS1xxx firmware).
+software for reading the SFMT's TMS1xxx firmware). Jason has documented the entire
+undertaking — the test-mode ROM extraction, the disassembly (with `naken_asm`), the
+schematic analysis and the breadboard recreation — in a detailed public write-up,
+"[Disassembling the Microtronic 2090](https://jsonj.co.uk/project/microtronic/)" [18]; the
+team's running build log is on Hackaday [17].
 
 ### The Phoenix
 
@@ -697,3 +707,7 @@ Microtronic that truly deserves the name: an emulator that could not be more aut
 name *Phoenix* therefore seemed fitting — the Microtronic ROM, all but lost in the flames of
 history, flies once more, and with it the Microtronic. With new hardware the Microtronic has
 now truly become "immortal", and will go on finding new fans for decades to come.
+
+*The Microtronic Phoenix is documented in detail in its project build logs [40] and has been
+covered by Hackaday [41] and Hackster.io [42]. Credit for the ROM excavation and the Phoenix
+hardware is shared with Jason T. Jacques and "Decle", whose work is referenced above.*

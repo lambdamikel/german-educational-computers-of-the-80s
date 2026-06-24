@@ -915,8 +915,9 @@ projects}\label{the-authors-projects}
   Microtronic firmware ROM "archaeology" ---
   \url{https://hackaday.io/project/197415-microtronic-firmware-rom-archaeology}
 \item
-  Microtronic Phoenix development notes (Jason T. Jacques) ---
-  \url{https://jsonj.co.uk/project/microtronic/}
+  Jason T. Jacques, "Disassembling the Microtronic 2090" --- detailed
+  write-up of the TMS1600 ROM extraction, disassembly, and breadboard
+  recreation --- \url{https://jsonj.co.uk/project/microtronic/}
 \item
   Microtronic drum computer (RetroChallenge RC 2021/10 winner) ---
   \url{https://hackaday.io/project/180252-a-retro-authentic-microtronic-rc-202110-winner}
@@ -1027,6 +1028,26 @@ emulators}\label{other-microtronic-emulators}
   \url{https://www.youtube.com/playlist?list=PLvdXKcHrGqhe_Snxh4nh8RMDz2SiUDCHH}
 \end{enumerate}
 
+\subsubsection{Press and further
+reading}\label{press-and-further-reading}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{39}
+\tightlist
+\item
+  Microtronic Phoenix project page and build logs (Hackaday.io) ---
+  \url{https://hackaday.io/project/202835-microtronic-phoenix}
+\item
+  "The Microtronic Phoenix Computer System", \emph{Hackaday} (15 Sep
+  2025) ---
+  \url{https://hackaday.com/2025/09/15/the-microtronic-phoenix-computer-system/}
+\item
+  "The Four-Bit Busch Microtronic Lives Again as the Microtronic
+  Phoenix", \emph{Hackster.io} ---
+  \url{https://www.hackster.io/news/the-four-bit-busch-microtronic-lives-again-as-the-microtronic-phoenix-complete-with-original-rom-2a5c7ccecba7}
+\end{enumerate}
+
 \subsection{About the author}\label{about-the-author}
 
 Dr. Michael Wessel is a computer scientist and has worked in Silicon
@@ -1083,7 +1104,13 @@ deterministic; these were corrected manually by Jason through extensive
 firmware analysis and "sharp thinking", using "Decle"\textquotesingle s
 TMS1600 disassembler (he had also previously built the Arduino-based
 hardware and software for reading the SFMT\textquotesingle s TMS1xxx
-firmware).
+firmware). Jason has documented the entire undertaking --- the test-mode
+ROM extraction, the disassembly (with \texttt{naken\_asm}), the
+schematic analysis and the breadboard recreation --- in a detailed
+public write-up,
+"\href{https://jsonj.co.uk/project/microtronic/}{Disassembling the
+Microtronic 2090}" {[}18{]}; the team\textquotesingle s running build
+log is on Hackaday {[}17{]}.
 
 \subsubsection{The Phoenix}\label{the-phoenix}
 
@@ -1166,5 +1193,11 @@ name: an emulator that could not be more authentic. The name
 lost in the flames of history, flies once more, and with it the
 Microtronic. With new hardware the Microtronic has now truly become
 "immortal", and will go on finding new fans for decades to come.
+
+\emph{The Microtronic Phoenix is documented in detail in its project
+build logs {[}40{]} and has been covered by Hackaday {[}41{]} and
+Hackster.io {[}42{]}. Credit for the ROM excavation and the Phoenix
+hardware is shared with Jason T. Jacques and "Decle", whose work is
+referenced above.}
 
 \end{document}
