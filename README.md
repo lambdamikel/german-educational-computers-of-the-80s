@@ -97,9 +97,13 @@ A comparison and an overall conclusion follow at the end.
 
 ## 1. The Busch Microtronic (1981)
 
+<div align="center">
+
 ![Busch Microtronic with PicoRAM 2090](images/microtronic-picoram.jpg)
 
 *Figure 1. The Busch Microtronic, shown with the modern PicoRAM 2090 SD-card expansion [14].*
+
+</div>
 
 Busch electronics kits had been available in Germany since 1976; until October 1981 they
 were distributed under the name "ELOtronic" by the Franzis publishing house. The
@@ -171,11 +175,15 @@ resulting low ~3–4 Hz GPIO sampling rate: input 4 clocks the firmware's backgr
 clock, which can register frequencies up to 60 Hz, so externally generated pulses are counted
 automatically and read out via the "get-time" instruction (F06).
 
+<div align="center">
+
 ![Buschi and the NIM game](images/buschi-nim.jpg)
 
 *Figure 2. "The computer as play-partner": Buschi, the Microtronic's mascot, presents the
 NIM game (built-in program PGM 7), which computes the optimal winning strategy. From the
 Busch Microtronic manual [1]; © Busch, reproduced for illustration.*
+
+</div>
 
 **Manual.** The two-volume manual [1], written by Jörg Vallen and lovingly illustrated with
 the "Buschi" mascot, is didactically excellent: Part 1 introduces the Microtronic, Part 2
@@ -206,9 +214,13 @@ by Stephan Kleinert [33]; and the author's own
 onward, including the author's "Microtronic 2nd / Next Generation" re-editions built into a
 Busch "2070" console (Hackaday "Reinvented Retro Contest" winner, 2021).
 
+<div align="center">
+
 ![Busch Microtronic with 2095 cassette interface and speech synthesizer](images/microtronic-2095.jpg)
 
 *Figure 3. The Busch Microtronic with the original 2095 cassette interface and a DIY speech synthesizer.*
+
+</div>
 
 **Recent developments (2025–2026).** The author has also used the Microtronic as the brain
 of larger systems: a recursive [Towers of Hanoi](https://github.com/lambdamikel/towers-of-hanoi) [10]
@@ -251,11 +263,15 @@ elegance of the Microtronic instruction set and to Rathje's ingenuity.
 
 ## 2. The Kosmos CP1 (1983)
 
+<div align="center">
+
 ![Kosmos CP1 with manual and quick-reference card](images/cp1.jpg)
 
 *Figure 4. The Kosmos CP1, with its spiral-bound manual and the green quick-reference card.
 The two expansion modules connected along the top are the CP3 memory expansion and the CP2
 cassette interface.*
+
+</div>
 
 The Kosmos CP1 was released in 1983 at an introductory price of DM 198, as a complement to
 Kosmos electronics kits (for example the "Elektronik Labor" sets): a Kosmos breadboard with
@@ -338,10 +354,14 @@ virtual machine directly), and an
 been developed. Further background on the CP1 is collected at the
 [8-bit Home Computer Museum](http://www.8bit-homecomputermuseum.at/computer/kosmos_computer_praxis_cp1.html) [28].
 
+<div align="center">
+
 ![Computron, the Kosmos CP1 mascot](images/computron.png)
 
 *Figure 5. Computron, the Kosmos CP1's mascot, who "carries out" the CPU operations in the
 manual. From the Kosmos CP1 manual [4]; © Kosmos, reproduced for illustration.*
+
+</div>
 
 **Recent developments (2025–2026).** The same recursive Towers of Hanoi also runs on the
 CP1, which can likewise drive the 64×32 LED-matrix renderer. To make writing and loading
@@ -362,9 +382,13 @@ valuable companions.
 
 ## 3. The Philips MasterLab (1983)
 
+<div align="center">
+
 ![Philips MasterLab and its manual](images/masterlab.jpg)
 
 *Figure 6. The Philips MasterLab and its "Microcomputer Master Lab" manual.*
+
+</div>
 
 Philips was at the time probably the second-largest supplier of experimentation kits on the
 German market, behind the leader Kosmos. In 1983 the MasterLab came out under the Philips
@@ -428,9 +452,13 @@ steeper curve, clearly aimed at adults / teacher training, and presented bone-dr
 MasterLab is the only one offering a complete, realistic, practical path to microprocessor
 programming.
 
+<div align="center">
+
 ![Philips MasterLab with an attached experiment box](images/masterlab-expbox.jpg)
 
 *Figure 7. The Philips MasterLab with an attached experiment box.*
+
+</div>
 
 **Recent developments (2025–2026).** Several projects have since appeared. Thorsten Brehm
 ("MacFly") built a complete
@@ -455,11 +483,15 @@ shared as ordinary files. PicoRAM Ultimate did not exist when the original artic
 written; today it is the most convenient way to develop for, and experiment with, the
 MasterLab.
 
+<div align="center">
+
 ![PicoRAM Ultimate connected to the Philips MasterLab](images/picoram-ultimate-masterlab.jpg)
 
 *Figure 8. PicoRAM Ultimate (right) connected to the Philips MasterLab — it plugs directly
 into the machine's two 2114 SRAM sockets via the ribbon cable; the MasterLab's display
 shows its "HALLO" power-up greeting [31].*
+
+</div>
 
 ---
 
@@ -619,9 +651,13 @@ in the scene as *LambdaMikel* and *MicrotronicHamburg* [39].
 
 ## Appendix: The Microtronic Phoenix
 
+<div align="center">
+
 ![The Microtronic Phoenix, running the original firmware](images/phoenix.jpg)
 
 *Figure 9. A new build running the original firmware: the Microtronic Phoenix [16].*
+
+</div>
 
 All Microtronic emulators published up to 2025 are complete re-implementations: the
 Microtronic's behavior (operating system and virtual machine language) is emulated as
