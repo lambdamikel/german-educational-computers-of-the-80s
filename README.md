@@ -247,7 +247,9 @@ elegance of the Microtronic instruction set and to Rathje's ingenuity.
 
 ![Kosmos CP1 with manual and quick-reference card](images/cp1.jpg)
 
-*Figure 3. The Kosmos CP1, with its spiral-bound manual and the green quick-reference card.*
+*Figure 3. The Kosmos CP1, with its spiral-bound manual and the green quick-reference card.
+The two expansion modules connected along the top are the CP3 memory expansion and the CP2
+cassette interface.*
 
 The Kosmos CP1 was released in 1983 at an introductory price of DM 198, as a complement to
 Kosmos electronics kits (for example the "Elektronik Labor" sets): a Kosmos breadboard with
