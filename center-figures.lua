@@ -17,7 +17,7 @@ function Pandoc(doc)
       -- small hand-drawn mascots: cap width so they aren't upscaled blurry
       local img = b.content[1]
       if img.src:match('computron') then
-        img.attributes.width = '2.2in'
+        img.attributes.width = '3in'
       end
       out:insert(pandoc.RawBlock('latex', '\\begin{center}'))
       out:insert(b)
