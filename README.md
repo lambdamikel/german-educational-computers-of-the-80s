@@ -729,7 +729,9 @@ In addition to the original Microtronic mode, the Phoenix has a second firmware 
 development of the earlier Arduino emulators: the **"Neo" firmware**. On power-up/reset the
 Phoenix asks which to use ("1" for Neo, "2" for Phoenix). Neo offers extras — e.g. the
 loudspeaker can produce tones via redundant Microtronic instructions (as for PicoRAM), so
-simple melodies and sound effects can be programmed — and it is up to three times faster.
+simple melodies and sound effects can be programmed — and it runs much faster than the
+original firmware. (Even the original firmware runs slightly faster on the Phoenix than on
+the original 1981 hardware.)
 
 Neo also gives access to the EEPROM. On the original, PGM 1/PGM 2 access the 2095 cassette
 interface to load/save programs; we did not rebuild the cassette interface (the Phoenix
