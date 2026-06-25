@@ -171,6 +171,12 @@ resulting low ~3–4 Hz GPIO sampling rate: input 4 clocks the firmware's backgr
 clock, which can register frequencies up to 60 Hz, so externally generated pulses are counted
 automatically and read out via the "get-time" instruction (F06).
 
+![Buschi and the NIM game](images/buschi-nim.jpg)
+
+*Figure 2. "The computer as play-partner": Buschi, the Microtronic's mascot, presents the
+NIM game (built-in program PGM 7), which computes the optimal winning strategy. From the
+Busch Microtronic manual [1]; © Busch, reproduced for illustration.*
+
 **Manual.** The two-volume manual [1], written by Jörg Vallen and lovingly illustrated with
 the "Buschi" mascot, is didactically excellent: Part 1 introduces the Microtronic, Part 2
 covers more complex programs, circuits and experiments with additional Busch kits.
@@ -202,7 +208,7 @@ Busch "2070" console (Hackaday "Reinvented Retro Contest" winner, 2021).
 
 ![Busch Microtronic with 2095 cassette interface and speech synthesizer](images/microtronic-2095.jpg)
 
-*Figure 2. The Busch Microtronic with the original 2095 cassette interface and a DIY speech synthesizer.*
+*Figure 3. The Busch Microtronic with the original 2095 cassette interface and a DIY speech synthesizer.*
 
 **Recent developments (2025–2026).** The author has also used the Microtronic as the brain
 of larger systems: a recursive [Towers of Hanoi](https://github.com/lambdamikel/towers-of-hanoi) [10]
@@ -247,7 +253,7 @@ elegance of the Microtronic instruction set and to Rathje's ingenuity.
 
 ![Kosmos CP1 with manual and quick-reference card](images/cp1.jpg)
 
-*Figure 3. The Kosmos CP1, with its spiral-bound manual and the green quick-reference card.
+*Figure 4. The Kosmos CP1, with its spiral-bound manual and the green quick-reference card.
 The two expansion modules connected along the top are the CP3 memory expansion and the CP2
 cassette interface.*
 
@@ -332,6 +338,11 @@ virtual machine directly), and an
 been developed. Further background on the CP1 is collected at the
 [8-bit Home Computer Museum](http://www.8bit-homecomputermuseum.at/computer/kosmos_computer_praxis_cp1.html) [28].
 
+![Computron, the Kosmos CP1 mascot](images/computron.png)
+
+*Figure 5. Computron, the Kosmos CP1's mascot, who "carries out" the CPU operations in the
+manual. From the Kosmos CP1 manual [4]; © Kosmos, reproduced for illustration.*
+
 **Recent developments (2025–2026).** The same recursive Towers of Hanoi also runs on the
 CP1, which can likewise drive the 64×32 LED-matrix renderer. To make writing and loading
 CP1 programs painless, the author built a small
@@ -353,7 +364,7 @@ valuable companions.
 
 ![Philips MasterLab and its manual](images/masterlab.jpg)
 
-*Figure 4. The Philips MasterLab and its "Microcomputer Master Lab" manual.*
+*Figure 6. The Philips MasterLab and its "Microcomputer Master Lab" manual.*
 
 Philips was at the time probably the second-largest supplier of experimentation kits on the
 German market, behind the leader Kosmos. In 1983 the MasterLab came out under the Philips
@@ -419,7 +430,7 @@ programming.
 
 ![Philips MasterLab with an attached experiment box](images/masterlab-expbox.jpg)
 
-*Figure 5. The Philips MasterLab with an attached experiment box.*
+*Figure 7. The Philips MasterLab with an attached experiment box.*
 
 **Recent developments (2025–2026).** Several projects have since appeared. Thorsten Brehm
 ("MacFly") built a complete
@@ -446,7 +457,7 @@ MasterLab.
 
 ![PicoRAM Ultimate connected to the Philips MasterLab](images/picoram-ultimate-masterlab.jpg)
 
-*Figure 6. PicoRAM Ultimate (right) connected to the Philips MasterLab — it plugs directly
+*Figure 8. PicoRAM Ultimate (right) connected to the Philips MasterLab — it plugs directly
 into the machine's two 2114 SRAM sockets via the ribbon cable; the MasterLab's display
 shows its "HALLO" power-up greeting [31].*
 
@@ -610,7 +621,7 @@ in the scene as *LambdaMikel* and *MicrotronicHamburg* [39].
 
 ![The Microtronic Phoenix, running the original firmware](images/phoenix.jpg)
 
-*Figure 7. A new build running the original firmware: the Microtronic Phoenix [16].*
+*Figure 9. A new build running the original firmware: the Microtronic Phoenix [16].*
 
 All Microtronic emulators published up to 2025 are complete re-implementations: the
 Microtronic's behavior (operating system and virtual machine language) is emulated as

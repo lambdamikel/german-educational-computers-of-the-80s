@@ -14,6 +14,11 @@ function Pandoc(doc)
     local is_image = (b.t == 'Para' or b.t == 'Plain')
       and #b.content == 1 and b.content[1].t == 'Image'
     if is_image then
+      -- small hand-drawn mascots: cap width so they aren't upscaled blurry
+      local img = b.content[1]
+      if img.src:match('computron') then
+        img.attributes.width = '2.2in'
+      end
       out:insert(pandoc.RawBlock('latex', '\\begin{center}'))
       out:insert(b)
       local nxt = blocks[i + 1]
