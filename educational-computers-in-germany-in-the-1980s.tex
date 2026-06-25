@@ -346,7 +346,11 @@ the NIM game actually computes the optimal winning strategy.
 Interpreting the instruction set costs time, though: a typical maximum
 is about 114 instructions per second, dropping to about 40 with the
 display on; some programs (e.g. dividing 9999 by 1) take up to 8
-seconds.
+seconds. A clever \textbf{trick} works around the resulting low
+\textasciitilde3--4 Hz GPIO sampling rate: input 4 clocks the
+firmware\textquotesingle s background real-time clock, which can
+register frequencies up to 60 Hz, so externally generated pulses are
+counted automatically and read out via the "get-time" instruction (F06).
 
 \textbf{Manual.} The two-volume manual {[}1{]}, written by Jörg Vallen
 and lovingly illustrated with the "Buschi" mascot, is didactically
@@ -357,12 +361,7 @@ calculation, a calculator, tic-tac-toe and sine computation; the
 electronics section covers timers, tone/music generators, model-railway
 control, a frequency counter and a reaction-time meter. An English
 translation of this classic manual (Part 1) is now underway {[}2{]},
-making it accessible to a wider, non-German-speaking audience. A clever
-\textbf{trick} works around the low \textasciitilde3--4 Hz GPIO sampling
-rate: input 4 clocks the firmware\textquotesingle s background real-time
-clock, which can register frequencies up to 60 Hz, so externally
-generated pulses are counted automatically and read out via the
-"get-time" instruction (F06).
+making it accessible to a wider, non-German-speaking audience.
 
 \textbf{Extensions, old and new.} The original "2095" cassette interface
 is leisurely (a full dump takes \textasciitilde220 s ≈ 14 baud); the
