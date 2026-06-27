@@ -500,6 +500,18 @@ things the 1981 machine never could on its own:
 \item
   \textbf{BLOCKADE} --- a numbered-lane, NIM-style strategy game with
   speech.
+\item
+  \textbf{Lunar Lander} --- the odd one out: not a port of an existing
+  program but a \emph{wholly original} game designed from scratch for
+  this hardware. A turn-based lander (the 1969 form, well suited to a
+  machine that blocks on each keypress) --- each turn you read the
+  gauges and key in one engine burn; gravity adds to your downward
+  speed, thrust bleeds it off but spends fuel; touch down at velocity ≤
+  2 and "THE EAGLE HAS LANDED", otherwise "CRASH". It uses the whole
+  machine at once: the red LED as the instruments (ALT / VEL / FUEL),
+  the OLED as the cockpit window (the lander descending, a thrust flame
+  when you burn, a smoking crater on impact), and TTS for the verdict
+  --- pure-integer physics in a single bank (172 words).
 \end{itemize}
 
 The assembler sources and a simulator are in the
@@ -521,6 +533,17 @@ PicoRAM\textquotesingle s OLED display (top left), with spoken moves and
 
 \end{center}
 
+\begin{center}
+
+\pandocbounded{\includegraphics[keepaspectratio,alt={Lunar Lander on the Microtronic + PicoRAM 2090}]{images/lander-picoram.jpg}}
+
+\emph{Figure 5. Lunar Lander --- a wholly original game written from
+scratch for the PicoRAM 2090-extended Microtronic. The OLED (top left)
+is the cockpit window showing the descending lander; the red LED below
+shows the ALT / VEL / FUEL instruments {[}14{]}.}
+
+\end{center}
+
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
 \subsection{2. The Kosmos CP1 (1983)}\label{2-the-kosmos-cp1-1983}
@@ -529,7 +552,7 @@ PicoRAM\textquotesingle s OLED display (top left), with spoken moves and
 
 \pandocbounded{\includegraphics[keepaspectratio,alt={Kosmos CP1 with manual and quick-reference card}]{images/cp1.jpg}}
 
-\emph{Figure 5. The Kosmos CP1, with its spiral-bound manual and the
+\emph{Figure 6. The Kosmos CP1, with its spiral-bound manual and the
 green quick-reference card. The two expansion modules connected along
 the top are the CP3 memory expansion and the CP2 cassette interface.}
 
@@ -644,7 +667,7 @@ Home Computer Museum} {[}28{]}.
 
 \includegraphics[width=3in,height=\textheight,keepaspectratio,alt={Computron, the Kosmos CP1 mascot}]{images/computron.png}
 
-\emph{Figure 6. Computron, the Kosmos CP1\textquotesingle s mascot, who
+\emph{Figure 7. Computron, the Kosmos CP1\textquotesingle s mascot, who
 "carries out" the CPU operations in the manual. From the Kosmos CP1
 manual {[}4{]}; © Kosmos, reproduced for illustration.}
 
@@ -679,7 +702,7 @@ toolchain} {[}25{]} are all valuable companions.
 
 \pandocbounded{\includegraphics[keepaspectratio,alt={Philips MasterLab and its manual}]{images/masterlab.jpg}}
 
-\emph{Figure 7. The Philips MasterLab and its "Microcomputer Master Lab"
+\emph{Figure 8. The Philips MasterLab and its "Microcomputer Master Lab"
 manual.}
 
 \end{center}
@@ -770,7 +793,7 @@ microprocessor programming.
 
 \pandocbounded{\includegraphics[keepaspectratio,alt={Philips MasterLab with an attached experiment box}]{images/masterlab-expbox.jpg}}
 
-\emph{Figure 8. The Philips MasterLab with an attached experiment box.}
+\emph{Figure 9. The Philips MasterLab with an attached experiment box.}
 
 \end{center}
 
@@ -807,7 +830,7 @@ way to develop for, and experiment with, the MasterLab.
 
 \pandocbounded{\includegraphics[keepaspectratio,alt={PicoRAM Ultimate connected to the Philips MasterLab}]{images/picoram-ultimate-masterlab.jpg}}
 
-\emph{Figure 9. PicoRAM Ultimate (right) connected to the Philips
+\emph{Figure 10. PicoRAM Ultimate (right) connected to the Philips
 MasterLab --- it plugs directly into the machine\textquotesingle s two
 2114 SRAM sockets via the ribbon cable; the MasterLab\textquotesingle s
 display shows its "HALLO" power-up greeting {[}31{]}.}
@@ -1157,7 +1180,7 @@ Phoenix}\label{appendix-the-microtronic-phoenix}
 
 \pandocbounded{\includegraphics[keepaspectratio,alt={The Microtronic Phoenix, running the original firmware}]{images/phoenix.jpg}}
 
-\emph{Figure 10. A new build running the original firmware: the
+\emph{Figure 11. A new build running the original firmware: the
 Microtronic Phoenix {[}16{]}.}
 
 \end{center}

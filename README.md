@@ -275,6 +275,15 @@ could on its own:
 - **MERLIN** and **MERLIN 2** — a graphical 3×3 "Lights-Out" puzzle with key beeps and a
   victory melody; MERLIN 2 adds selectable difficulty levels.
 - **BLOCKADE** — a numbered-lane, NIM-style strategy game with speech.
+- **Lunar Lander** — the odd one out: not a port of an existing program but a *wholly
+  original* game designed from scratch for this hardware. A turn-based lander (the 1969 form,
+  well suited to a machine that blocks on each keypress) — each turn you read the gauges and
+  key in one engine burn; gravity adds to your downward speed, thrust bleeds it off but
+  spends fuel; touch down at velocity ≤ 2 and "THE EAGLE HAS LANDED", otherwise "CRASH". It
+  uses the whole machine at once: the red LED as the instruments (ALT / VEL / FUEL), the OLED
+  as the cockpit window (the lander descending, a thrust flame when you burn, a smoking
+  crater on impact), and TTS for the verdict — pure-integer physics in a single bank
+  (172 words).
 
 The assembler sources and a simulator are in the
 [`software/vibe-coded/`](https://github.com/lambdamikel/picoram2090/tree/main/software/vibe-coded)
@@ -292,6 +301,16 @@ spoken moves and — for the human-first game — a new from-scratch board-scann
 
 </div>
 
+<div align="center">
+
+![Lunar Lander on the Microtronic + PicoRAM 2090](images/lander-picoram.jpg)
+
+*Figure 5. Lunar Lander — a wholly original game written from scratch for the PicoRAM
+2090-extended Microtronic. The OLED (top left) is the cockpit window showing the descending
+lander; the red LED below shows the ALT / VEL / FUEL instruments [14].*
+
+</div>
+
 ---
 
 ## 2. The Kosmos CP1 (1983)
@@ -300,7 +319,7 @@ spoken moves and — for the human-first game — a new from-scratch board-scann
 
 ![Kosmos CP1 with manual and quick-reference card](images/cp1.jpg)
 
-*Figure 5. The Kosmos CP1, with its spiral-bound manual and the green quick-reference card.
+*Figure 6. The Kosmos CP1, with its spiral-bound manual and the green quick-reference card.
 The two expansion modules connected along the top are the CP3 memory expansion and the CP2
 cassette interface.*
 
@@ -391,7 +410,7 @@ been developed. Further background on the CP1 is collected at the
 
 ![Computron, the Kosmos CP1 mascot](images/computron.png)
 
-*Figure 6. Computron, the Kosmos CP1's mascot, who "carries out" the CPU operations in the
+*Figure 7. Computron, the Kosmos CP1's mascot, who "carries out" the CPU operations in the
 manual. From the Kosmos CP1 manual [4]; © Kosmos, reproduced for illustration.*
 
 </div>
@@ -419,7 +438,7 @@ valuable companions.
 
 ![Philips MasterLab and its manual](images/masterlab.jpg)
 
-*Figure 7. The Philips MasterLab and its "Microcomputer Master Lab" manual.*
+*Figure 8. The Philips MasterLab and its "Microcomputer Master Lab" manual.*
 
 </div>
 
@@ -489,7 +508,7 @@ programming.
 
 ![Philips MasterLab with an attached experiment box](images/masterlab-expbox.jpg)
 
-*Figure 8. The Philips MasterLab with an attached experiment box.*
+*Figure 9. The Philips MasterLab with an attached experiment box.*
 
 </div>
 
@@ -520,7 +539,7 @@ MasterLab.
 
 ![PicoRAM Ultimate connected to the Philips MasterLab](images/picoram-ultimate-masterlab.jpg)
 
-*Figure 9. PicoRAM Ultimate (right) connected to the Philips MasterLab — it plugs directly
+*Figure 10. PicoRAM Ultimate (right) connected to the Philips MasterLab — it plugs directly
 into the machine's two 2114 SRAM sockets via the ribbon cable; the MasterLab's display
 shows its "HALLO" power-up greeting [31].*
 
@@ -688,7 +707,7 @@ in the scene as *LambdaMikel* and *MicrotronicHamburg* [39].
 
 ![The Microtronic Phoenix, running the original firmware](images/phoenix.jpg)
 
-*Figure 10. A new build running the original firmware: the Microtronic Phoenix [16].*
+*Figure 11. A new build running the original firmware: the Microtronic Phoenix [16].*
 
 </div>
 
