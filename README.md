@@ -268,8 +268,10 @@ OLED graphics, text-to-speech, and SRAM bank-switching — to do things the 1981
 could on its own:
 
 - **Tic-Tac-Toe** (human-first and computer-first variants) — the first working Tic-Tac-Toe
-  for the Microtronic, combining OLED graphics, spoken moves, bank-switched game state, and a
-  genuine game AI that plays perfectly.
+  for the Microtronic. The authentic 1981 Busch manual strategy only ever worked when the
+  *computer* moved first (opening in the centre, position 5); the **human-first** game is a
+  genuine new achievement, requiring a from-scratch board-scanning AI — combined with OLED
+  graphics, spoken moves, bank-switched game state, and perfect play.
 - **MERLIN** and **MERLIN 2** — a graphical 3×3 "Lights-Out" puzzle with key beeps and a
   victory melody; MERLIN 2 adds selectable difficulty levels.
 - **BLOCKADE** — a numbered-lane, NIM-style strategy game with speech.
@@ -280,6 +282,16 @@ folder of the PicoRAM 2090 repository [14]. There is a pleasing symmetry here: t
 of AI-assisted collaboration that produced this very article is now also writing fresh
 machine code for a 45-year-old 4-bit computer.
 
+<div align="center">
+
+![Tic-Tac-Toe on the Microtronic + PicoRAM 2090](images/ttt-picoram.jpg)
+
+*Figure 4. The first working Tic-Tac-Toe for the Microtronic, running on the PicoRAM
+2090-extended machine: the 3×3 grid is drawn on PicoRAM's OLED display (top left), with
+spoken moves and — for the human-first game — a new from-scratch board-scanning AI [14].*
+
+</div>
+
 ---
 
 ## 2. The Kosmos CP1 (1983)
@@ -288,7 +300,7 @@ machine code for a 45-year-old 4-bit computer.
 
 ![Kosmos CP1 with manual and quick-reference card](images/cp1.jpg)
 
-*Figure 4. The Kosmos CP1, with its spiral-bound manual and the green quick-reference card.
+*Figure 5. The Kosmos CP1, with its spiral-bound manual and the green quick-reference card.
 The two expansion modules connected along the top are the CP3 memory expansion and the CP2
 cassette interface.*
 
@@ -379,7 +391,7 @@ been developed. Further background on the CP1 is collected at the
 
 ![Computron, the Kosmos CP1 mascot](images/computron.png)
 
-*Figure 5. Computron, the Kosmos CP1's mascot, who "carries out" the CPU operations in the
+*Figure 6. Computron, the Kosmos CP1's mascot, who "carries out" the CPU operations in the
 manual. From the Kosmos CP1 manual [4]; © Kosmos, reproduced for illustration.*
 
 </div>
@@ -407,7 +419,7 @@ valuable companions.
 
 ![Philips MasterLab and its manual](images/masterlab.jpg)
 
-*Figure 6. The Philips MasterLab and its "Microcomputer Master Lab" manual.*
+*Figure 7. The Philips MasterLab and its "Microcomputer Master Lab" manual.*
 
 </div>
 
@@ -477,7 +489,7 @@ programming.
 
 ![Philips MasterLab with an attached experiment box](images/masterlab-expbox.jpg)
 
-*Figure 7. The Philips MasterLab with an attached experiment box.*
+*Figure 8. The Philips MasterLab with an attached experiment box.*
 
 </div>
 
@@ -508,7 +520,7 @@ MasterLab.
 
 ![PicoRAM Ultimate connected to the Philips MasterLab](images/picoram-ultimate-masterlab.jpg)
 
-*Figure 8. PicoRAM Ultimate (right) connected to the Philips MasterLab — it plugs directly
+*Figure 9. PicoRAM Ultimate (right) connected to the Philips MasterLab — it plugs directly
 into the machine's two 2114 SRAM sockets via the ribbon cable; the MasterLab's display
 shows its "HALLO" power-up greeting [31].*
 
@@ -676,7 +688,7 @@ in the scene as *LambdaMikel* and *MicrotronicHamburg* [39].
 
 ![The Microtronic Phoenix, running the original firmware](images/phoenix.jpg)
 
-*Figure 9. A new build running the original firmware: the Microtronic Phoenix [16].*
+*Figure 10. A new build running the original firmware: the Microtronic Phoenix [16].*
 
 </div>
 
