@@ -259,6 +259,27 @@ That a 4-bit, 500 kHz machine with 1 KB of program memory can host a slot-machin
 simulation, several board and arcade games, and Game of Life is a testament both to the
 elegance of the Microtronic instruction set and to Rathje's ingenuity.
 
+**New "vibe-coded" programs for the PicoRAM 2090-extended Microtronic.** A second strand of
+contemporary Microtronic software appeared in 2026: a set of programs written with AI
+assistance ("vibe coding") by Claude (Anthropic, Opus 4.8) — the same author as this English
+edition — targeting the PicoRAM 2090-extended Microtronic [14]. They are Microtronic machine
+code using only existing opcodes (no firmware changes), and lean on PicoRAM's modern I/O —
+OLED graphics, text-to-speech, and SRAM bank-switching — to do things the 1981 machine never
+could on its own:
+
+- **Tic-Tac-Toe** (human-first and computer-first variants) — the first working Tic-Tac-Toe
+  for the Microtronic, combining OLED graphics, spoken moves, bank-switched game state, and a
+  genuine game AI that plays perfectly.
+- **MERLIN** and **MERLIN 2** — a graphical 3×3 "Lights-Out" puzzle with key beeps and a
+  victory melody; MERLIN 2 adds selectable difficulty levels.
+- **BLOCKADE** — a numbered-lane, NIM-style strategy game with speech.
+
+The assembler sources and a simulator are in the
+[`software/vibe-coded/`](https://github.com/lambdamikel/picoram2090/tree/main/software/vibe-coded)
+folder of the PicoRAM 2090 repository [14]. There is a pleasing symmetry here: the same kind
+of AI-assisted collaboration that produced this very article is now also writing fresh
+machine code for a 45-year-old 4-bit computer.
+
 ---
 
 ## 2. The Kosmos CP1 (1983)
