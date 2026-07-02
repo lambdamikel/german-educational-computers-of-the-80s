@@ -359,6 +359,19 @@ entering and inspecting cells (entries via "IN"/Enter auto-increment it). There 
 breakpoint facility — one inserts HALT manually. The decimal scheme and the cumbersome
 "9 OUT" mechanism are ergonomically inferior to what hexadecimal would have afforded.
 
+<div align="center">
+
+![Inside the Kosmos CP1: main board, memory expansion, and cassette interface](images/cp1-internals.jpg)
+
+*Figure 7. Inside the CP1 and its two stacked expansion modules (on the Kosmos construction
+rails). **Bottom** — the CP1 main board: the mask-programmed **Intel 8049** microcontroller (here
+an M5L8049, marked "KOSMOS B") and an **8155** (M5L8155P) for RAM and I/O, above the orange
+keypad-matrix PCB and the shielded six-digit LED display. **Middle** — the CP3 **memory
+expansion**, built around a second 8155 (an NEC D8155HC). **Top** — the CP2 **cassette
+interface**, an analog board of op-amps and filters that generates and reads the cassette tones.*
+
+</div>
+
 **Instruction set.** Instructions exist to display and delay, to load the accumulator with a
 constant or a cell and store it back, and to add/subtract a cell. An "implicit" flag is set
 by comparing the accumulator with a cell (equal/less/greater), after which a conditional
@@ -411,7 +424,7 @@ been developed. Further background on the CP1 is collected at the
 
 ![Computron, the Kosmos CP1 mascot](images/computron.png)
 
-*Figure 7. Computron, the Kosmos CP1's mascot, who "carries out" the CPU operations in the
+*Figure 8. Computron, the Kosmos CP1's mascot, who "carries out" the CPU operations in the
 manual. From the Kosmos CP1 manual [4]; © Kosmos, reproduced for illustration.*
 
 </div>
@@ -439,7 +452,7 @@ valuable companions.
 
 ![Philips MasterLab and its manual](images/masterlab.jpg)
 
-*Figure 8. The Philips MasterLab and its "Microcomputer Master Lab" manual.*
+*Figure 9. The Philips MasterLab and its "Microcomputer Master Lab" manual.*
 
 </div>
 
@@ -509,7 +522,7 @@ programming.
 
 ![Philips MasterLab with an attached experiment box](images/masterlab-expbox.jpg)
 
-*Figure 9. The Philips MasterLab with an attached experiment box.*
+*Figure 10. The Philips MasterLab with an attached experiment box.*
 
 </div>
 
@@ -543,7 +556,7 @@ digital sampling scopes render X-Y vector art poorly.
 
 ![Cube, torus and sphere on a real Tektronix 2335](images/masterlab-vector-scope.jpg)
 
-*Figure 10. The MasterLab's vector-graphics engine on a real Tektronix 2335 analog scope: a
+*Figure 11. The MasterLab's vector-graphics engine on a real Tektronix 2335 analog scope: a
 perspective cube, a torus, and a sphere (left to right), each a rotating 3-D wireframe drawn from
 endpoints by the R-2R DAC, with an RC slew-limit turning the DAC's steps into drawn lines [12].*
 
@@ -565,7 +578,7 @@ without touching the machine.
 
 ![The vector shooter on a real Tektronix 2335](images/masterlab-shooter.jpg)
 
-*Figure 11. The interactive vector shooter on the real MasterLab and 2335: the turret (bottom), a
+*Figure 12. The interactive vector shooter on the real MasterLab and 2335: the turret (bottom), a
 bullet in flight, and a wave of hexagonal aliens — one column already cleared. Played from the hex
 keypad or the SA/SB console buttons [12].*
 
@@ -588,7 +601,7 @@ MasterLab.
 
 ![PicoRAM Ultimate connected to the Philips MasterLab](images/picoram-ultimate-masterlab.jpg)
 
-*Figure 12. PicoRAM Ultimate (right) connected to the Philips MasterLab — it plugs directly
+*Figure 13. PicoRAM Ultimate (right) connected to the Philips MasterLab — it plugs directly
 into the machine's two 2114 SRAM sockets via the ribbon cable; the MasterLab's display
 shows its "HALLO" power-up greeting [31].*
 
@@ -756,7 +769,7 @@ in the scene as *LambdaMikel* and *MicrotronicHamburg* [39].
 
 ![The Microtronic Phoenix, running the original firmware](images/phoenix.jpg)
 
-*Figure 13. A new build running the original firmware: the Microtronic Phoenix [16].*
+*Figure 14. A new build running the original firmware: the Microtronic Phoenix [16].*
 
 </div>
 
