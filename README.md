@@ -224,7 +224,8 @@ Busch "2070" console (Hackaday "Reinvented Retro Contest" winner, 2021).
 
 **Recent developments (2025–2026).** The author has also used the Microtronic as the brain
 of larger systems: a recursive [Towers of Hanoi](https://github.com/lambdamikel/towers-of-hanoi) [10]
-solver drives a physical pan/tilt **Hanoi robot** and, most recently, animates the solution
+solver (the author's own machine-code original) drives a physical pan/tilt **Hanoi robot** — its
+robot-control extension added later with Claude — and, most recently, animates the solution
 on a **64×32 RGB LED matrix** — via a microcontroller that reads the Microtronic's moves
 over a simple 4-bit GPIO protocol (a video of the recursive solver running on the
 Microtronic is available [37]). And, most significantly of all, the original Microtronic
