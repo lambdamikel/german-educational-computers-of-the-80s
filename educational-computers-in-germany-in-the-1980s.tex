@@ -802,11 +802,17 @@ appeared. Thorsten Brehm ("MacFly") built a complete
 \href{https://github.com/ThorstenBr/MasterLab-MC6400}{MasterLab
 \textbf{emulator}} {[}29{]} in JavaScript/HTML-CSS (November 2024),
 playable online --- the emulator used as a reference while developing
-the vector display below. And the author built a
+the vector display below. And the author collaborated with
+\textbf{Claude} (Anthropic, Opus 4.8) on a
 \href{https://github.com/lambdamikel/philips-mc6400-vector-graphics}{\textbf{vector-graphics
-display}} {[}12{]} for the MasterLab: a program drives an X-Y
-oscilloscope from a homemade \textbf{R-2R DAC} on the expansion bus,
-turning the INS8070\textquotesingle s speed and that bus into a small
+display}} {[}12{]} for the MasterLab: Claude designed the \textbf{R-2R
+DAC} and wrote all of the software --- the rotating wireframes, the
+shooter (below), and a complete from-scratch toolchain (an INS8070
+assembler, a cycle-accurate emulator, and an oscilloscope simulator) ---
+while the author designed the DAC\textquotesingle s PCB and did the
+bring-up and testing on real hardware. A program drives an X-Y
+oscilloscope from the DAC on the expansion bus, turning the
+INS8070\textquotesingle s speed and that bus into a small
 vector-graphics engine. The CPU emits only the \emph{endpoints} of a
 wireframe; a double-buffered DAC (three 74HC374 latches) commits both
 axes on one clock edge, so the beam jumps straight to each vertex
@@ -838,7 +844,7 @@ DAC\textquotesingle s steps into drawn lines {[}12{]}.}
 
 \end{center}
 
-On the same pipeline the author then wrote an \textbf{interactive vector
+On the same pipeline Claude then wrote an \textbf{interactive vector
 game} --- a small, Space-Invaders-style \textbf{shooter}. A turret at
 the bottom of the screen fires at a descending grid of hexagonal
 "aliens"; clear the wave and a vector \textbf{"WIN"} flashes up, get

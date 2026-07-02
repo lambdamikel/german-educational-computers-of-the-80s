@@ -516,13 +516,17 @@ programming.
 ("MacFly") built a complete
 [MasterLab **emulator**](https://github.com/ThorstenBr/MasterLab-MC6400) [29] in
 JavaScript/HTML-CSS (November 2024), playable online — the emulator used as a reference
-while developing the vector display below. And the author built a
+while developing the vector display below. And the author collaborated with **Claude** (Anthropic,
+Opus 4.8) on a
 [**vector-graphics display**](https://github.com/lambdamikel/philips-mc6400-vector-graphics) [12]
-for the MasterLab: a program drives an X-Y oscilloscope from a homemade **R-2R DAC** on the
-expansion bus, turning the INS8070's speed and that bus into a small vector-graphics engine. The
-CPU emits only the *endpoints* of a wireframe; a double-buffered DAC (three 74HC374 latches)
-commits both axes on one clock edge, so the beam jumps straight to each vertex instead of tracing
-an L-shaped staircase.
+for the MasterLab: Claude designed the **R-2R DAC** and wrote all of the software — the rotating
+wireframes, the shooter (below), and a complete from-scratch toolchain (an INS8070 assembler, a
+cycle-accurate emulator, and an oscilloscope simulator) — while the author designed the DAC's PCB
+and did the bring-up and testing on real hardware. A program drives an X-Y oscilloscope from the
+DAC on the expansion bus, turning the INS8070's speed and that bus into a small vector-graphics
+engine. The CPU emits only the *endpoints* of a wireframe; a double-buffered DAC (three 74HC374
+latches) commits both axes on one clock edge, so the beam jumps straight to each vertex instead of
+tracing an L-shaped staircase.
 
 The bring-up held one instructive surprise. A plain step-DAC drew only a scatter of **bright
 dots** — the vertices — with the fast slews between them invisible, because the beam crossed the
@@ -544,7 +548,7 @@ endpoints by the R-2R DAC, with an RC slew-limit turning the DAC's steps into dr
 
 </div>
 
-On the same pipeline the author then wrote an **interactive vector game** — a small,
+On the same pipeline Claude then wrote an **interactive vector game** — a small,
 Space-Invaders-style **shooter**. A turret at the bottom of the screen fires at a descending grid
 of hexagonal "aliens"; clear the wave and a vector **"WIN"** flashes up, get overrun and a large
 **"X"** appears, and the next wave begins. It is a fitting use of the MasterLab's otherwise-meagre
