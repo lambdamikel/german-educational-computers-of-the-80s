@@ -518,9 +518,53 @@ programming.
 JavaScript/HTML-CSS (November 2024), playable online — the emulator used as a reference
 while developing the vector display below. And the author built a
 [**vector-graphics display**](https://github.com/lambdamikel/philips-mc6400-vector-graphics) [12]
-for the MasterLab: a program drives an X-Y oscilloscope to show a rotating 3-D wireframe
-(cube, torus, sphere) via a homemade R-2R DAC on the expansion bus — turning the INS8070's
-speed and the expansion bus into a small vector-graphics engine.
+for the MasterLab: a program drives an X-Y oscilloscope from a homemade **R-2R DAC** on the
+expansion bus, turning the INS8070's speed and that bus into a small vector-graphics engine. The
+CPU emits only the *endpoints* of a wireframe; a double-buffered DAC (three 74HC374 latches)
+commits both axes on one clock edge, so the beam jumps straight to each vertex instead of tracing
+an L-shaped staircase.
+
+The bring-up held one instructive surprise. A plain step-DAC drew only a scatter of **bright
+dots** — the vertices — with the fast slews between them invisible, because the beam crossed the
+screen faster than the phosphor could light. The remedy was not more code but a little analog: a
+matched **RC low-pass ("slew-limit")** on each axis turns every instantaneous jump into a smooth
+ramp, so the beam is *dragged* from vertex to vertex and actually draws the connecting line. With
+the RC in place the wireframes appear as solid, continuous figures. Three demos — a perspective
+**cube**, a **torus**, and a **sphere**, each rotating about two axes — were built and verified on
+real hardware. An **analog CRT scope is essential** here (the author used a Tektronix 2335);
+digital sampling scopes render X-Y vector art poorly.
+
+<div align="center">
+
+![Cube, torus and sphere on a real Tektronix 2335](images/masterlab-vector-scope.jpg)
+
+*Figure 10. The MasterLab's vector-graphics engine on a real Tektronix 2335 analog scope: a
+perspective cube, a torus, and a sphere (left to right), each a rotating 3-D wireframe drawn from
+endpoints by the R-2R DAC, with an RC slew-limit turning the DAC's steps into drawn lines [12].*
+
+</div>
+
+On the same pipeline the author then wrote an **interactive vector game** — a small,
+Space-Invaders-style **shooter**. A turret at the bottom of the screen fires at a descending grid
+of hexagonal "aliens"; clear the wave and a vector **"WIN"** flashes up, get overrun and a large
+**"X"** appears, and the next wave begins. It is a fitting use of the MasterLab's otherwise-meagre
+I/O: the game is played not only from the hex keypad but directly from the **SA/SB console
+buttons** — the very GPIOs, wired straight to the status register, that the original manual barely
+exercised (SA moves left, SB right, both together fire) — while the **F1/F2/F3 LEDs** serve as an
+"aliens-remaining" bar. Wave size (3/6/9) and speed are chosen at build time, the smaller waves
+ramp up in difficulty as they are cleared, and the whole game fits in the machine's 1 KB of RAM.
+For an exhibit the console buttons can be paralleled to external arcade buttons, so visitors play
+without touching the machine.
+
+<div align="center">
+
+![The vector shooter on a real Tektronix 2335](images/masterlab-shooter.jpg)
+
+*Figure 11. The interactive vector shooter on the real MasterLab and 2335: the turret (bottom), a
+bullet in flight, and a wave of hexagonal aliens — one column already cleared. Played from the hex
+keypad or the SA/SB console buttons [12].*
+
+</div>
 
 Crucially, the perennial problem of *getting programs into the machine* now has a modern
 solution: [**PicoRAM Ultimate**](https://github.com/lambdamikel/picoram-ultimate) [31], a
@@ -539,7 +583,7 @@ MasterLab.
 
 ![PicoRAM Ultimate connected to the Philips MasterLab](images/picoram-ultimate-masterlab.jpg)
 
-*Figure 10. PicoRAM Ultimate (right) connected to the Philips MasterLab — it plugs directly
+*Figure 12. PicoRAM Ultimate (right) connected to the Philips MasterLab — it plugs directly
 into the machine's two 2114 SRAM sockets via the ribbon cable; the MasterLab's display
 shows its "HALLO" power-up greeting [31].*
 
@@ -707,7 +751,7 @@ in the scene as *LambdaMikel* and *MicrotronicHamburg* [39].
 
 ![The Microtronic Phoenix, running the original firmware](images/phoenix.jpg)
 
-*Figure 11. A new build running the original firmware: the Microtronic Phoenix [16].*
+*Figure 13. A new build running the original firmware: the Microtronic Phoenix [16].*
 
 </div>
 
