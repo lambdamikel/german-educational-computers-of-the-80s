@@ -417,12 +417,12 @@ manual. From the Kosmos CP1 manual [4]; © Kosmos, reproduced for illustration.*
 
 **Recent developments (2025–2026).** The same recursive Towers of Hanoi also runs on the
 CP1, which can likewise drive the 64×32 LED-matrix renderer. To make writing and loading
-CP1 programs painless, the author built a small
+CP1 programs painless, the author and **Claude** (Anthropic, Opus 4.8) built a small
 [**CP1 development toolchain**](https://github.com/lambdamikel/kosmos-cp1-devel-toolchain) [11]:
-a real assembler (mnemonics, labels), and — after digitizing a genuine CP2 cassette save and
-reverse-engineering the previously undocumented CP1/CP2 FSK tape format — a tool that turns
-a program into a **cassette WAV** you simply play into the CP2, so programs load without any
-hand-keying (a video of the recursive Towers of Hanoi running on the CP1 is available [38]).
+Claude wrote a real assembler (mnemonics, labels), and — after the author digitized a genuine CP2
+cassette save — reverse-engineered the previously undocumented CP1/CP2 FSK tape format and wrote a
+tool that turns a program into a **cassette WAV** you simply play into the CP2, so programs load
+without any hand-keying (a video of the recursive Towers of Hanoi running on the CP1 is available [38]).
 This builds on a lively CP1 community — the
 [asig/kosmos-cp1](https://github.com/asig/kosmos-cp1) [22] emulator (with an integrated
 assembler and an SD-card tape emulator), the
