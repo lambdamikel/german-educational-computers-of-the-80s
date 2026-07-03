@@ -429,14 +429,34 @@ manual. From the Kosmos CP1 manual [4]; © Kosmos, reproduced for illustration.*
 
 </div>
 
-**Recent developments (2025–2026).** The same recursive Towers of Hanoi also runs on the
-CP1, which can likewise drive the 64×32 LED-matrix renderer. To make writing and loading
+**Recent developments (2025–2026).** The same recursive Towers of Hanoi runs on the CP1 too [38] —
+and, most recently, the CP1 has been made to **paint the solution on a 64×32 RGB LED matrix**. It
+streams each move over a simple four-bit GPIO protocol to an Arduino Mega 2560, which animates the
+disks sliding between the three pegs, rainbow-coloured by size on a blue base — the very move protocol
+first built for the physical Hanoi robot, now repurposed to drive an LED panel. It makes a striking
+sight: a 1983 decimal von-Neumann trainer conducting a modern graphics display (a video of the full
+solve is available [39]).
+
+<div align="center">
+
+![The Kosmos CP1 driving a 64×32 RGB LED matrix with the Towers of Hanoi solution](images/cp1-hanoi-matrix.jpg)
+
+*Figure 9. The real rig: a Kosmos CP1 (right) driving a 64×32 RGB LED matrix (left) mid-solve, linked
+by the four-bit move protocol over jumper wires. The 8049-based 1983 trainer streams each Hanoi move
+to an Arduino Mega 2560, which renders the disks on the panel; the program itself was loaded through
+the CP1's cassette input as a WAV [39].*
+
+</div>
+
+To make writing and loading
 CP1 programs painless, the author and **Claude** (Anthropic, Opus 4.8) built a small
 [**CP1 development toolchain**](https://github.com/lambdamikel/kosmos-cp1-devel-toolchain) [11]:
-Claude wrote a real assembler (mnemonics, labels), and — after the author digitized a genuine CP2
-cassette save — reverse-engineered the previously undocumented CP1/CP2 FSK tape format and wrote a
-tool that turns a program into a **cassette WAV** you simply play into the CP2, so programs load
-without any hand-keying (a video of the recursive Towers of Hanoi running on the CP1 is available [38]).
+Claude wrote a real **assembler** (mnemonics, labels, named data) and a **no-hardware emulator/tracer**
+that shows the display, the ports, and where a program halts or loops; and — after the author digitized
+a genuine CP2 cassette save — reverse-engineered the previously undocumented CP1/CP2 FSK tape format
+into a tool that turns a program into a **cassette WAV** you simply play into the CP2 (a companion
+decoder reads real tapes back, validated by a byte-exact round-trip), so programs load without any
+hand-keying.
 This builds on a lively CP1 community — the
 [asig/kosmos-cp1](https://github.com/asig/kosmos-cp1) [22] emulator (with an integrated
 assembler and an SD-card tape emulator), the
@@ -452,7 +472,7 @@ valuable companions.
 
 ![Philips MasterLab and its manual](images/masterlab.jpg)
 
-*Figure 9. The Philips MasterLab and its "Microcomputer Master Lab" manual.*
+*Figure 10. The Philips MasterLab and its "Microcomputer Master Lab" manual.*
 
 </div>
 
@@ -522,7 +542,7 @@ programming.
 
 ![Philips MasterLab with an attached experiment box](images/masterlab-expbox.jpg)
 
-*Figure 10. The Philips MasterLab with an attached experiment box.*
+*Figure 11. The Philips MasterLab with an attached experiment box.*
 
 </div>
 
@@ -556,7 +576,7 @@ digital sampling scopes render X-Y vector art poorly.
 
 ![Cube, torus and sphere on a real Tektronix 2335](images/masterlab-vector-scope.jpg)
 
-*Figure 11. The MasterLab's vector-graphics engine on a real Tektronix 2335 analog scope: a
+*Figure 12. The MasterLab's vector-graphics engine on a real Tektronix 2335 analog scope: a
 perspective cube, a torus, and a sphere (left to right), each a rotating 3-D wireframe drawn from
 endpoints by the R-2R DAC, with an RC slew-limit turning the DAC's steps into drawn lines [12].*
 
@@ -578,7 +598,7 @@ without touching the machine.
 
 ![The vector shooter on a real Tektronix 2335](images/masterlab-shooter.jpg)
 
-*Figure 12. The interactive vector shooter on the real MasterLab and 2335: the turret (bottom), a
+*Figure 13. The interactive vector shooter on the real MasterLab and 2335: the turret (bottom), a
 bullet in flight, and a wave of hexagonal aliens — one column already cleared. Played from the hex
 keypad or the SA/SB console buttons [12].*
 
@@ -601,7 +621,7 @@ MasterLab.
 
 ![PicoRAM Ultimate connected to the Philips MasterLab](images/picoram-ultimate-masterlab.jpg)
 
-*Figure 13. PicoRAM Ultimate (right) connected to the Philips MasterLab — it plugs directly
+*Figure 14. PicoRAM Ultimate (right) connected to the Philips MasterLab — it plugs directly
 into the machine's two 2114 SRAM sockets via the ribbon cable; the MasterLab's display
 shows its "HALLO" power-up greeting [31].*
 
@@ -746,20 +766,21 @@ technical history that did not exist in this form in other countries.
 36. Speed benchmark — Philips MasterLab — <https://youtu.be/T0yymKe42YQ>
 37. Recursive Towers of Hanoi on the Busch Microtronic — <https://youtu.be/SwUh-Cs_eZE>
 38. Recursive Towers of Hanoi on the Kosmos CP1 — <https://youtu.be/SXnRAB-B1f0>
-39. Author's YouTube channel (educational & experimentation computers) — <https://www.youtube.com/playlist?list=PLvdXKcHrGqhe_Snxh4nh8RMDz2SiUDCHH>
+39. Towers of Hanoi on a 64×32 RGB LED matrix, driven by the Kosmos CP1 — <https://youtu.be/CkCNBzWRjq4>
+40. Author's YouTube channel (educational & experimentation computers) — <https://www.youtube.com/playlist?list=PLvdXKcHrGqhe_Snxh4nh8RMDz2SiUDCHH>
 
 ### Press and further reading
 
-40. Microtronic Phoenix project page and build logs (Hackaday.io) — <https://hackaday.io/project/202835-microtronic-phoenix>
-41. "The Microtronic Phoenix Computer System", *Hackaday* (15 Sep 2025) — <https://hackaday.com/2025/09/15/the-microtronic-phoenix-computer-system/>
-42. "The Four-Bit Busch Microtronic Lives Again as the Microtronic Phoenix", *Hackster.io* — <https://www.hackster.io/news/the-four-bit-busch-microtronic-lives-again-as-the-microtronic-phoenix-complete-with-original-rom-2a5c7ccecba7>
+41. Microtronic Phoenix project page and build logs (Hackaday.io) — <https://hackaday.io/project/202835-microtronic-phoenix>
+42. "The Microtronic Phoenix Computer System", *Hackaday* (15 Sep 2025) — <https://hackaday.com/2025/09/15/the-microtronic-phoenix-computer-system/>
+43. "The Four-Bit Busch Microtronic Lives Again as the Microtronic Phoenix", *Hackster.io* — <https://www.hackster.io/news/the-four-bit-busch-microtronic-lives-again-as-the-microtronic-phoenix-complete-with-original-rom-2a5c7ccecba7>
 
 ## About the author
 
 Dr. Michael Wessel is a computer scientist and has worked in Silicon Valley, California,
 since 2010. He owes his professional career to the Busch Microtronic, which he received from
 his parents for Christmas in 1983. He has collected home computers since 2001 and is known
-in the scene as *LambdaMikel* and *MicrotronicHamburg* [39].
+in the scene as *LambdaMikel* and *MicrotronicHamburg* [40].
 
 ---
 
@@ -769,7 +790,7 @@ in the scene as *LambdaMikel* and *MicrotronicHamburg* [39].
 
 ![The Microtronic Phoenix, running the original firmware](images/phoenix.jpg)
 
-*Figure 14. A new build running the original firmware: the Microtronic Phoenix [16].*
+*Figure 15. A new build running the original firmware: the Microtronic Phoenix [16].*
 
 </div>
 
@@ -873,6 +894,6 @@ name *Phoenix* therefore seemed fitting — the Microtronic ROM, all but lost in
 history, flies once more, and with it the Microtronic. With new hardware the Microtronic has
 now truly become "immortal", and will go on finding new fans for decades to come.
 
-*The Microtronic Phoenix is documented in detail in its project build logs [40] and has been
-covered by Hackaday [41] and Hackster.io [42]. Credit for the ROM excavation and the Phoenix
+*The Microtronic Phoenix is documented in detail in its project build logs [41] and has been
+covered by Hackaday [42] and Hackster.io [43]. Credit for the ROM excavation and the Phoenix
 hardware is shared with Jason T. Jacques and "Decle", whose work is referenced above.*

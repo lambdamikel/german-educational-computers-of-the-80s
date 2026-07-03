@@ -692,18 +692,41 @@ manual {[}4{]}; © Kosmos, reproduced for illustration.}
 \end{minipage}\end{center}
 
 \textbf{Recent developments (2025--2026).} The same recursive Towers of
-Hanoi also runs on the CP1, which can likewise drive the 64×32
-LED-matrix renderer. To make writing and loading CP1 programs painless,
-the author and \textbf{Claude} (Anthropic, Opus 4.8) built a small
+Hanoi runs on the CP1 too {[}38{]} --- and, most recently, the CP1 has
+been made to \textbf{paint the solution on a 64×32 RGB LED matrix}. It
+streams each move over a simple four-bit GPIO protocol to an Arduino
+Mega 2560, which animates the disks sliding between the three pegs,
+rainbow-coloured by size on a blue base --- the very move protocol first
+built for the physical Hanoi robot, now repurposed to drive an LED
+panel. It makes a striking sight: a 1983 decimal von-Neumann trainer
+conducting a modern graphics display (a video of the full solve is
+available {[}39{]}).
+
+\begin{center}\begin{minipage}{\linewidth}\centering
+
+\pandocbounded{\includegraphics[keepaspectratio,alt={The Kosmos CP1 driving a 64×32 RGB LED matrix with the Towers of Hanoi solution}]{images/cp1-hanoi-matrix.jpg}}
+
+\emph{Figure 9. The real rig: a Kosmos CP1 (right) driving a 64×32 RGB
+LED matrix (left) mid-solve, linked by the four-bit move protocol over
+jumper wires. The 8049-based 1983 trainer streams each Hanoi move to an
+Arduino Mega 2560, which renders the disks on the panel; the program
+itself was loaded through the CP1\textquotesingle s cassette input as a
+WAV {[}39{]}.}
+
+\end{minipage}\end{center}
+
+To make writing and loading CP1 programs painless, the author and
+\textbf{Claude} (Anthropic, Opus 4.8) built a small
 \href{https://github.com/lambdamikel/kosmos-cp1-devel-toolchain}{\textbf{CP1
-development toolchain}} {[}11{]}: Claude wrote a real assembler
-(mnemonics, labels), and --- after the author digitized a genuine CP2
+development toolchain}} {[}11{]}: Claude wrote a real \textbf{assembler}
+(mnemonics, labels, named data) and a \textbf{no-hardware
+emulator/tracer} that shows the display, the ports, and where a program
+halts or loops; and --- after the author digitized a genuine CP2
 cassette save --- reverse-engineered the previously undocumented CP1/CP2
-FSK tape format and wrote a tool that turns a program into a
-\textbf{cassette WAV} you simply play into the CP2, so programs load
-without any hand-keying (a video of the recursive Towers of Hanoi
-running on the CP1 is available {[}38{]}). This builds on a lively CP1
-community --- the
+FSK tape format into a tool that turns a program into a \textbf{cassette
+WAV} you simply play into the CP2 (a companion decoder reads real tapes
+back, validated by a byte-exact round-trip), so programs load without
+any hand-keying. This builds on a lively CP1 community --- the
 \href{https://github.com/asig/kosmos-cp1}{asig/kosmos-cp1} {[}22{]}
 emulator (with an integrated assembler and an SD-card tape emulator),
 the
@@ -721,8 +744,8 @@ toolchain} {[}25{]} are all valuable companions.
 
 \pandocbounded{\includegraphics[keepaspectratio,alt={Philips MasterLab and its manual}]{images/masterlab.jpg}}
 
-\emph{Figure 9. The Philips MasterLab and its "Microcomputer Master Lab"
-manual.}
+\emph{Figure 10. The Philips MasterLab and its "Microcomputer Master
+Lab" manual.}
 
 \end{minipage}\end{center}
 
@@ -812,7 +835,7 @@ microprocessor programming.
 
 \pandocbounded{\includegraphics[keepaspectratio,alt={Philips MasterLab with an attached experiment box}]{images/masterlab-expbox.jpg}}
 
-\emph{Figure 10. The Philips MasterLab with an attached experiment box.}
+\emph{Figure 11. The Philips MasterLab with an attached experiment box.}
 
 \end{minipage}\end{center}
 
@@ -855,7 +878,7 @@ X-Y vector art poorly.
 
 \pandocbounded{\includegraphics[keepaspectratio,alt={Cube, torus and sphere on a real Tektronix 2335}]{images/masterlab-vector-scope.jpg}}
 
-\emph{Figure 11. The MasterLab\textquotesingle s vector-graphics engine
+\emph{Figure 12. The MasterLab\textquotesingle s vector-graphics engine
 on a real Tektronix 2335 analog scope: a perspective cube, a torus, and
 a sphere (left to right), each a rotating 3-D wireframe drawn from
 endpoints by the R-2R DAC, with an RC slew-limit turning the
@@ -883,7 +906,7 @@ external arcade buttons, so visitors play without touching the machine.
 
 \pandocbounded{\includegraphics[keepaspectratio,alt={The vector shooter on a real Tektronix 2335}]{images/masterlab-shooter.jpg}}
 
-\emph{Figure 12. The interactive vector shooter on the real MasterLab
+\emph{Figure 13. The interactive vector shooter on the real MasterLab
 and 2335: the turret (bottom), a bullet in flight, and a wave of
 hexagonal aliens --- one column already cleared. Played from the hex
 keypad or the SA/SB console buttons {[}12{]}.}
@@ -910,7 +933,7 @@ way to develop for, and experiment with, the MasterLab.
 
 \pandocbounded{\includegraphics[keepaspectratio,alt={PicoRAM Ultimate connected to the Philips MasterLab}]{images/picoram-ultimate-masterlab.jpg}}
 
-\emph{Figure 13. PicoRAM Ultimate (right) connected to the Philips
+\emph{Figure 14. PicoRAM Ultimate (right) connected to the Philips
 MasterLab --- it plugs directly into the machine\textquotesingle s two
 2114 SRAM sockets via the ribbon cable; the MasterLab\textquotesingle s
 display shows its "HALLO" power-up greeting {[}31{]}.}
@@ -1218,6 +1241,9 @@ emulators}\label{other-microtronic-emulators}
   Recursive Towers of Hanoi on the Kosmos CP1 ---
   \url{https://youtu.be/SXnRAB-B1f0}
 \item
+  Towers of Hanoi on a 64×32 RGB LED matrix, driven by the Kosmos CP1
+  --- \url{https://youtu.be/CkCNBzWRjq4}
+\item
   Author\textquotesingle s YouTube channel (educational \&
   experimentation computers) ---
   \url{https://www.youtube.com/playlist?list=PLvdXKcHrGqhe_Snxh4nh8RMDz2SiUDCHH}
@@ -1228,7 +1254,7 @@ reading}\label{press-and-further-reading}
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
-\setcounter{enumi}{39}
+\setcounter{enumi}{40}
 \tightlist
 \item
   Microtronic Phoenix project page and build logs (Hackaday.io) ---
@@ -1249,7 +1275,7 @@ Dr. Michael Wessel is a computer scientist and has worked in Silicon
 Valley, California, since 2010. He owes his professional career to the
 Busch Microtronic, which he received from his parents for Christmas in
 1983. He has collected home computers since 2001 and is known in the
-scene as \emph{LambdaMikel} and \emph{MicrotronicHamburg} {[}39{]}.
+scene as \emph{LambdaMikel} and \emph{MicrotronicHamburg} {[}40{]}.
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
@@ -1260,7 +1286,7 @@ Phoenix}\label{appendix-the-microtronic-phoenix}
 
 \pandocbounded{\includegraphics[keepaspectratio,alt={The Microtronic Phoenix, running the original firmware}]{images/phoenix.jpg}}
 
-\emph{Figure 14. A new build running the original firmware: the
+\emph{Figure 15. A new build running the original firmware: the
 Microtronic Phoenix {[}16{]}.}
 
 \end{minipage}\end{center}
@@ -1396,8 +1422,8 @@ Microtronic. With new hardware the Microtronic has now truly become
 "immortal", and will go on finding new fans for decades to come.
 
 \emph{The Microtronic Phoenix is documented in detail in its project
-build logs {[}40{]} and has been covered by Hackaday {[}41{]} and
-Hackster.io {[}42{]}. Credit for the ROM excavation and the Phoenix
+build logs {[}41{]} and has been covered by Hackaday {[}42{]} and
+Hackster.io {[}43{]}. Credit for the ROM excavation and the Phoenix
 hardware is shared with Jason T. Jacques and "Decle", whose work is
 referenced above.}
 
