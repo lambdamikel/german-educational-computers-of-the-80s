@@ -177,7 +177,7 @@ automatically and read out via the "get-time" instruction (F06).
 
 <div align="center">
 
-![Buschi and the NIM game](images/buschi-nim.jpg)
+![Buschi and the NIM game](images/buschi-new.png)
 
 *Figure 2. "The computer as play-partner": Buschi, the Microtronic's mascot, presents the
 NIM game (built-in program PGM 7), which computes the optimal winning strategy. From the
