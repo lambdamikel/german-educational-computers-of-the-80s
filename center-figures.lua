@@ -19,7 +19,7 @@ function Pandoc(doc)
       if img.src:match('computron') then
         img.attributes.width = '3in'
       end
-      out:insert(pandoc.RawBlock('latex', '\\begin{center}'))
+      out:insert(pandoc.RawBlock('latex', '\\begin{center}\\begin{minipage}{\\linewidth}\\centering'))
       out:insert(b)
       local nxt = blocks[i + 1]
       local is_caption = nxt and (nxt.t == 'Para' or nxt.t == 'Plain')
@@ -28,7 +28,7 @@ function Pandoc(doc)
         out:insert(nxt)
         i = i + 1
       end
-      out:insert(pandoc.RawBlock('latex', '\\end{center}'))
+      out:insert(pandoc.RawBlock('latex', '\\end{minipage}\\end{center}'))
     else
       out:insert(b)
     end

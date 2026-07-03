@@ -236,7 +236,7 @@ described in the appendix.
 **Björn Rathje's projects.** The most ambitious and impressive *contemporary software*
 projects for the Microtronic — the author's own Towers of Hanoi notwithstanding ;-) — come
 from [**Björn Rathje**](https://github.com/rab-berlin) [20]. Working purely in the
-Microtronic's tiny 256-instruction machine language, he has produced a remarkable body of
+Microtronic's tiny machine language of some forty instructions, he has produced a remarkable body of
 work that pushes the little 4-bit machine far beyond what its 1981 manuals imagined:
 
 - [**Monarch2090**](https://github.com/rab-berlin/Monarch2090) [21] — a faithful simulation
@@ -406,7 +406,7 @@ expansion, the CP4 relay module (model railways, Fischertechnik robots) and the 
 (eight LEDs + amplifiers on output 2, eight slide switches on input 1) can all be combined.
 The manual [4] is lovingly and didactically high-quality, using the "Computron" character to
 carry out the CPU operations; its programs resemble the Microtronic's (NIM, moon landing,
-dice, Senso, number guessing) and kit-based projects (timers, reaction testers, blinking
+dice, Simon, number guessing) and kit-based projects (timers, reaction testers, blinking
 lights, tone generators, alarms, model-railway control). Compared with the Microtronic,
 some programs are less general — e.g. the CP1's NIM is hard-coded for 15 sticks / 3 removable
 and uses external buttons for input, since the keyboard cannot be read by programs. Both
