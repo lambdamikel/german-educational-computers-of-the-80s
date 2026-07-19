@@ -578,7 +578,8 @@ digital sampling scopes render X-Y vector art poorly.
 
 *Figure 12. The MasterLab's vector-graphics engine on a real Tektronix 2335 analog scope: a
 perspective cube, a torus, and a sphere (left to right), each a rotating 3-D wireframe drawn from
-endpoints by the R-2R DAC, with an RC slew-limit turning the DAC's steps into drawn lines [12].*
+endpoints by the R-2R DAC, with an RC slew-limit turning the DAC's steps into drawn lines [12]; see
+the video [40].*
 
 </div>
 
@@ -600,7 +601,7 @@ without touching the machine.
 
 *Figure 13. The interactive vector shooter on the real MasterLab and 2335: the turret (bottom), a
 bullet in flight, and a wave of hexagonal aliens — one column already cleared. Played from the hex
-keypad or the SA/SB console buttons [12].*
+keypad or the SA/SB console buttons [12]; see the video [41].*
 
 </div>
 
@@ -767,20 +768,22 @@ technical history that did not exist in this form in other countries.
 37. Recursive Towers of Hanoi on the Busch Microtronic — <https://youtu.be/SwUh-Cs_eZE>
 38. Recursive Towers of Hanoi on the Kosmos CP1 — <https://youtu.be/SXnRAB-B1f0>
 39. Towers of Hanoi on a 64×32 RGB LED matrix, driven by the Kosmos CP1 — <https://youtu.be/CkCNBzWRjq4>
-40. Author's YouTube channel (educational & experimentation computers) — <https://www.youtube.com/playlist?list=PLvdXKcHrGqhe_Snxh4nh8RMDz2SiUDCHH>
+40. Rotating 3-D vector wireframes (cube, torus, sphere) on the Philips MasterLab — <https://youtu.be/bAo9eb0MnI4>
+41. "Vector Invaders" — a vector-graphics shooter for the Philips MasterLab — <https://youtu.be/onkOl3PdP7Q>
+42. Author's YouTube channel (educational & experimentation computers) — <https://www.youtube.com/playlist?list=PLvdXKcHrGqhe_Snxh4nh8RMDz2SiUDCHH>
 
 ### Press and further reading
 
-41. Microtronic Phoenix project page and build logs (Hackaday.io) — <https://hackaday.io/project/202835-microtronic-phoenix>
-42. "The Microtronic Phoenix Computer System", *Hackaday* (15 Sep 2025) — <https://hackaday.com/2025/09/15/the-microtronic-phoenix-computer-system/>
-43. "The Four-Bit Busch Microtronic Lives Again as the Microtronic Phoenix", *Hackster.io* — <https://www.hackster.io/news/the-four-bit-busch-microtronic-lives-again-as-the-microtronic-phoenix-complete-with-original-rom-2a5c7ccecba7>
+43. Microtronic Phoenix project page and build logs (Hackaday.io) — <https://hackaday.io/project/202835-microtronic-phoenix>
+44. "The Microtronic Phoenix Computer System", *Hackaday* (15 Sep 2025) — <https://hackaday.com/2025/09/15/the-microtronic-phoenix-computer-system/>
+45. "The Four-Bit Busch Microtronic Lives Again as the Microtronic Phoenix", *Hackster.io* — <https://www.hackster.io/news/the-four-bit-busch-microtronic-lives-again-as-the-microtronic-phoenix-complete-with-original-rom-2a5c7ccecba7>
 
 ## About the author
 
 Dr. Michael Wessel is a computer scientist and has worked in Silicon Valley, California,
 since 2010. He owes his professional career to the Busch Microtronic, which he received from
 his parents for Christmas in 1983. He has collected home computers since 2001 and is known
-in the scene as *LambdaMikel* and *MicrotronicHamburg* [40].
+in the scene as *LambdaMikel* and *MicrotronicHamburg* [42].
 
 ---
 
@@ -894,6 +897,6 @@ name *Phoenix* therefore seemed fitting — the Microtronic ROM, all but lost in
 history, flies once more, and with it the Microtronic. With new hardware the Microtronic has
 now truly become "immortal", and will go on finding new fans for decades to come.
 
-*The Microtronic Phoenix is documented in detail in its project build logs [41] and has been
-covered by Hackaday [42] and Hackster.io [43]. Credit for the ROM excavation and the Phoenix
+*The Microtronic Phoenix is documented in detail in its project build logs [43] and has been
+covered by Hackaday [44] and Hackster.io [45]. Credit for the ROM excavation and the Phoenix
 hardware is shared with Jason T. Jacques and "Decle", whose work is referenced above.*
