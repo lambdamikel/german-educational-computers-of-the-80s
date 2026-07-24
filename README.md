@@ -208,8 +208,8 @@ NOP-like register-to-self copy) that never occur in normal programs; PicoRAM rep
 them as new side effects. PicoRAM 2090 won the RetroChallenge 2023/10 Grand Prize. A range
 of emulators also exists — the first written by the author in 1985 on a Schneider CPC 464 in
 BASIC; a [C/Linux emulator](https://freeshell.de/~d01c/micsim_0.1.0.tar.xz) by Ingo D.
-Rullhusen [32]; a [Macintosh app](https://download.cnet.com/2090-emulator/3000-2072_4-47314.html)
-by Stephan Kleinert [33]; and the author's own
+Rullhusen [33]; a [Macintosh app](https://download.cnet.com/2090-emulator/3000-2072_4-47314.html)
+by Stephan Kleinert [34]; and the author's own
 [Arduino-based hardware emulators](https://github.com/lambdamikel/Busch-2090) [13] from 2016
 onward, including the author's "Microtronic 2nd / Next Generation" re-editions built into a
 Busch "2070" console (Hackaday "Reinvented Retro Contest" winner, 2021).
@@ -228,18 +228,18 @@ solver (the author's own machine-code original) drives a physical pan/tilt **Han
 robot-control extension added later with Claude — and, most recently, animates the solution
 on a **64×32 RGB LED matrix** — via a microcontroller that reads the Microtronic's moves
 over a simple 4-bit GPIO protocol (a video of the recursive solver running on the
-Microtronic is available [37]). And, most significantly of all, the original Microtronic
+Microtronic is available [38]). And, most significantly of all, the original Microtronic
 firmware ROM was finally recovered and brought back to life on new hardware: the
 [**Microtronic Phoenix**](https://github.com/lambdamikel/microtronic-phoenix) [16],
 described in the appendix.
 
 **Björn Rathje's projects.** The most ambitious and impressive *contemporary software*
 projects for the Microtronic — the author's own Towers of Hanoi notwithstanding ;-) — come
-from [**Björn Rathje**](https://github.com/rab-berlin) [20]. Working purely in the
+from [**Björn Rathje**](https://github.com/rab-berlin) [21]. Working purely in the
 Microtronic's tiny machine language of some forty instructions, he has produced a remarkable body of
 work that pushes the little 4-bit machine far beyond what its 1981 manuals imagined:
 
-- [**Monarch2090**](https://github.com/rab-berlin/Monarch2090) [21] — a faithful simulation
+- [**Monarch2090**](https://github.com/rab-berlin/Monarch2090) [22] — a faithful simulation
   of the legendary *Rotomat Monarch* (1972) slot machine on the Microtronic; the standout
   piece, and the most elaborate.
 - [**Kniffel2090**](https://github.com/rab-berlin/Kniffel2090) — Yahtzee (Kniffel) for the
@@ -412,13 +412,13 @@ some programs are less general — e.g. the CP1's NIM is hard-coded for 15 stick
 and uses external buttons for input, since the keyboard cannot be read by programs. Both
 software and hardware (Arduino-based) emulations and re-implementations exist; since the
 firmware is available and the parts are standard, faithful re-implementations are easy
-(e.g. [MiniPC](https://www.g-heinrichs.de/wordpress/index.php/informatik/minipc/) [26]
+(e.g. [MiniPC](https://www.g-heinrichs.de/wordpress/index.php/informatik/minipc/) [27]
 emulates the 8049 and runs the original firmware, while a
-[Java-based emulator](https://sourceforge.net/projects/cp1-sim/) [27] reimplements the
+[Java-based emulator](https://sourceforge.net/projects/cp1-sim/) [28] reimplements the
 virtual machine directly), and an
-[Arduino-based CP2 cassette emulator](https://github.com/asig/kosmos_tape_emulator) [23] has
+[Arduino-based CP2 cassette emulator](https://github.com/asig/kosmos_tape_emulator) [24] has
 been developed. Further background on the CP1 is collected at the
-[8-bit Home Computer Museum](http://www.8bit-homecomputermuseum.at/computer/kosmos_computer_praxis_cp1.html) [28].
+[8-bit Home Computer Museum](http://www.8bit-homecomputermuseum.at/computer/kosmos_computer_praxis_cp1.html) [29].
 
 <div align="center">
 
@@ -429,13 +429,13 @@ manual. From the Kosmos CP1 manual [4]; © Kosmos, reproduced for illustration.*
 
 </div>
 
-**Recent developments (2025–2026).** The same recursive Towers of Hanoi runs on the CP1 too [38] —
+**Recent developments (2025–2026).** The same recursive Towers of Hanoi runs on the CP1 too [39] —
 and, most recently, the CP1 has been made to **paint the solution on a 64×32 RGB LED matrix**. It
 streams each move over a simple four-bit GPIO protocol to an Arduino Mega 2560, which animates the
 disks sliding between the three pegs, rainbow-coloured by size on a blue base — the very move protocol
 first built for the physical Hanoi robot, now repurposed to drive an LED panel. It makes a striking
 sight: a 1983 decimal von-Neumann trainer conducting a modern graphics display (a video of the full
-solve is available [39]).
+solve is available [40]).
 
 <div align="center">
 
@@ -444,7 +444,7 @@ solve is available [39]).
 *Figure 9. The real rig: a Kosmos CP1 (right) driving a 64×32 RGB LED matrix (left) mid-solve, linked
 by the four-bit move protocol over jumper wires. The 8049-based 1983 trainer streams each Hanoi move
 to an Arduino Mega 2560, which renders the disks on the panel; the program itself was loaded through
-the CP1's cassette input as a WAV [39].*
+the CP1's cassette input as a WAV [40].*
 
 </div>
 
@@ -458,10 +458,10 @@ into a tool that turns a program into a **cassette WAV** you simply play into th
 decoder reads real tapes back, validated by a byte-exact round-trip), so programs load without any
 hand-keying.
 This builds on a lively CP1 community — the
-[asig/kosmos-cp1](https://github.com/asig/kosmos-cp1) [22] emulator (with an integrated
+[asig/kosmos-cp1](https://github.com/asig/kosmos-cp1) [23] emulator (with an integrated
 assembler and an SD-card tape emulator), the
-[RalphBln cassette emulator](https://github.com/RalphBln/kosmos-cp1-arduino-cassette-emulator) [24],
-and the [moosy CP1 toolchain](https://github.com/moosy/kosmos-cp1-toolchain) [25] are all
+[RalphBln cassette emulator](https://github.com/RalphBln/kosmos-cp1-arduino-cassette-emulator) [25],
+and the [moosy CP1 toolchain](https://github.com/moosy/kosmos-cp1-toolchain) [26] are all
 valuable companions.
 
 ---
@@ -486,7 +486,7 @@ the "Institut für Lehrerfortbildung" (Institute for Teacher Training) in Hambur
 particular by Mr. Erhard Meyer, author of the manual [5], whose initials "E.M." also appear
 in the firmware EPROM ("COPYRIGHT 1982,1983 (C) GAMA, E.M., …"). What seems certain is that
 the MasterLab's birthplace lies in Hamburg; more on its origins is collected on the
-[Philips/Schuco 6400 information page](https://norbert.old.no/kits/6400/6400.html) [30].
+[Philips/Schuco 6400 information page](https://norbert.old.no/kits/6400/6400.html) [31].
 
 **External attributes.** The MasterLab is a feast for the eyes — a shapely silver case with
 a transparent Plexiglas hood, colorful keys, and a seven-segment LED display of **eight**
@@ -548,7 +548,7 @@ programming.
 
 **Recent developments (2025–2026).** Several projects have since appeared. Thorsten Brehm
 ("MacFly") built a complete
-[MasterLab **emulator**](https://github.com/ThorstenBr/MasterLab-MC6400) [29] in
+[MasterLab **emulator**](https://github.com/ThorstenBr/MasterLab-MC6400) [30] in
 JavaScript/HTML-CSS (November 2024), playable online — the emulator used as a reference
 while developing the vector display below. And the author collaborated with **Claude** (Anthropic,
 Opus 4.8) on a
@@ -579,7 +579,7 @@ digital sampling scopes render X-Y vector art poorly.
 *Figure 12. The MasterLab's vector-graphics engine on a real Tektronix 2335 analog scope: a
 perspective cube, a torus, and a sphere (left to right), each a rotating 3-D wireframe drawn from
 endpoints by the R-2R DAC, with an RC slew-limit turning the DAC's steps into drawn lines [12]; see
-the video [40].*
+the video [41].*
 
 </div>
 
@@ -601,12 +601,12 @@ without touching the machine.
 
 *Figure 13. The interactive vector shooter on the real MasterLab and 2335: the turret (bottom), a
 bullet in flight, and a wave of hexagonal aliens — one column already cleared. Played from the hex
-keypad or the SA/SB console buttons [12]; see the video [41].*
+keypad or the SA/SB console buttons [12]; see the video [42].*
 
 </div>
 
 Crucially, the perennial problem of *getting programs into the machine* now has a modern
-solution: [**PicoRAM Ultimate**](https://github.com/lambdamikel/picoram-ultimate) [31], a
+solution: [**PicoRAM Ultimate**](https://github.com/lambdamikel/picoram-ultimate) [32], a
 Raspberry Pi Pico–based SD-card RAM emulator for the MasterLab (a sibling of the
 Microtronic's PicoRAM 2090). It plugs directly into the MasterLab's two 2114 SRAM sockets
 via a ribbon cable and stands in for the machine's RAM, loading and saving complete program
@@ -624,7 +624,7 @@ MasterLab.
 
 *Figure 14. PicoRAM Ultimate (right) connected to the Philips MasterLab — it plugs directly
 into the machine's two 2114 SRAM sockets via the ribbon cable; the MasterLab's display
-shows its "HALLO" power-up greeting [31].*
+shows its "HALLO" power-up greeting [32].*
 
 </div>
 
@@ -650,7 +650,7 @@ language (and the Microtronic is only 4-bit at 500 kHz), whereas the MasterLab r
 So the MasterLab is roughly **1,290×** faster than the Microtronic and about **46×** faster
 than the CP1 — the payoff of running native code instead of an interpreter. The Microtronic
 drops further still (to ≈ 40 ips) with the display switched on. The benchmark runs are shown
-on video for the Microtronic [34], the Kosmos CP1 [35], and the Philips MasterLab [36].
+on video for the Microtronic [35], the Kosmos CP1 [36], and the Philips MasterLab [37].
 
 ### Overall scoring
 
@@ -732,58 +732,59 @@ technical history that did not exist in this form in other countries.
 16. The Microtronic Phoenix (emulator running the original 1981 firmware) — <https://github.com/lambdamikel/microtronic-phoenix>
 17. Microtronic firmware ROM "archaeology" — <https://hackaday.io/project/197415-microtronic-firmware-rom-archaeology>
 18. Jason T. Jacques, "Disassembling the Microtronic 2090" — detailed write-up of the TMS1600 ROM extraction, disassembly, and breadboard recreation — <https://jsonj.co.uk/project/microtronic/>
-19. Microtronic drum computer (RetroChallenge RC 2021/10 winner) — <https://hackaday.io/project/180252-a-retro-authentic-microtronic-rc-202110-winner>
+19. Annotated Microtronic firmware — a complete, commented reverse-engineering of the original 1981 TMS1600 operating-system ROM (theory of operation, line-by-line annotated disassembly, and a browsable web page), by Claude (Opus 4.8), directed by M. Wessel — <https://github.com/lambdamikel/microtronic-firmware-annotated>
+20. Microtronic drum computer (RetroChallenge RC 2021/10 winner) — <https://hackaday.io/project/180252-a-retro-authentic-microtronic-rc-202110-winner>
 
 ### Björn Rathje's Microtronic projects
 
-20. Björn Rathje — overview of all projects — <https://github.com/rab-berlin>
-21. Monarch2090 — *Rotomat Monarch* (1972) slot-machine simulation — <https://github.com/rab-berlin/Monarch2090>
+21. Björn Rathje — overview of all projects — <https://github.com/rab-berlin>
+22. Monarch2090 — *Rotomat Monarch* (1972) slot-machine simulation — <https://github.com/rab-berlin/Monarch2090>
 
 ### Kosmos CP1 emulators and tools
 
-22. asig/kosmos-cp1 — CP1 emulator with integrated assembler — <https://github.com/asig/kosmos-cp1>
-23. asig/kosmos_tape_emulator — Arduino CP2 SD-card cassette emulator — <https://github.com/asig/kosmos_tape_emulator>
-24. RalphBln/kosmos-cp1-arduino-cassette-emulator — <https://github.com/RalphBln/kosmos-cp1-arduino-cassette-emulator>
-25. moosy/kosmos-cp1-toolchain — <https://github.com/moosy/kosmos-cp1-toolchain>
-26. MiniPC — CP1 emulator (Georg Heinrichs) — <https://www.g-heinrichs.de/wordpress/index.php/informatik/minipc/>
-27. cp1-sim — Java CP1 emulator — <https://sourceforge.net/projects/cp1-sim/>
-28. Kosmos CP1 at the 8-bit Home Computer Museum — <http://www.8bit-homecomputermuseum.at/computer/kosmos_computer_praxis_cp1.html>
+23. asig/kosmos-cp1 — CP1 emulator with integrated assembler — <https://github.com/asig/kosmos-cp1>
+24. asig/kosmos_tape_emulator — Arduino CP2 SD-card cassette emulator — <https://github.com/asig/kosmos_tape_emulator>
+25. RalphBln/kosmos-cp1-arduino-cassette-emulator — <https://github.com/RalphBln/kosmos-cp1-arduino-cassette-emulator>
+26. moosy/kosmos-cp1-toolchain — <https://github.com/moosy/kosmos-cp1-toolchain>
+27. MiniPC — CP1 emulator (Georg Heinrichs) — <https://www.g-heinrichs.de/wordpress/index.php/informatik/minipc/>
+28. cp1-sim — Java CP1 emulator — <https://sourceforge.net/projects/cp1-sim/>
+29. Kosmos CP1 at the 8-bit Home Computer Museum — <http://www.8bit-homecomputermuseum.at/computer/kosmos_computer_praxis_cp1.html>
 
 ### Philips MasterLab
 
-29. MasterLab emulator (Thorsten Brehm, "MacFly"), JavaScript/HTML — <https://github.com/ThorstenBr/MasterLab-MC6400>
-30. Philips/Schuco MasterLab 6400 information page (Norbert) — <https://norbert.old.no/kits/6400/6400.html>
-31. PicoRAM Ultimate — Raspberry Pi Pico SD-card RAM emulator for the MasterLab (and other trainers) — <https://github.com/lambdamikel/picoram-ultimate>
+30. MasterLab emulator (Thorsten Brehm, "MacFly"), JavaScript/HTML — <https://github.com/ThorstenBr/MasterLab-MC6400>
+31. Philips/Schuco MasterLab 6400 information page (Norbert) — <https://norbert.old.no/kits/6400/6400.html>
+32. PicoRAM Ultimate — Raspberry Pi Pico SD-card RAM emulator for the MasterLab (and other trainers) — <https://github.com/lambdamikel/picoram-ultimate>
 
 ### Other Microtronic emulators
 
-32. micsim — Microtronic emulator for Linux (Ingo D. Rullhusen) — <https://freeshell.de/~d01c/micsim_0.1.0.tar.xz>
-33. 2090 Emulator for Mac (Stephan Kleinert) — <https://download.cnet.com/2090-emulator/3000-2072_4-47314.html>
+33. micsim — Microtronic emulator for Linux (Ingo D. Rullhusen) — <https://freeshell.de/~d01c/micsim_0.1.0.tar.xz>
+34. 2090 Emulator for Mac (Stephan Kleinert) — <https://download.cnet.com/2090-emulator/3000-2072_4-47314.html>
 
 ### Videos
 
-34. Speed benchmark — Busch Microtronic ("The MIPS Monster") — <https://www.youtube.com/watch?v=e8KJ-cnX9bU>
-35. Speed benchmark — Kosmos CP1 ("Another 1983 MIPS Monster") — <https://www.youtube.com/watch?v=5lR29-H8SQQ>
-36. Speed benchmark — Philips MasterLab — <https://youtu.be/T0yymKe42YQ>
-37. Recursive Towers of Hanoi on the Busch Microtronic — <https://youtu.be/SwUh-Cs_eZE>
-38. Recursive Towers of Hanoi on the Kosmos CP1 — <https://youtu.be/SXnRAB-B1f0>
-39. Towers of Hanoi on a 64×32 RGB LED matrix, driven by the Kosmos CP1 — <https://youtu.be/CkCNBzWRjq4>
-40. Rotating 3-D vector wireframes (cube, torus, sphere) on the Philips MasterLab — <https://youtu.be/bAo9eb0MnI4>
-41. "Vector Invaders" — a vector-graphics shooter for the Philips MasterLab — <https://youtu.be/onkOl3PdP7Q>
-42. Author's YouTube channel (educational & experimentation computers) — <https://www.youtube.com/playlist?list=PLvdXKcHrGqhe_Snxh4nh8RMDz2SiUDCHH>
+35. Speed benchmark — Busch Microtronic ("The MIPS Monster") — <https://www.youtube.com/watch?v=e8KJ-cnX9bU>
+36. Speed benchmark — Kosmos CP1 ("Another 1983 MIPS Monster") — <https://www.youtube.com/watch?v=5lR29-H8SQQ>
+37. Speed benchmark — Philips MasterLab — <https://youtu.be/T0yymKe42YQ>
+38. Recursive Towers of Hanoi on the Busch Microtronic — <https://youtu.be/SwUh-Cs_eZE>
+39. Recursive Towers of Hanoi on the Kosmos CP1 — <https://youtu.be/SXnRAB-B1f0>
+40. Towers of Hanoi on a 64×32 RGB LED matrix, driven by the Kosmos CP1 — <https://youtu.be/CkCNBzWRjq4>
+41. Rotating 3-D vector wireframes (cube, torus, sphere) on the Philips MasterLab — <https://youtu.be/bAo9eb0MnI4>
+42. "Vector Invaders" — a vector-graphics shooter for the Philips MasterLab — <https://youtu.be/onkOl3PdP7Q>
+43. Author's YouTube channel (educational & experimentation computers) — <https://www.youtube.com/playlist?list=PLvdXKcHrGqhe_Snxh4nh8RMDz2SiUDCHH>
 
 ### Press and further reading
 
-43. Microtronic Phoenix project page and build logs (Hackaday.io) — <https://hackaday.io/project/202835-microtronic-phoenix>
-44. "The Microtronic Phoenix Computer System", *Hackaday* (15 Sep 2025) — <https://hackaday.com/2025/09/15/the-microtronic-phoenix-computer-system/>
-45. "The Four-Bit Busch Microtronic Lives Again as the Microtronic Phoenix", *Hackster.io* — <https://www.hackster.io/news/the-four-bit-busch-microtronic-lives-again-as-the-microtronic-phoenix-complete-with-original-rom-2a5c7ccecba7>
+44. Microtronic Phoenix project page and build logs (Hackaday.io) — <https://hackaday.io/project/202835-microtronic-phoenix>
+45. "The Microtronic Phoenix Computer System", *Hackaday* (15 Sep 2025) — <https://hackaday.com/2025/09/15/the-microtronic-phoenix-computer-system/>
+46. "The Four-Bit Busch Microtronic Lives Again as the Microtronic Phoenix", *Hackster.io* — <https://www.hackster.io/news/the-four-bit-busch-microtronic-lives-again-as-the-microtronic-phoenix-complete-with-original-rom-2a5c7ccecba7>
 
 ## About the author
 
 Dr. Michael Wessel is a computer scientist and has worked in Silicon Valley, California,
 since 2010. He owes his professional career to the Busch Microtronic, which he received from
 his parents for Christmas in 1983. He has collected home computers since 2001 and is known
-in the scene as *LambdaMikel* and *MicrotronicHamburg* [42].
+in the scene as *LambdaMikel* and *MicrotronicHamburg* [43].
 
 ---
 
@@ -831,6 +832,42 @@ undertaking — the test-mode ROM extraction, the disassembly (with `naken_asm`)
 schematic analysis and the breadboard recreation — in a detailed public write-up,
 "[Disassembling the Microtronic 2090](https://jsonj.co.uk/project/microtronic/)" [18]; the
 team's running build log is on Hackaday [17].
+
+### Decoding the firmware
+
+Reading the ROM out of the chip was one thing; understanding it was another. The
+4-KB image is dense, undocumented TMS1600 microcode, and for more than forty years no
+description of the Microtronic's inner workings existed — the manuals explain what the
+machine *does*, but nothing explained *how*. In mid-2026 the author finally had the
+entire firmware reverse-engineered and annotated — not by hand over many weeks, but by
+the frontier AI model **Claude (Opus 4.8)**, directed by the author, in a single
+afternoon. The result is a public repository [19] with a complete "theory of
+operation", a line-by-line annotated disassembly, and a colour-coded, searchable web
+page that links every routine.
+
+The reconstruction lays the whole machine bare — and confirms just how much of the
+Microtronic is an illusion. Almost everything the user sees — the sixteen-instruction
+language, the sixteen registers, the carry and zero flags, the six-digit display, the
+hex keypad, even the cassette interface — is a *virtual machine*, hand-written in the
+TMS1600's own microcode; very little of it exists as hardware. The annotation recovers
+the complete RAM memory map, the fetch-decode-execute cycle with its two-level opcode
+dispatch, and the implementation of every instruction, down to small elegances that had
+never been written down anywhere: the display has no character font at all (the
+hex-to-segment decode is baked into the chip's output PLA); multiplication, division and
+hexadecimal/decimal conversion are done by simple counting loops, since the 4-bit chip
+has no such arithmetic; the carry flag means "no borrow"; and the built-in demonstration
+(a Nim game) is itself a Microtronic program, stored in the firmware ROM as data and
+copied into RAM at start-up — the machine ships an application written in its own
+invented language.
+
+Perhaps the most remarkable part, however, is not the firmware but the method. Mapping
+out an undocumented ROM for so exotic an architecture as the TMS1000 family — a 4-bit
+Harvard design whose program counter is a shift register, and for which mainstream tools
+such as *Ghidra* have no support at all — would traditionally be weeks or months of
+specialist labour. That it can now be done in an afternoon by an AI model, essentially
+independently, is a striking marker of how quickly AI-assisted reverse engineering is
+advancing — with implications, for better and for worse, that reach well beyond a
+beloved 1981 educational computer.
 
 ### The Phoenix
 
@@ -888,7 +925,7 @@ redundant instructions) can easily be adapted for one's own experiments — it i
 a simple Arduino "C" program (not so easy with the original firmware). Thus a Microtronic
 variant was developed that acts as a MIDI drum computer / "drum sequencer", requiring
 extensive instruction-set extensions and machine-language changes; this "Microtronic drum
-computer" won a prize in the RetroChallenge RC 2021/10 [19].
+computer" won a prize in the RetroChallenge RC 2021/10 [20].
 
 Despite all these extensions and advantages, nothing will be dearer to the Microtronic fan
 than the original. With the Phoenix we now have, after 44 years, a re-edition of the
@@ -897,6 +934,6 @@ name *Phoenix* therefore seemed fitting — the Microtronic ROM, all but lost in
 history, flies once more, and with it the Microtronic. With new hardware the Microtronic has
 now truly become "immortal", and will go on finding new fans for decades to come.
 
-*The Microtronic Phoenix is documented in detail in its project build logs [43] and has been
-covered by Hackaday [44] and Hackster.io [45]. Credit for the ROM excavation and the Phoenix
+*The Microtronic Phoenix is documented in detail in its project build logs [44] and has been
+covered by Hackaday [45] and Hackster.io [46]. Credit for the ROM excavation and the Phoenix
 hardware is shared with Jason T. Jacques and "Decle", whose work is referenced above.*
