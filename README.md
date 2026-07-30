@@ -265,8 +265,8 @@ contemporary Microtronic software appeared in 2026: a set of programs written wi
 assistance ("vibe coding") by Claude (Anthropic, Opus 4.8) — the same author as this English
 edition — targeting the PicoRAM 2090-extended Microtronic [14]. They are Microtronic machine
 code using only existing opcodes (no firmware changes), and lean on PicoRAM's modern I/O —
-OLED graphics, text-to-speech, and SRAM bank-switching — to do things the 1981 machine never
-could on its own:
+OLED graphics, text-to-speech, SRAM bank-switching, and the battery-backed real-time clock —
+to do things the 1981 machine never could on its own:
 
 - **Tic-Tac-Toe** (human-first and computer-first variants) — the first working Tic-Tac-Toe
   for the Microtronic. The authentic 1981 Busch manual strategy only ever worked when the
@@ -285,6 +285,20 @@ could on its own:
   as the cockpit window (the lander descending, a thrust flame when you burn, a smoking
   crater on impact), and TTS for the verdict — pure-integer physics in a single bank
   (172 words).
+
+Two later additions are looping *demos* rather than games:
+
+- **MICRONET 2** — a self-restarting version of the classic MICRONET graphics demo: an
+  animated diagonal "net" woven line by line on the OLED, then "MICROTRONIC" spelled across
+  the top band and spoken aloud, wiping and redrawing forever. The six-digit LED and the four
+  DOT-output lamps are kept busy throughout — a running "lines woven" counter and a little
+  blinking binary light show — making it an ideal exhibit-table piece.
+- **Vector Clock** — a big-digit wall clock built on PicoRAM's battery-backed real-time clock:
+  the live time ticks on the red LED, and a keypress draws it as four large vector
+  seven-segment digits on the OLED. It is also a neat study in taming PicoRAM's subtlest
+  hazard — the real-time-clock load is an *asynchronous* operation that briefly rewrites
+  memory beneath the running program — using a "runway" of no-op instructions and a carefully
+  placed key-wait so the timing race can never disturb the display.
 
 The assembler sources and a simulator are in the
 [`software/vibe-coded/`](https://github.com/lambdamikel/picoram2090/tree/main/software/vibe-coded)
