@@ -852,10 +852,13 @@ team's running build log is on Hackaday [17].
 Reading the ROM out of the chip was one thing; understanding it was another. The
 4-KB image is dense, undocumented TMS1600 microcode, and for more than forty years no
 description of the Microtronic's inner workings existed — the manuals explain what the
-machine *does*, but nothing explained *how*. In mid-2026 the author finally had the
-entire firmware reverse-engineered and annotated — not by hand over many weeks, but by
-the frontier AI model **Claude (Opus 4.8)**, directed by the author, in a single
-afternoon. The result is a public repository [19] with a complete "theory of
+machine *does*, but no complete description of *how* it worked internally existed —
+Jason's write-up [18] had begun the job, documenting the extraction and disassembly and
+untangling specific routines, but the firmware as a whole was still uncharted. In
+mid-2026 the author had it reconstructed and annotated end to end — not by hand over
+many weeks, but by the frontier AI model **Claude (Opus 4.8)**, directed by the author
+and building on the recovered dump, Jason's TMS1600 emulator, and Jason's write-up, over
+about a day. The result is a public repository [19] with a complete "theory of
 operation", a line-by-line annotated disassembly, and a colour-coded, searchable web
 page that links every routine.
 
@@ -878,10 +881,11 @@ Perhaps the most remarkable part, however, is not the firmware but the method. M
 out an undocumented ROM for so exotic an architecture as the TMS1000 family — a 4-bit
 Harvard design whose program counter is a shift register, and for which mainstream tools
 such as *Ghidra* have no support at all — would traditionally be weeks or months of
-specialist labour. That it can now be done in an afternoon by an AI model, essentially
-independently, is a striking marker of how quickly AI-assisted reverse engineering is
-advancing — with implications, for better and for worse, that reach well beyond a
-beloved 1981 educational computer.
+specialist labour. That an AI model, given the dump, the manuals, an emulator, and the
+existing write-up, can now synthesise the whole into a uniform annotation in an afternoon
+is a striking marker of how quickly AI-assisted reverse engineering is advancing — with
+implications, for better and for worse, that reach well beyond a beloved 1981 educational
+computer.
 
 ### The Phoenix
 

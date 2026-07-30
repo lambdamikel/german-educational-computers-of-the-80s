@@ -1381,14 +1381,18 @@ Reading the ROM out of the chip was one thing; understanding it was
 another. The 4-KB image is dense, undocumented TMS1600 microcode, and
 for more than forty years no description of the
 Microtronic\textquotesingle s inner workings existed --- the manuals
-explain what the machine \emph{does}, but nothing explained \emph{how}.
-In mid-2026 the author finally had the entire firmware
-reverse-engineered and annotated --- not by hand over many weeks, but by
-the frontier AI model \textbf{Claude (Opus 4.8)}, directed by the
-author, in a single afternoon. The result is a public repository
-{[}19{]} with a complete "theory of operation", a line-by-line annotated
-disassembly, and a colour-coded, searchable web page that links every
-routine.
+explain what the machine \emph{does}, but no complete description of
+\emph{how} it worked internally existed --- Jason\textquotesingle s
+write-up {[}18{]} had begun the job, documenting the extraction and
+disassembly and untangling specific routines, but the firmware as a
+whole was still uncharted. In mid-2026 the author had it reconstructed
+and annotated end to end --- not by hand over many weeks, but by the
+frontier AI model \textbf{Claude (Opus 4.8)}, directed by the author and
+building on the recovered dump, Jason\textquotesingle s TMS1600
+emulator, and Jason\textquotesingle s write-up, over about a day. The
+result is a public repository {[}19{]} with a complete "theory of
+operation", a line-by-line annotated disassembly, and a colour-coded,
+searchable web page that links every routine.
 
 The reconstruction lays the whole machine bare --- and confirms just how
 much of the Microtronic is an illusion. Almost everything the user sees
@@ -1413,8 +1417,9 @@ method. Mapping out an undocumented ROM for so exotic an architecture as
 the TMS1000 family --- a 4-bit Harvard design whose program counter is a
 shift register, and for which mainstream tools such as \emph{Ghidra}
 have no support at all --- would traditionally be weeks or months of
-specialist labour. That it can now be done in an afternoon by an AI
-model, essentially independently, is a striking marker of how quickly
+specialist labour. That an AI model, given the dump, the manuals, an
+emulator, and the existing write-up, can now synthesise the whole into a
+uniform annotation in an afternoon is a striking marker of how quickly
 AI-assisted reverse engineering is advancing --- with implications, for
 better and for worse, that reach well beyond a beloved 1981 educational
 computer.
