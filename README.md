@@ -191,8 +191,9 @@ covers more complex programs, circuits and experiments with additional Busch kit
 Highlights include a moon-landing game, a perpetual calendar, biorhythm calculation, a
 calculator, tic-tac-toe and sine computation; the electronics section covers timers,
 tone/music generators, model-railway control, a frequency counter and a reaction-time
-meter. An English translation of this classic manual (Part 1) is now underway [2], making
-it accessible to a wider, non-German-speaking audience.
+meter. Both volumes have since been translated into English [2], as has the companion
+"Computer Spiele" booklet (Busch Nr. 2094) with its 25 games and experiments, making them
+accessible to a wider, non-German-speaking audience.
 
 **Extensions, old and new.** The original "2095" cassette interface is leisurely (a full
 dump takes ~220 s ≈ 14 baud); the "2092 special interface" doubles the GPIOs and adds
@@ -723,7 +724,7 @@ technical history that did not exist in this form in other countries.
 ### Primary sources and manuals
 
 1. Busch Microtronic 2090 manual (German, two volumes), Jörg Vallen — <https://github.com/lambdamikel/Busch-2090/tree/master/manuals>
-2. English translation of the Busch Microtronic 2090 manual (Part 1), M. Wessel — <https://github.com/lambdamikel/microtronic-2090-manuals-english>
+2. English translation of the Busch Microtronic 2090 manual (both parts) and of the "Computer Spiele" booklet 2094, M. Wessel — <https://github.com/lambdamikel/microtronic-2090-manuals-english>
 3. Jörg Vallen, diploma thesis (1980), preamble and development history — <https://github.com/lambdamikel/Busch-2090/blob/master/manuals/joerg-vallen-diplom.pdf>
 4. Kosmos CP1 "Computer Praxis" manual — <https://archive.org/details/cp-1-manual>
 5. Philips 6400 "Microcomputer Master Lab" instruction manual — <https://www.manualslib.com/manual/714710/Philips-6400-Series.html>
