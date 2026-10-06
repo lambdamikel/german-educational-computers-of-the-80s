@@ -793,6 +793,7 @@ technical history that did not exist in this form in other countries.
 44. Microtronic Phoenix project page and build logs (Hackaday.io) — <https://hackaday.io/project/202835-microtronic-phoenix>
 45. "The Microtronic Phoenix Computer System", *Hackaday* (15 Sep 2025) — <https://hackaday.com/2025/09/15/the-microtronic-phoenix-computer-system/>
 46. "The Four-Bit Busch Microtronic Lives Again as the Microtronic Phoenix", *Hackster.io* — <https://www.hackster.io/news/the-four-bit-busch-microtronic-lives-again-as-the-microtronic-phoenix-complete-with-original-rom-2a5c7ccecba7>
+47. Microtronic emulator for the browser, running the original firmware (JavaScript) — <https://lambdamikel.github.io/microtronic-emulator/> · source: <https://github.com/lambdamikel/microtronic-emulator>
 
 ## About the author
 
@@ -952,6 +953,27 @@ Microtronic that truly deserves the name: an emulator that could not be more aut
 name *Phoenix* therefore seemed fitting — the Microtronic ROM, all but lost in the flames of
 history, flies once more, and with it the Microtronic. With new hardware the Microtronic has
 now truly become "immortal", and will go on finding new fans for decades to come.
+
+### The Microtronic in the browser
+
+In October 2026 the original firmware took one more step — from new hardware to no hardware at
+all: a [**browser-based Microtronic emulator**](https://lambdamikel.github.io/microtronic-emulator/) [47].
+Written in plain JavaScript with Claude Code (Opus 5.5), it runs the same 1981 ROM on an emulated
+TMS1600 and models the surrounding circuit at pin level, following the Busch schematic — the 2114
+program RAM, the multiplexed display, the keypad matrix, the inputs and outputs, the flag LEDs and
+the 1 Hz clock — so nothing in the firmware is patched or intercepted; like the Phoenix, it takes
+its CPU semantics from Jason's TMS1600 emulator [18]. The console is drawn from photographs of the
+author's machine, and the page adds a library of programs from the manuals, a live view of the
+registers and the program memory, and PicoRAM's sound instruction. Anyone can now try the
+Microtronic: there is nothing to build, and nothing to load or install.
+
+<div align="center">
+
+![The browser-based Microtronic emulator](images/microtronic-emulator.png)
+
+*Figure 16. The Microtronic in the browser: the original firmware running in a JavaScript emulator [47].*
+
+</div>
 
 *The Microtronic Phoenix is documented in detail in its project build logs [44] and has been
 covered by Hackaday [45] and Hackster.io [46]. Credit for the ROM excavation and the Phoenix

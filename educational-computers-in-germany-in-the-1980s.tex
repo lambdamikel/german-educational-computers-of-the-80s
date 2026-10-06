@@ -1307,6 +1307,11 @@ reading}\label{press-and-further-reading}
   "The Four-Bit Busch Microtronic Lives Again as the Microtronic
   Phoenix", \emph{Hackster.io} ---
   \url{https://www.hackster.io/news/the-four-bit-busch-microtronic-lives-again-as-the-microtronic-phoenix-complete-with-original-rom-2a5c7ccecba7}
+\item
+  Microtronic emulator for the browser, running the original firmware
+  (JavaScript) ---
+  \url{https://lambdamikel.github.io/microtronic-emulator/} · source:
+  \url{https://github.com/lambdamikel/microtronic-emulator}
 \end{enumerate}
 
 \subsection{About the author}\label{about-the-author}
@@ -1509,6 +1514,35 @@ name: an emulator that could not be more authentic. The name
 lost in the flames of history, flies once more, and with it the
 Microtronic. With new hardware the Microtronic has now truly become
 "immortal", and will go on finding new fans for decades to come.
+
+\subsubsection{The Microtronic in the
+browser}\label{the-microtronic-in-the-browser}
+
+In October 2026 the original firmware took one more step --- from new
+hardware to no hardware at all: a
+\href{https://lambdamikel.github.io/microtronic-emulator/}{\textbf{browser-based
+Microtronic emulator}} {[}47{]}. Written in plain JavaScript with Claude
+Code (Opus 5.5), it runs the same 1981 ROM on an emulated TMS1600 and
+models the surrounding circuit at pin level, following the Busch
+schematic --- the 2114 program RAM, the multiplexed display, the keypad
+matrix, the inputs and outputs, the flag LEDs and the 1 Hz clock --- so
+nothing in the firmware is patched or intercepted; like the Phoenix, it
+takes its CPU semantics from Jason\textquotesingle s TMS1600 emulator
+{[}18{]}. The console is drawn from photographs of the
+author\textquotesingle s machine, and the page adds a library of
+programs from the manuals, a live view of the registers and the program
+memory, and PicoRAM\textquotesingle s sound instruction. Anyone can now
+try the Microtronic: there is nothing to build, and nothing to load or
+install.
+
+\begin{center}\begin{minipage}{\linewidth}\centering
+
+\pandocbounded{\includegraphics[keepaspectratio,alt={The browser-based Microtronic emulator}]{images/microtronic-emulator.png}}
+
+\emph{Figure 16. The Microtronic in the browser: the original firmware
+running in a JavaScript emulator {[}47{]}.}
+
+\end{minipage}\end{center}
 
 \emph{The Microtronic Phoenix is documented in detail in its project
 build logs {[}44{]} and has been covered by Hackaday {[}45{]} and
