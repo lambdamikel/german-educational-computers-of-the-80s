@@ -393,9 +393,23 @@ ROM on an emulated TMS1600, in plain JavaScript, behind a console drawn
 from photographs of the real machine. Keys, display, inputs, outputs and
 the 1 Hz clock all work as on the original, and a library of programs
 from the manuals is one click away --- so anyone can try the Microtronic
-without building, loading or installing anything. It is described in
-more detail \hyperref[the-microtronic-in-the-browser]{at the end of the
-appendix}.
+without building, loading or installing anything (Figure 3). It is
+described in more detail \hyperref[the-microtronic-in-the-browser]{at
+the end of the appendix}.
+
+\textbf{Hardware emulators.} The author\textquotesingle s own
+\href{https://github.com/lambdamikel/Busch-2090}{Arduino-based hardware
+emulators} {[}13{]} have appeared from 2016 onward --- among them the
+\href{https://github.com/lambdamikel/Busch-2090/tree/master/busch2090-mega-v4}{Busch
+2090 "Mega" emulator} of 2016, built around an Arduino Mega 2560 (Figure
+4), and the "Microtronic 2nd / Next Generation" re-editions built into a
+Busch "2070" console (Hackaday "Reinvented Retro Contest" winner, 2021).
+These, too, are re-implementations of the Microtronic\textquotesingle s
+instruction set. The
+\href{https://github.com/lambdamikel/microtronic-phoenix}{\textbf{Microtronic
+Phoenix}} {[}16{]} of 2025 (Figure 17) is the first hardware emulator to
+run the original firmware; it is described in
+\hyperref[appendix-the-microtronic-phoenix]{the appendix}.
 
 \begin{center}\begin{minipage}{\linewidth}\centering
 
@@ -406,16 +420,14 @@ running in a JavaScript emulator {[}47{]}.}
 
 \end{minipage}\end{center}
 
-\textbf{Hardware emulators.} The author\textquotesingle s own
-\href{https://github.com/lambdamikel/Busch-2090}{Arduino-based hardware
-emulators} {[}13{]} have appeared from 2016 onward, including the
-"Microtronic 2nd / Next Generation" re-editions built into a Busch
-"2070" console (Hackaday "Reinvented Retro Contest" winner, 2021).
-These, too, are re-implementations of the Microtronic\textquotesingle s
-instruction set. The
-\href{https://github.com/lambdamikel/microtronic-phoenix}{\textbf{Microtronic
-Phoenix}} {[}16{]} of 2025 is the first hardware emulator to run the
-original firmware; it is the subject of the appendix.
+\begin{center}\begin{minipage}{\linewidth}\centering
+
+\pandocbounded{\includegraphics[keepaspectratio,alt={The Busch 2090 Microtronic emulator for the Arduino Mega 2560}]{images/microtronic-mega-emulator.jpg}}
+
+\emph{Figure 4. A hardware emulator: the author\textquotesingle s Busch
+2090 Microtronic emulator for the Arduino Mega 2560 {[}13{]}.}
+
+\end{minipage}\end{center}
 
 \textbf{Extensions, old and new.} The original "2095" cassette interface
 is leisurely (a full dump takes \textasciitilde220 s ≈ 14 baud); the
@@ -441,7 +453,7 @@ RetroChallenge 2023/10 Grand Prize.
 
 \pandocbounded{\includegraphics[keepaspectratio,alt={Busch Microtronic with 2095 cassette interface and speech synthesizer}]{images/microtronic-2095.jpg}}
 
-\emph{Figure 4. The Busch Microtronic with the original 2095 cassette
+\emph{Figure 5. The Busch Microtronic with the original 2095 cassette
 interface and a DIY speech synthesizer.}
 
 \end{minipage}\end{center}
@@ -585,7 +597,7 @@ this very article is now also writing fresh machine code for a
 
 \pandocbounded{\includegraphics[keepaspectratio,alt={Tic-Tac-Toe on the Microtronic + PicoRAM 2090}]{images/ttt-picoram.jpg}}
 
-\emph{Figure 5. The first working Tic-Tac-Toe for the Microtronic,
+\emph{Figure 6. The first working Tic-Tac-Toe for the Microtronic,
 running on the PicoRAM 2090-extended machine: the 3×3 grid is drawn on
 PicoRAM\textquotesingle s OLED display (top left), with spoken moves and
 --- for the human-first game --- a new from-scratch board-scanning AI
@@ -597,7 +609,7 @@ PicoRAM\textquotesingle s OLED display (top left), with spoken moves and
 
 \pandocbounded{\includegraphics[keepaspectratio,alt={Lunar Lander on the Microtronic + PicoRAM 2090}]{images/lander-picoram.jpg}}
 
-\emph{Figure 6. Lunar Lander --- a wholly original game written from
+\emph{Figure 7. Lunar Lander --- a wholly original game written from
 scratch for the PicoRAM 2090-extended Microtronic. The OLED (top left)
 is the cockpit window showing the descending lander; the red LED below
 shows the ALT / VEL / FUEL instruments {[}14{]}.}
@@ -612,7 +624,7 @@ shows the ALT / VEL / FUEL instruments {[}14{]}.}
 
 \pandocbounded{\includegraphics[keepaspectratio,alt={Kosmos CP1 with manual and quick-reference card}]{images/cp1.jpg}}
 
-\emph{Figure 7. The Kosmos CP1, with its spiral-bound manual and the
+\emph{Figure 8. The Kosmos CP1, with its spiral-bound manual and the
 green quick-reference card. The two expansion modules connected along
 the top are the CP3 memory expansion and the CP2 cassette interface.}
 
@@ -664,7 +676,7 @@ ergonomically inferior to what hexadecimal would have afforded.
 
 \pandocbounded{\includegraphics[keepaspectratio,alt={Inside the Kosmos CP1: main board, memory expansion, and cassette interface}]{images/cp1-internals.jpg}}
 
-\emph{Figure 8. Inside the CP1 and its two stacked expansion modules (on
+\emph{Figure 9. Inside the CP1 and its two stacked expansion modules (on
 the Kosmos construction rails). \textbf{Bottom} --- the CP1 main board:
 the mask-programmed \textbf{Intel 8049} microcontroller (here an
 M5L8049, marked "KOSMOS B") and an \textbf{8155} (M5L8155P) for RAM and
@@ -743,7 +755,7 @@ Home Computer Museum} {[}29{]}.
 
 \includegraphics[width=3in,height=\textheight,keepaspectratio,alt={Computron, the Kosmos CP1 mascot}]{images/computron.png}
 
-\emph{Figure 9. Computron, the Kosmos CP1\textquotesingle s mascot, who
+\emph{Figure 10. Computron, the Kosmos CP1\textquotesingle s mascot, who
 "carries out" the CPU operations in the manual. From the Kosmos CP1
 manual {[}4{]}; © Kosmos, reproduced for illustration.}
 
@@ -764,7 +776,7 @@ available {[}40{]}).
 
 \pandocbounded{\includegraphics[keepaspectratio,alt={The Kosmos CP1 driving a 64×32 RGB LED matrix with the Towers of Hanoi solution}]{images/cp1-hanoi-matrix.jpg}}
 
-\emph{Figure 10. The real rig: a Kosmos CP1 (right) driving a 64×32 RGB
+\emph{Figure 11. The real rig: a Kosmos CP1 (right) driving a 64×32 RGB
 LED matrix (left) mid-solve, linked by the four-bit move protocol over
 jumper wires. The 8049-based 1983 trainer streams each Hanoi move to an
 Arduino Mega 2560, which renders the disks on the panel; the program
@@ -802,7 +814,7 @@ toolchain} {[}26{]} are all valuable companions.
 
 \pandocbounded{\includegraphics[keepaspectratio,alt={Philips MasterLab and its manual}]{images/masterlab.jpg}}
 
-\emph{Figure 11. The Philips MasterLab and its "Microcomputer Master
+\emph{Figure 12. The Philips MasterLab and its "Microcomputer Master
 Lab" manual.}
 
 \end{minipage}\end{center}
@@ -893,7 +905,7 @@ microprocessor programming.
 
 \pandocbounded{\includegraphics[keepaspectratio,alt={Philips MasterLab with an attached experiment box}]{images/masterlab-expbox.jpg}}
 
-\emph{Figure 12. The Philips MasterLab with an attached experiment box.}
+\emph{Figure 13. The Philips MasterLab with an attached experiment box.}
 
 \end{minipage}\end{center}
 
@@ -936,7 +948,7 @@ X-Y vector art poorly.
 
 \pandocbounded{\includegraphics[keepaspectratio,alt={Cube, torus and sphere on a real Tektronix 2335}]{images/masterlab-vector-scope.jpg}}
 
-\emph{Figure 13. The MasterLab\textquotesingle s vector-graphics engine
+\emph{Figure 14. The MasterLab\textquotesingle s vector-graphics engine
 on a real Tektronix 2335 analog scope: a perspective cube, a torus, and
 a sphere (left to right), each a rotating 3-D wireframe drawn from
 endpoints by the R-2R DAC, with an RC slew-limit turning the
@@ -965,7 +977,7 @@ external arcade buttons, so visitors play without touching the machine.
 
 \pandocbounded{\includegraphics[keepaspectratio,alt={The vector shooter on a real Tektronix 2335}]{images/masterlab-shooter.jpg}}
 
-\emph{Figure 14. The interactive vector shooter on the real MasterLab
+\emph{Figure 15. The interactive vector shooter on the real MasterLab
 and 2335: the turret (bottom), a bullet in flight, and a wave of
 hexagonal aliens --- one column already cleared. Played from the hex
 keypad or the SA/SB console buttons {[}12{]}; see the video {[}42{]}.}
@@ -992,7 +1004,7 @@ way to develop for, and experiment with, the MasterLab.
 
 \pandocbounded{\includegraphics[keepaspectratio,alt={PicoRAM Ultimate connected to the Philips MasterLab}]{images/picoram-ultimate-masterlab.jpg}}
 
-\emph{Figure 15. PicoRAM Ultimate (right) connected to the Philips
+\emph{Figure 16. PicoRAM Ultimate (right) connected to the Philips
 MasterLab --- it plugs directly into the machine\textquotesingle s two
 2114 SRAM sockets via the ribbon cable; the MasterLab\textquotesingle s
 display shows its "HALLO" power-up greeting {[}32{]}.}
@@ -1362,7 +1374,7 @@ Phoenix}\label{appendix-the-microtronic-phoenix}
 
 \pandocbounded{\includegraphics[keepaspectratio,alt={The Microtronic Phoenix, running the original firmware}]{images/phoenix.jpg}}
 
-\emph{Figure 16. A new build running the original firmware: the
+\emph{Figure 17. A new build running the original firmware: the
 Microtronic Phoenix {[}16{]}.}
 
 \end{minipage}\end{center}

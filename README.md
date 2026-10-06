@@ -208,7 +208,18 @@ does not: the [**browser-based Microtronic emulator**](https://lambdamikel.githu
 a console drawn from photographs of the real machine. Keys, display, inputs, outputs and the
 1 Hz clock all work as on the original, and a library of programs from the manuals is one
 click away — so anyone can try the Microtronic without building, loading or installing
-anything. It is described in more detail [at the end of the appendix](#the-microtronic-in-the-browser).
+anything (Figure 3). It is described in more detail [at the end of the appendix](#the-microtronic-in-the-browser).
+
+**Hardware emulators.** The author's own
+[Arduino-based hardware emulators](https://github.com/lambdamikel/Busch-2090) [13] have
+appeared from 2016 onward — among them the
+[Busch 2090 "Mega" emulator](https://github.com/lambdamikel/Busch-2090/tree/master/busch2090-mega-v4)
+of 2016, built around an Arduino Mega 2560 (Figure 4), and the "Microtronic 2nd / Next Generation" re-editions
+built into a Busch "2070" console (Hackaday "Reinvented Retro Contest" winner, 2021). These,
+too, are re-implementations of the Microtronic's instruction set. The
+[**Microtronic Phoenix**](https://github.com/lambdamikel/microtronic-phoenix) [16] of 2025
+(Figure 17) is the first hardware emulator to run the original firmware; it is described in
+[the appendix](#appendix-the-microtronic-phoenix).
 
 <div align="center">
 
@@ -218,13 +229,13 @@ anything. It is described in more detail [at the end of the appendix](#the-micro
 
 </div>
 
-**Hardware emulators.** The author's own
-[Arduino-based hardware emulators](https://github.com/lambdamikel/Busch-2090) [13] have
-appeared from 2016 onward, including the "Microtronic 2nd / Next Generation" re-editions
-built into a Busch "2070" console (Hackaday "Reinvented Retro Contest" winner, 2021). These,
-too, are re-implementations of the Microtronic's instruction set. The
-[**Microtronic Phoenix**](https://github.com/lambdamikel/microtronic-phoenix) [16] of 2025 is
-the first hardware emulator to run the original firmware; it is the subject of the appendix.
+<div align="center">
+
+![The Busch 2090 Microtronic emulator for the Arduino Mega 2560](images/microtronic-mega-emulator.jpg)
+
+*Figure 4. A hardware emulator: the author's Busch 2090 Microtronic emulator for the Arduino Mega 2560 [13].*
+
+</div>
 
 **Extensions, old and new.** The original "2095" cassette interface is leisurely (a full
 dump takes ~220 s ≈ 14 baud); the "2092 special interface" doubles the GPIOs and adds
@@ -243,7 +254,7 @@ them as new side effects. PicoRAM 2090 won the RetroChallenge 2023/10 Grand Priz
 
 ![Busch Microtronic with 2095 cassette interface and speech synthesizer](images/microtronic-2095.jpg)
 
-*Figure 4. The Busch Microtronic with the original 2095 cassette interface and a DIY speech synthesizer.*
+*Figure 5. The Busch Microtronic with the original 2095 cassette interface and a DIY speech synthesizer.*
 
 </div>
 
@@ -335,7 +346,7 @@ machine code for a 45-year-old 4-bit computer.
 
 ![Tic-Tac-Toe on the Microtronic + PicoRAM 2090](images/ttt-picoram.jpg)
 
-*Figure 5. The first working Tic-Tac-Toe for the Microtronic, running on the PicoRAM
+*Figure 6. The first working Tic-Tac-Toe for the Microtronic, running on the PicoRAM
 2090-extended machine: the 3×3 grid is drawn on PicoRAM's OLED display (top left), with
 spoken moves and — for the human-first game — a new from-scratch board-scanning AI [14].*
 
@@ -345,7 +356,7 @@ spoken moves and — for the human-first game — a new from-scratch board-scann
 
 ![Lunar Lander on the Microtronic + PicoRAM 2090](images/lander-picoram.jpg)
 
-*Figure 6. Lunar Lander — a wholly original game written from scratch for the PicoRAM
+*Figure 7. Lunar Lander — a wholly original game written from scratch for the PicoRAM
 2090-extended Microtronic. The OLED (top left) is the cockpit window showing the descending
 lander; the red LED below shows the ALT / VEL / FUEL instruments [14].*
 
@@ -359,7 +370,7 @@ lander; the red LED below shows the ALT / VEL / FUEL instruments [14].*
 
 ![Kosmos CP1 with manual and quick-reference card](images/cp1.jpg)
 
-*Figure 7. The Kosmos CP1, with its spiral-bound manual and the green quick-reference card.
+*Figure 8. The Kosmos CP1, with its spiral-bound manual and the green quick-reference card.
 The two expansion modules connected along the top are the CP3 memory expansion and the CP2
 cassette interface.*
 
@@ -402,7 +413,7 @@ breakpoint facility — one inserts HALT manually. The decimal scheme and the cu
 
 ![Inside the Kosmos CP1: main board, memory expansion, and cassette interface](images/cp1-internals.jpg)
 
-*Figure 8. Inside the CP1 and its two stacked expansion modules (on the Kosmos construction
+*Figure 9. Inside the CP1 and its two stacked expansion modules (on the Kosmos construction
 rails). **Bottom** — the CP1 main board: the mask-programmed **Intel 8049** microcontroller (here
 an M5L8049, marked "KOSMOS B") and an **8155** (M5L8155P) for RAM and I/O, above the orange
 keypad-matrix PCB and the shielded six-digit LED display. **Middle** — the CP3 **memory
@@ -463,7 +474,7 @@ been developed. Further background on the CP1 is collected at the
 
 ![Computron, the Kosmos CP1 mascot](images/computron.png)
 
-*Figure 9. Computron, the Kosmos CP1's mascot, who "carries out" the CPU operations in the
+*Figure 10. Computron, the Kosmos CP1's mascot, who "carries out" the CPU operations in the
 manual. From the Kosmos CP1 manual [4]; © Kosmos, reproduced for illustration.*
 
 </div>
@@ -480,7 +491,7 @@ solve is available [40]).
 
 ![The Kosmos CP1 driving a 64×32 RGB LED matrix with the Towers of Hanoi solution](images/cp1-hanoi-matrix.jpg)
 
-*Figure 10. The real rig: a Kosmos CP1 (right) driving a 64×32 RGB LED matrix (left) mid-solve, linked
+*Figure 11. The real rig: a Kosmos CP1 (right) driving a 64×32 RGB LED matrix (left) mid-solve, linked
 by the four-bit move protocol over jumper wires. The 8049-based 1983 trainer streams each Hanoi move
 to an Arduino Mega 2560, which renders the disks on the panel; the program itself was loaded through
 the CP1's cassette input as a WAV [40].*
@@ -511,7 +522,7 @@ valuable companions.
 
 ![Philips MasterLab and its manual](images/masterlab.jpg)
 
-*Figure 11. The Philips MasterLab and its "Microcomputer Master Lab" manual.*
+*Figure 12. The Philips MasterLab and its "Microcomputer Master Lab" manual.*
 
 </div>
 
@@ -581,7 +592,7 @@ programming.
 
 ![Philips MasterLab with an attached experiment box](images/masterlab-expbox.jpg)
 
-*Figure 12. The Philips MasterLab with an attached experiment box.*
+*Figure 13. The Philips MasterLab with an attached experiment box.*
 
 </div>
 
@@ -615,7 +626,7 @@ digital sampling scopes render X-Y vector art poorly.
 
 ![Cube, torus and sphere on a real Tektronix 2335](images/masterlab-vector-scope.jpg)
 
-*Figure 13. The MasterLab's vector-graphics engine on a real Tektronix 2335 analog scope: a
+*Figure 14. The MasterLab's vector-graphics engine on a real Tektronix 2335 analog scope: a
 perspective cube, a torus, and a sphere (left to right), each a rotating 3-D wireframe drawn from
 endpoints by the R-2R DAC, with an RC slew-limit turning the DAC's steps into drawn lines [12]; see
 the video [41].*
@@ -638,7 +649,7 @@ without touching the machine.
 
 ![The vector shooter on a real Tektronix 2335](images/masterlab-shooter.jpg)
 
-*Figure 14. The interactive vector shooter on the real MasterLab and 2335: the turret (bottom), a
+*Figure 15. The interactive vector shooter on the real MasterLab and 2335: the turret (bottom), a
 bullet in flight, and a wave of hexagonal aliens — one column already cleared. Played from the hex
 keypad or the SA/SB console buttons [12]; see the video [42].*
 
@@ -661,7 +672,7 @@ MasterLab.
 
 ![PicoRAM Ultimate connected to the Philips MasterLab](images/picoram-ultimate-masterlab.jpg)
 
-*Figure 15. PicoRAM Ultimate (right) connected to the Philips MasterLab — it plugs directly
+*Figure 16. PicoRAM Ultimate (right) connected to the Philips MasterLab — it plugs directly
 into the machine's two 2114 SRAM sockets via the ribbon cable; the MasterLab's display
 shows its "HALLO" power-up greeting [32].*
 
@@ -834,7 +845,7 @@ in the scene as *LambdaMikel* and *MicrotronicHamburg* [43].
 
 ![The Microtronic Phoenix, running the original firmware](images/phoenix.jpg)
 
-*Figure 16. A new build running the original firmware: the Microtronic Phoenix [16].*
+*Figure 17. A new build running the original firmware: the Microtronic Phoenix [16].*
 
 </div>
 
