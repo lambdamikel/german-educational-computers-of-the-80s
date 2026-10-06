@@ -191,9 +191,40 @@ covers more complex programs, circuits and experiments with additional Busch kit
 Highlights include a moon-landing game, a perpetual calendar, biorhythm calculation, a
 calculator, tic-tac-toe and sine computation; the electronics section covers timers,
 tone/music generators, model-railway control, a frequency counter and a reaction-time
-meter. Both volumes have since been translated into English [2], as has the companion
-"Computer Spiele" booklet (Busch Nr. 2094) with its 25 games and experiments, making them
-accessible to a wider, non-German-speaking audience.
+meter. Both volumes have since been
+[translated into English](https://github.com/lambdamikel/microtronic-2090-manuals-english) [2]
+([read online](https://lambdamikel.github.io/microtronic-2090-manuals-english/)), as has the
+companion ["Computer Spiele" booklet](https://lambdamikel.github.io/microtronic-2090-manuals-english/computer-games.html)
+(Busch Nr. 2094) with its 25 games and experiments, making them accessible to a wider,
+non-German-speaking audience.
+
+**Software emulators.** A range of emulators exists. The first was written by the author in
+1985, in BASIC on a Schneider CPC 464; later came a
+[C/Linux emulator](https://freeshell.de/~d01c/micsim_0.1.0.tar.xz) by Ingo D. Rullhusen [33]
+and a [Macintosh app](https://download.cnet.com/2090-emulator/3000-2072_4-47314.html) by
+Stephan Kleinert [34]. All of these re-implement the Microtronic's behaviour. The newest one
+does not: the [**browser-based Microtronic emulator**](https://lambdamikel.github.io/microtronic-emulator/) [47]
+(2026) runs the original 1981 firmware ROM on an emulated TMS1600, in plain JavaScript, behind
+a console drawn from photographs of the real machine. Keys, display, inputs, outputs and the
+1 Hz clock all work as on the original, and a library of programs from the manuals is one
+click away — so anyone can try the Microtronic without building, loading or installing
+anything. It is described in more detail [at the end of the appendix](#the-microtronic-in-the-browser).
+
+<div align="center">
+
+![The browser-based Microtronic emulator](images/microtronic-emulator.png)
+
+*Figure 3. The Microtronic in the browser: the original firmware running in a JavaScript emulator [47].*
+
+</div>
+
+**Hardware emulators.** The author's own
+[Arduino-based hardware emulators](https://github.com/lambdamikel/Busch-2090) [13] have
+appeared from 2016 onward, including the "Microtronic 2nd / Next Generation" re-editions
+built into a Busch "2070" console (Hackaday "Reinvented Retro Contest" winner, 2021). These,
+too, are re-implementations of the Microtronic's instruction set. The
+[**Microtronic Phoenix**](https://github.com/lambdamikel/microtronic-phoenix) [16] of 2025 is
+the first hardware emulator to run the original firmware; it is the subject of the appendix.
 
 **Extensions, old and new.** The original "2095" cassette interface is leisurely (a full
 dump takes ~220 s ≈ 14 baud); the "2092 special interface" doubles the GPIOs and adds
@@ -206,20 +237,13 @@ RAM emulator with SD card that replaces the 2114, adds bank-switched memory expa
 extensive I/O expansion (speech, sound, OLED text/graphics, battery-backed clock). It is
 addressed through 64 "redundant", ineffective instructions (such as `MOV <x> → <x>`, a
 NOP-like register-to-self copy) that never occur in normal programs; PicoRAM repurposes
-them as new side effects. PicoRAM 2090 won the RetroChallenge 2023/10 Grand Prize. A range
-of emulators also exists — the first written by the author in 1985 on a Schneider CPC 464 in
-BASIC; a [C/Linux emulator](https://freeshell.de/~d01c/micsim_0.1.0.tar.xz) by Ingo D.
-Rullhusen [33]; a [Macintosh app](https://download.cnet.com/2090-emulator/3000-2072_4-47314.html)
-by Stephan Kleinert [34]; and the author's own
-[Arduino-based hardware emulators](https://github.com/lambdamikel/Busch-2090) [13] from 2016
-onward, including the author's "Microtronic 2nd / Next Generation" re-editions built into a
-Busch "2070" console (Hackaday "Reinvented Retro Contest" winner, 2021).
+them as new side effects. PicoRAM 2090 won the RetroChallenge 2023/10 Grand Prize.
 
 <div align="center">
 
 ![Busch Microtronic with 2095 cassette interface and speech synthesizer](images/microtronic-2095.jpg)
 
-*Figure 3. The Busch Microtronic with the original 2095 cassette interface and a DIY speech synthesizer.*
+*Figure 4. The Busch Microtronic with the original 2095 cassette interface and a DIY speech synthesizer.*
 
 </div>
 
@@ -311,7 +335,7 @@ machine code for a 45-year-old 4-bit computer.
 
 ![Tic-Tac-Toe on the Microtronic + PicoRAM 2090](images/ttt-picoram.jpg)
 
-*Figure 4. The first working Tic-Tac-Toe for the Microtronic, running on the PicoRAM
+*Figure 5. The first working Tic-Tac-Toe for the Microtronic, running on the PicoRAM
 2090-extended machine: the 3×3 grid is drawn on PicoRAM's OLED display (top left), with
 spoken moves and — for the human-first game — a new from-scratch board-scanning AI [14].*
 
@@ -321,7 +345,7 @@ spoken moves and — for the human-first game — a new from-scratch board-scann
 
 ![Lunar Lander on the Microtronic + PicoRAM 2090](images/lander-picoram.jpg)
 
-*Figure 5. Lunar Lander — a wholly original game written from scratch for the PicoRAM
+*Figure 6. Lunar Lander — a wholly original game written from scratch for the PicoRAM
 2090-extended Microtronic. The OLED (top left) is the cockpit window showing the descending
 lander; the red LED below shows the ALT / VEL / FUEL instruments [14].*
 
@@ -335,7 +359,7 @@ lander; the red LED below shows the ALT / VEL / FUEL instruments [14].*
 
 ![Kosmos CP1 with manual and quick-reference card](images/cp1.jpg)
 
-*Figure 6. The Kosmos CP1, with its spiral-bound manual and the green quick-reference card.
+*Figure 7. The Kosmos CP1, with its spiral-bound manual and the green quick-reference card.
 The two expansion modules connected along the top are the CP3 memory expansion and the CP2
 cassette interface.*
 
@@ -378,7 +402,7 @@ breakpoint facility — one inserts HALT manually. The decimal scheme and the cu
 
 ![Inside the Kosmos CP1: main board, memory expansion, and cassette interface](images/cp1-internals.jpg)
 
-*Figure 7. Inside the CP1 and its two stacked expansion modules (on the Kosmos construction
+*Figure 8. Inside the CP1 and its two stacked expansion modules (on the Kosmos construction
 rails). **Bottom** — the CP1 main board: the mask-programmed **Intel 8049** microcontroller (here
 an M5L8049, marked "KOSMOS B") and an **8155** (M5L8155P) for RAM and I/O, above the orange
 keypad-matrix PCB and the shielded six-digit LED display. **Middle** — the CP3 **memory
@@ -439,7 +463,7 @@ been developed. Further background on the CP1 is collected at the
 
 ![Computron, the Kosmos CP1 mascot](images/computron.png)
 
-*Figure 8. Computron, the Kosmos CP1's mascot, who "carries out" the CPU operations in the
+*Figure 9. Computron, the Kosmos CP1's mascot, who "carries out" the CPU operations in the
 manual. From the Kosmos CP1 manual [4]; © Kosmos, reproduced for illustration.*
 
 </div>
@@ -456,7 +480,7 @@ solve is available [40]).
 
 ![The Kosmos CP1 driving a 64×32 RGB LED matrix with the Towers of Hanoi solution](images/cp1-hanoi-matrix.jpg)
 
-*Figure 9. The real rig: a Kosmos CP1 (right) driving a 64×32 RGB LED matrix (left) mid-solve, linked
+*Figure 10. The real rig: a Kosmos CP1 (right) driving a 64×32 RGB LED matrix (left) mid-solve, linked
 by the four-bit move protocol over jumper wires. The 8049-based 1983 trainer streams each Hanoi move
 to an Arduino Mega 2560, which renders the disks on the panel; the program itself was loaded through
 the CP1's cassette input as a WAV [40].*
@@ -487,7 +511,7 @@ valuable companions.
 
 ![Philips MasterLab and its manual](images/masterlab.jpg)
 
-*Figure 10. The Philips MasterLab and its "Microcomputer Master Lab" manual.*
+*Figure 11. The Philips MasterLab and its "Microcomputer Master Lab" manual.*
 
 </div>
 
@@ -557,7 +581,7 @@ programming.
 
 ![Philips MasterLab with an attached experiment box](images/masterlab-expbox.jpg)
 
-*Figure 11. The Philips MasterLab with an attached experiment box.*
+*Figure 12. The Philips MasterLab with an attached experiment box.*
 
 </div>
 
@@ -591,7 +615,7 @@ digital sampling scopes render X-Y vector art poorly.
 
 ![Cube, torus and sphere on a real Tektronix 2335](images/masterlab-vector-scope.jpg)
 
-*Figure 12. The MasterLab's vector-graphics engine on a real Tektronix 2335 analog scope: a
+*Figure 13. The MasterLab's vector-graphics engine on a real Tektronix 2335 analog scope: a
 perspective cube, a torus, and a sphere (left to right), each a rotating 3-D wireframe drawn from
 endpoints by the R-2R DAC, with an RC slew-limit turning the DAC's steps into drawn lines [12]; see
 the video [41].*
@@ -614,7 +638,7 @@ without touching the machine.
 
 ![The vector shooter on a real Tektronix 2335](images/masterlab-shooter.jpg)
 
-*Figure 13. The interactive vector shooter on the real MasterLab and 2335: the turret (bottom), a
+*Figure 14. The interactive vector shooter on the real MasterLab and 2335: the turret (bottom), a
 bullet in flight, and a wave of hexagonal aliens — one column already cleared. Played from the hex
 keypad or the SA/SB console buttons [12]; see the video [42].*
 
@@ -637,7 +661,7 @@ MasterLab.
 
 ![PicoRAM Ultimate connected to the Philips MasterLab](images/picoram-ultimate-masterlab.jpg)
 
-*Figure 14. PicoRAM Ultimate (right) connected to the Philips MasterLab — it plugs directly
+*Figure 15. PicoRAM Ultimate (right) connected to the Philips MasterLab — it plugs directly
 into the machine's two 2114 SRAM sockets via the ribbon cable; the MasterLab's display
 shows its "HALLO" power-up greeting [32].*
 
@@ -810,7 +834,7 @@ in the scene as *LambdaMikel* and *MicrotronicHamburg* [43].
 
 ![The Microtronic Phoenix, running the original firmware](images/phoenix.jpg)
 
-*Figure 15. A new build running the original firmware: the Microtronic Phoenix [16].*
+*Figure 16. A new build running the original firmware: the Microtronic Phoenix [16].*
 
 </div>
 
@@ -965,15 +989,9 @@ the 1 Hz clock — so nothing in the firmware is patched or intercepted; like th
 its CPU semantics from Jason's TMS1600 emulator [18]. The console is drawn from photographs of the
 author's machine, and the page adds a library of programs from the manuals, a live view of the
 registers and the program memory, and PicoRAM's sound instruction. Anyone can now try the
-Microtronic: there is nothing to build, and nothing to load or install.
-
-<div align="center">
-
-![The browser-based Microtronic emulator](images/microtronic-emulator.png)
-
-*Figure 16. The Microtronic in the browser: the original firmware running in a JavaScript emulator [47].*
-
-</div>
+Microtronic: there is nothing to build, and nothing to load or install (see the screenshot in
+Figure 3). The emulator's [project page](https://github.com/lambdamikel/microtronic-emulator) [47]
+documents what is emulated and how.
 
 *The Microtronic Phoenix is documented in detail in its project build logs [44] and has been
 covered by Hackaday [45] and Hackster.io [46]. Credit for the ROM excavation and the Phoenix
