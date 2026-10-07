@@ -218,7 +218,7 @@ of 2016, built around an Arduino Mega 2560 (Figure 3), and the "Microtronic 2nd 
 built into a Busch "2070" console (Hackaday "Reinvented Retro Contest" winner, 2021). These,
 too, are re-implementations of the Microtronic's instruction set. The
 [**Microtronic Phoenix**](https://github.com/lambdamikel/microtronic-phoenix) [16] of 2025
-(Figure 18) is the first hardware emulator to run the original firmware; it is described in
+(Figure 19) is the first hardware emulator to run the original firmware; it is described in
 [the appendix](#appendix-the-microtronic-phoenix).
 
 <div align="center">
@@ -522,6 +522,25 @@ assembler and an SD-card tape emulator), the
 and the [moosy CP1 toolchain](https://github.com/moosy/kosmos-cp1-toolchain) [26] are all
 valuable companions.
 
+And in October 2026 the CP1, too, became something anyone can try: a
+[**browser-based Kosmos CP1 emulator**](https://lambdamikel.github.io/kosmos-cp1-emulator/) [48],
+the sister of the Microtronic emulator (Figure 4). Written in plain JavaScript with Claude Code
+(Opus 5.5), it runs the original 1983 firmware on an emulated Intel 8049 with its two 8155 RAM/IO
+chips — the 8049 core and the wiring follow Andreas Signer's emulator [23], from whose repository
+the ROM image also comes. The page shows the computer with its input/output module (eight switches on
+Port 1, eight LEDs on Port 2), the manual's contact clips and its "random number" wiring between the
+two ports, and tone generators for sound. Its library holds 57 programs, 50 of them listings from the
+Kosmos manual — among them the moon landing, Nim, roulette and the melody generator — alongside the
+recursive Towers of Hanoi. There is nothing to build or install.
+
+<div align="center">
+
+![The browser-based Kosmos CP1 emulator](images/cp1-emulator.png)
+
+*Figure 13. The Kosmos CP1 in the browser: the original firmware running in a JavaScript emulator [48].*
+
+</div>
+
 ---
 
 ## 3. The Philips MasterLab (1983)
@@ -530,7 +549,7 @@ valuable companions.
 
 ![Philips MasterLab and its manual](images/masterlab.jpg)
 
-*Figure 13. The Philips MasterLab and its "Microcomputer Master Lab" manual.*
+*Figure 14. The Philips MasterLab and its "Microcomputer Master Lab" manual.*
 
 </div>
 
@@ -600,7 +619,7 @@ programming.
 
 ![Philips MasterLab with an attached experiment box](images/masterlab-expbox.jpg)
 
-*Figure 14. The Philips MasterLab with an attached experiment box.*
+*Figure 15. The Philips MasterLab with an attached experiment box.*
 
 </div>
 
@@ -634,7 +653,7 @@ digital sampling scopes render X-Y vector art poorly.
 
 ![Cube, torus and sphere on a real Tektronix 2335](images/masterlab-vector-scope.jpg)
 
-*Figure 15. The MasterLab's vector-graphics engine on a real Tektronix 2335 analog scope: a
+*Figure 16. The MasterLab's vector-graphics engine on a real Tektronix 2335 analog scope: a
 perspective cube, a torus, and a sphere (left to right), each a rotating 3-D wireframe drawn from
 endpoints by the R-2R DAC, with an RC slew-limit turning the DAC's steps into drawn lines [12]; see
 the video [41].*
@@ -657,7 +676,7 @@ without touching the machine.
 
 ![The vector shooter on a real Tektronix 2335](images/masterlab-shooter.jpg)
 
-*Figure 16. The interactive vector shooter on the real MasterLab and 2335: the turret (bottom), a
+*Figure 17. The interactive vector shooter on the real MasterLab and 2335: the turret (bottom), a
 bullet in flight, and a wave of hexagonal aliens — one column already cleared. Played from the hex
 keypad or the SA/SB console buttons [12]; see the video [42].*
 
@@ -680,7 +699,7 @@ MasterLab.
 
 ![PicoRAM Ultimate connected to the Philips MasterLab](images/picoram-ultimate-masterlab.jpg)
 
-*Figure 17. PicoRAM Ultimate (right) connected to the Philips MasterLab — it plugs directly
+*Figure 18. PicoRAM Ultimate (right) connected to the Philips MasterLab — it plugs directly
 into the machine's two 2114 SRAM sockets via the ribbon cable; the MasterLab's display
 shows its "HALLO" power-up greeting [32].*
 
@@ -837,6 +856,7 @@ technical history that did not exist in this form in other countries.
 45. "The Microtronic Phoenix Computer System", *Hackaday* (15 Sep 2025) — <https://hackaday.com/2025/09/15/the-microtronic-phoenix-computer-system/>
 46. "The Four-Bit Busch Microtronic Lives Again as the Microtronic Phoenix", *Hackster.io* — <https://www.hackster.io/news/the-four-bit-busch-microtronic-lives-again-as-the-microtronic-phoenix-complete-with-original-rom-2a5c7ccecba7>
 47. Microtronic emulator for the browser, running the original firmware (JavaScript) — <https://lambdamikel.github.io/microtronic-emulator/> · source: <https://github.com/lambdamikel/microtronic-emulator>
+48. Kosmos CP1 emulator for the browser, running the original firmware (JavaScript) — <https://lambdamikel.github.io/kosmos-cp1-emulator/> · source: <https://github.com/lambdamikel/kosmos-cp1-emulator>
 
 ## About the author
 
@@ -853,7 +873,7 @@ in the scene as *LambdaMikel* and *MicrotronicHamburg* [43].
 
 ![The Microtronic Phoenix, running the original firmware](images/phoenix.jpg)
 
-*Figure 18. A new build running the original firmware: the Microtronic Phoenix [16].*
+*Figure 19. A new build running the original firmware: the Microtronic Phoenix [16].*
 
 </div>
 

@@ -407,7 +407,7 @@ Busch "2070" console (Hackaday "Reinvented Retro Contest" winner, 2021).
 These, too, are re-implementations of the Microtronic\textquotesingle s
 instruction set. The
 \href{https://github.com/lambdamikel/microtronic-phoenix}{\textbf{Microtronic
-Phoenix}} {[}16{]} of 2025 (Figure 18) is the first hardware emulator to
+Phoenix}} {[}16{]} of 2025 (Figure 19) is the first hardware emulator to
 run the original firmware; it is described in
 \hyperref[appendix-the-microtronic-phoenix]{the appendix}.
 
@@ -815,6 +815,30 @@ cassette emulator} {[}25{]}, and the
 \href{https://github.com/moosy/kosmos-cp1-toolchain}{moosy CP1
 toolchain} {[}26{]} are all valuable companions.
 
+And in October 2026 the CP1, too, became something anyone can try: a
+\href{https://lambdamikel.github.io/kosmos-cp1-emulator/}{\textbf{browser-based
+Kosmos CP1 emulator}} {[}48{]}, the sister of the Microtronic emulator
+(Figure 4). Written in plain JavaScript with Claude Code (Opus 5.5), it
+runs the original 1983 firmware on an emulated Intel 8049 with its two
+8155 RAM/IO chips --- the 8049 core and the wiring follow Andreas
+Signer\textquotesingle s emulator {[}23{]}, from whose repository the
+ROM image also comes. The page shows the computer with its input/output
+module (eight switches on Port 1, eight LEDs on Port 2), the
+manual\textquotesingle s contact clips and its "random number" wiring
+between the two ports, and tone generators for sound. Its library holds
+57 programs, 50 of them listings from the Kosmos manual --- among them
+the moon landing, Nim, roulette and the melody generator --- alongside
+the recursive Towers of Hanoi. There is nothing to build or install.
+
+\begin{center}\begin{minipage}{\linewidth}\centering
+
+\pandocbounded{\includegraphics[keepaspectratio,alt={The browser-based Kosmos CP1 emulator}]{images/cp1-emulator.png}}
+
+\emph{Figure 13. The Kosmos CP1 in the browser: the original firmware
+running in a JavaScript emulator {[}48{]}.}
+
+\end{minipage}\end{center}
+
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
 \subsection{3. The Philips MasterLab
@@ -824,7 +848,7 @@ toolchain} {[}26{]} are all valuable companions.
 
 \pandocbounded{\includegraphics[keepaspectratio,alt={Philips MasterLab and its manual}]{images/masterlab.jpg}}
 
-\emph{Figure 13. The Philips MasterLab and its "Microcomputer Master
+\emph{Figure 14. The Philips MasterLab and its "Microcomputer Master
 Lab" manual.}
 
 \end{minipage}\end{center}
@@ -915,7 +939,7 @@ microprocessor programming.
 
 \pandocbounded{\includegraphics[keepaspectratio,alt={Philips MasterLab with an attached experiment box}]{images/masterlab-expbox.jpg}}
 
-\emph{Figure 14. The Philips MasterLab with an attached experiment box.}
+\emph{Figure 15. The Philips MasterLab with an attached experiment box.}
 
 \end{minipage}\end{center}
 
@@ -958,7 +982,7 @@ X-Y vector art poorly.
 
 \pandocbounded{\includegraphics[keepaspectratio,alt={Cube, torus and sphere on a real Tektronix 2335}]{images/masterlab-vector-scope.jpg}}
 
-\emph{Figure 15. The MasterLab\textquotesingle s vector-graphics engine
+\emph{Figure 16. The MasterLab\textquotesingle s vector-graphics engine
 on a real Tektronix 2335 analog scope: a perspective cube, a torus, and
 a sphere (left to right), each a rotating 3-D wireframe drawn from
 endpoints by the R-2R DAC, with an RC slew-limit turning the
@@ -987,7 +1011,7 @@ external arcade buttons, so visitors play without touching the machine.
 
 \pandocbounded{\includegraphics[keepaspectratio,alt={The vector shooter on a real Tektronix 2335}]{images/masterlab-shooter.jpg}}
 
-\emph{Figure 16. The interactive vector shooter on the real MasterLab
+\emph{Figure 17. The interactive vector shooter on the real MasterLab
 and 2335: the turret (bottom), a bullet in flight, and a wave of
 hexagonal aliens --- one column already cleared. Played from the hex
 keypad or the SA/SB console buttons {[}12{]}; see the video {[}42{]}.}
@@ -1014,7 +1038,7 @@ way to develop for, and experiment with, the MasterLab.
 
 \pandocbounded{\includegraphics[keepaspectratio,alt={PicoRAM Ultimate connected to the Philips MasterLab}]{images/picoram-ultimate-masterlab.jpg}}
 
-\emph{Figure 17. PicoRAM Ultimate (right) connected to the Philips
+\emph{Figure 18. PicoRAM Ultimate (right) connected to the Philips
 MasterLab --- it plugs directly into the machine\textquotesingle s two
 2114 SRAM sockets via the ribbon cable; the MasterLab\textquotesingle s
 display shows its "HALLO" power-up greeting {[}32{]}.}
@@ -1365,6 +1389,11 @@ reading}\label{press-and-further-reading}
   (JavaScript) ---
   \url{https://lambdamikel.github.io/microtronic-emulator/} · source:
   \url{https://github.com/lambdamikel/microtronic-emulator}
+\item
+  Kosmos CP1 emulator for the browser, running the original firmware
+  (JavaScript) ---
+  \url{https://lambdamikel.github.io/kosmos-cp1-emulator/} · source:
+  \url{https://github.com/lambdamikel/kosmos-cp1-emulator}
 \end{enumerate}
 
 \subsection{About the author}\label{about-the-author}
@@ -1384,7 +1413,7 @@ Phoenix}\label{appendix-the-microtronic-phoenix}
 
 \pandocbounded{\includegraphics[keepaspectratio,alt={The Microtronic Phoenix, running the original firmware}]{images/phoenix.jpg}}
 
-\emph{Figure 18. A new build running the original firmware: the
+\emph{Figure 19. A new build running the original firmware: the
 Microtronic Phoenix {[}16{]}.}
 
 \end{minipage}\end{center}
