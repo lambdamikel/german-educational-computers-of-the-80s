@@ -901,7 +901,7 @@ known.
 
 ### Reading out the firmware
 
-This has now changed through our team's work [17]. In early 2024, on the occasion of a
+This has now changed through our team's work, the [Microtronic firmware ROM "archaeology"](https://hackaday.io/project/197415-microtronic-firmware-rom-archaeology) project on Hackaday.io [17]. In early 2024, on the occasion of a
 YouTube video about the "Radio Shack Science Fair Microcomputer Trainer" (SFMT), the author
 was contacted by Jason T. Jacques and "Decle", who had successfully read out the ROM of that
 very SFMT. The SFMT uses the "little brother" of the TMS1600 — the TMS1100. Might it
@@ -921,7 +921,8 @@ software for reading the SFMT's TMS1xxx firmware). Jason has documented the enti
 undertaking — the test-mode ROM extraction, the disassembly (with `naken_asm`), the
 schematic analysis and the breadboard recreation — in a detailed public write-up,
 "[Disassembling the Microtronic 2090](https://jsonj.co.uk/project/microtronic/)" [18]; the
-team's running build log is on Hackaday [17].
+team's running build log, with the experiments and the read-out hardware, is the
+[Hackaday.io project page](https://hackaday.io/project/197415-microtronic-firmware-rom-archaeology) [17].
 
 ### Decoding the firmware
 
@@ -930,13 +931,18 @@ Reading the ROM out of the chip was one thing; understanding it was another. The
 description of the Microtronic's inner workings existed — the manuals explain what the
 machine *does*, but no complete description of *how* it worked internally existed —
 Jason's write-up [18] had begun the job, documenting the extraction and disassembly and
-untangling specific routines, but the firmware as a whole was still uncharted. In
+untangling specific routines, but the firmware as a whole was still uncharted. What existed
+was the raw material: the 4096-byte ROM image and its plain disassembly — every instruction
+decoded, none explained — published with the kind permission of Jörg Vallen in the
+[firmware folder of the Phoenix repository](https://github.com/lambdamikel/microtronic-phoenix/tree/main/microtronic-firmware)
+([disassembled listing](https://github.com/lambdamikel/microtronic-phoenix/blob/main/microtronic-firmware/microtronic-firmware-disassembled.txt)) [16]. In
 mid-2026 the author had it reconstructed and annotated end to end — not by hand over
 many weeks, but by the frontier AI model **Claude (Opus 4.8)**, directed by the author
 and building on the recovered dump, Jason's TMS1600 emulator, and Jason's write-up, over
 about a day. The result is a public repository [19] with a complete "theory of
 operation", a line-by-line annotated disassembly, and a colour-coded, searchable web
-page that links every routine.
+page that links every routine:
+[lambdamikel.github.io/microtronic-firmware-annotated](https://lambdamikel.github.io/microtronic-firmware-annotated/).
 
 The reconstruction lays the whole machine bare — and confirms just how much of the
 Microtronic is an illusion. Almost everything the user sees — the sixteen-instruction

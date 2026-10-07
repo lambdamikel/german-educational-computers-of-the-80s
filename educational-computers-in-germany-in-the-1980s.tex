@@ -1448,35 +1448,38 @@ non-destructive procedure was known.
 
 \subsubsection{Reading out the firmware}\label{reading-out-the-firmware}
 
-This has now changed through our team\textquotesingle s work {[}17{]}.
-In early 2024, on the occasion of a YouTube video about the "Radio Shack
-Science Fair Microcomputer Trainer" (SFMT), the author was contacted by
-Jason T. Jacques and "Decle", who had successfully read out the ROM of
-that very SFMT. The SFMT uses the "little brother" of the TMS1600 ---
-the TMS1100. Might it therefore be possible to read the Microtronic
-firmware with the same method? It was not quite that simple. But over
-the following months our team developed a procedure that ultimately
-yielded the read-out Microtronic ROM. For this, the TMS1600 --- like the
-TMS1100 before it --- had to be put into its so-called test mode. The
-details of the TMS1600 test mode were not known, and there was no
-documented case on the internet; our experiments first had to determine
-which TMS1600 I/O pins activate this mode on reset. We also found that
-the protocol for serially (bit-by-bit) reading the ROM differs markedly
-from the documented TMS1100 protocol. This Microtronic-ROM "archaeology"
-thus required several weeks of intensive work and extensive
-experimentation. Despite all efforts, a few bits in the ROM image
-remained ambiguous, because the read-out process was not 100\%
-deterministic; these were corrected manually by Jason through extensive
-firmware analysis and "sharp thinking", using "Decle"\textquotesingle s
-TMS1600 disassembler (he had also previously built the Arduino-based
-hardware and software for reading the SFMT\textquotesingle s TMS1xxx
-firmware). Jason has documented the entire undertaking --- the test-mode
-ROM extraction, the disassembly (with \texttt{naken\_asm}), the
-schematic analysis and the breadboard recreation --- in a detailed
-public write-up,
+This has now changed through our team\textquotesingle s work, the
+\href{https://hackaday.io/project/197415-microtronic-firmware-rom-archaeology}{Microtronic
+firmware ROM "archaeology"} project on Hackaday.io {[}17{]}. In early
+2024, on the occasion of a YouTube video about the "Radio Shack Science
+Fair Microcomputer Trainer" (SFMT), the author was contacted by Jason T.
+Jacques and "Decle", who had successfully read out the ROM of that very
+SFMT. The SFMT uses the "little brother" of the TMS1600 --- the TMS1100.
+Might it therefore be possible to read the Microtronic firmware with the
+same method? It was not quite that simple. But over the following months
+our team developed a procedure that ultimately yielded the read-out
+Microtronic ROM. For this, the TMS1600 --- like the TMS1100 before it
+--- had to be put into its so-called test mode. The details of the
+TMS1600 test mode were not known, and there was no documented case on
+the internet; our experiments first had to determine which TMS1600 I/O
+pins activate this mode on reset. We also found that the protocol for
+serially (bit-by-bit) reading the ROM differs markedly from the
+documented TMS1100 protocol. This Microtronic-ROM "archaeology" thus
+required several weeks of intensive work and extensive experimentation.
+Despite all efforts, a few bits in the ROM image remained ambiguous,
+because the read-out process was not 100\% deterministic; these were
+corrected manually by Jason through extensive firmware analysis and
+"sharp thinking", using "Decle"\textquotesingle s TMS1600 disassembler
+(he had also previously built the Arduino-based hardware and software
+for reading the SFMT\textquotesingle s TMS1xxx firmware). Jason has
+documented the entire undertaking --- the test-mode ROM extraction, the
+disassembly (with \texttt{naken\_asm}), the schematic analysis and the
+breadboard recreation --- in a detailed public write-up,
 "\href{https://jsonj.co.uk/project/microtronic/}{Disassembling the
 Microtronic 2090}" {[}18{]}; the team\textquotesingle s running build
-log is on Hackaday {[}17{]}.
+log, with the experiments and the read-out hardware, is the
+\href{https://hackaday.io/project/197415-microtronic-firmware-rom-archaeology}{Hackaday.io
+project page} {[}17{]}.
 
 \subsubsection{Decoding the firmware}\label{decoding-the-firmware}
 
@@ -1488,14 +1491,22 @@ explain what the machine \emph{does}, but no complete description of
 \emph{how} it worked internally existed --- Jason\textquotesingle s
 write-up {[}18{]} had begun the job, documenting the extraction and
 disassembly and untangling specific routines, but the firmware as a
-whole was still uncharted. In mid-2026 the author had it reconstructed
-and annotated end to end --- not by hand over many weeks, but by the
+whole was still uncharted. What existed was the raw material: the
+4096-byte ROM image and its plain disassembly --- every instruction
+decoded, none explained --- published with the kind permission of Jörg
+Vallen in the
+\href{https://github.com/lambdamikel/microtronic-phoenix/tree/main/microtronic-firmware}{firmware
+folder of the Phoenix repository}
+(\href{https://github.com/lambdamikel/microtronic-phoenix/blob/main/microtronic-firmware/microtronic-firmware-disassembled.txt}{disassembled
+listing}) {[}16{]}. In mid-2026 the author had it reconstructed and
+annotated end to end --- not by hand over many weeks, but by the
 frontier AI model \textbf{Claude (Opus 4.8)}, directed by the author and
 building on the recovered dump, Jason\textquotesingle s TMS1600
 emulator, and Jason\textquotesingle s write-up, over about a day. The
 result is a public repository {[}19{]} with a complete "theory of
 operation", a line-by-line annotated disassembly, and a colour-coded,
-searchable web page that links every routine.
+searchable web page that links every routine:
+\href{https://lambdamikel.github.io/microtronic-firmware-annotated/}{lambdamikel.github.io/microtronic-firmware-annotated}.
 
 The reconstruction lays the whole machine bare --- and confirms just how
 much of the Microtronic is an illusion. Almost everything the user sees
