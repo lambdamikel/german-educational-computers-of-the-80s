@@ -383,12 +383,12 @@ making them accessible to a wider, non-German-speaking audience.
 \textbf{Software emulators.} A range of emulators exists. The first was
 written by the author in 1985, in BASIC on a Schneider CPC 464; later
 came a \href{https://freeshell.de/~d01c/micsim_0.1.0.tar.xz}{C/Linux
-emulator} by Ingo D. Rullhusen {[}33{]} and a
+emulator} by Ingo D. Rullhusen {[}35{]} and a
 \href{https://download.cnet.com/2090-emulator/3000-2072_4-47314.html}{Macintosh
-app} by Stephan Kleinert {[}34{]}. All of these re-implement the
+app} by Stephan Kleinert {[}36{]}. All of these re-implement the
 Microtronic\textquotesingle s behaviour. The newest one does not: the
 \href{https://lambdamikel.github.io/microtronic-emulator/}{\textbf{browser-based
-Microtronic emulator}} {[}47{]} of October 2026 (Figure 4) runs the
+Microtronic emulator}} {[}21{]} of October 2026 (Figure 4) runs the
 original 1981 firmware ROM --- the one recovered for the Microtronic
 Phoenix (see the appendix) --- on an emulated TMS1600. Written in plain
 JavaScript with Claude Code (Opus 5.5), it models the surrounding
@@ -403,7 +403,7 @@ registers and the program memory, and PicoRAM\textquotesingle s sound
 instruction. Anyone can now try the Microtronic: there is nothing to
 build, and nothing to load or install. The emulator\textquotesingle s
 \href{https://github.com/lambdamikel/microtronic-emulator}{project page}
-{[}47{]} documents what is emulated and how.
+{[}21{]} documents what is emulated and how.
 
 \textbf{Hardware emulators.} The author\textquotesingle s own
 \href{https://github.com/lambdamikel/Busch-2090}{Arduino-based hardware
@@ -433,7 +433,7 @@ run the original firmware; it is described in
 \pandocbounded{\includegraphics[keepaspectratio,alt={The browser-based Microtronic emulator}]{images/microtronic-emulator.png}}
 
 \emph{Figure 4. The Microtronic in the browser: the original firmware
-running in a JavaScript emulator {[}47{]}.}
+running in a JavaScript emulator {[}21{]}.}
 
 \end{minipage}\end{center}
 
@@ -485,7 +485,7 @@ extension added later with Claude --- and, most recently, animates the
 solution on a \textbf{64×32 RGB LED matrix} --- via a microcontroller
 that reads the Microtronic\textquotesingle s moves over a simple 4-bit
 GPIO protocol (a video of the recursive solver running on the
-Microtronic is available {[}38{]}). And, most significantly of all, the
+Microtronic is available {[}40{]}). And, most significantly of all, the
 original Microtronic firmware ROM was finally recovered and brought back
 to life on new hardware: the
 \href{https://github.com/lambdamikel/microtronic-phoenix}{\textbf{Microtronic
@@ -495,7 +495,7 @@ Phoenix}} {[}16{]}, described in the appendix.
 impressive \emph{contemporary software} projects for the Microtronic ---
 the author\textquotesingle s own Towers of Hanoi notwithstanding ;-) ---
 come from \href{https://github.com/rab-berlin}{\textbf{Björn Rathje}}
-{[}21{]}. Working purely in the Microtronic\textquotesingle s tiny
+{[}23{]}. Working purely in the Microtronic\textquotesingle s tiny
 machine language of some forty instructions, he has produced a
 remarkable body of work that pushes the little 4-bit machine far beyond
 what its 1981 manuals imagined:
@@ -504,7 +504,7 @@ what its 1981 manuals imagined:
 \tightlist
 \item
   \href{https://github.com/rab-berlin/Monarch2090}{\textbf{Monarch2090}}
-  {[}22{]} --- a faithful simulation of the legendary \emph{Rotomat
+  {[}24{]} --- a faithful simulation of the legendary \emph{Rotomat
   Monarch} (1972) slot machine on the Microtronic; the standout piece,
   and the most elaborate.
 \item
@@ -760,14 +760,14 @@ be read by programs. Both software and hardware (Arduino-based)
 emulations and re-implementations exist; since the firmware is available
 and the parts are standard, faithful re-implementations are easy (e.g.
 \href{https://www.g-heinrichs.de/wordpress/index.php/informatik/minipc/}{MiniPC}
-{[}27{]} emulates the 8049 and runs the original firmware, while a
+{[}29{]} emulates the 8049 and runs the original firmware, while a
 \href{https://sourceforge.net/projects/cp1-sim/}{Java-based emulator}
-{[}28{]} reimplements the virtual machine directly), and an
+{[}30{]} reimplements the virtual machine directly), and an
 \href{https://github.com/asig/kosmos_tape_emulator}{Arduino-based CP2
-cassette emulator} {[}24{]} has been developed. Further background on
+cassette emulator} {[}26{]} has been developed. Further background on
 the CP1 is collected at the
 \href{http://www.8bit-homecomputermuseum.at/computer/kosmos_computer_praxis_cp1.html}{8-bit
-Home Computer Museum} {[}29{]}.
+Home Computer Museum} {[}31{]}.
 
 \begin{center}\begin{minipage}{\linewidth}\centering
 
@@ -780,7 +780,7 @@ manual {[}4{]}; © Kosmos, reproduced for illustration.}
 \end{minipage}\end{center}
 
 \textbf{Recent developments (2025--2026).} The same recursive Towers of
-Hanoi runs on the CP1 too {[}39{]} --- and, most recently, the CP1 has
+Hanoi runs on the CP1 too {[}41{]} --- and, most recently, the CP1 has
 been made to \textbf{paint the solution on a 64×32 RGB LED matrix}. It
 streams each move over a simple four-bit GPIO protocol to an Arduino
 Mega 2560, which animates the disks sliding between the three pegs,
@@ -788,7 +788,7 @@ rainbow-coloured by size on a blue base --- the very move protocol first
 built for the physical Hanoi robot, now repurposed to drive an LED
 panel. It makes a striking sight: a 1983 decimal von-Neumann trainer
 conducting a modern graphics display (a video of the full solve is
-available {[}40{]}).
+available {[}42{]}).
 
 \begin{center}\begin{minipage}{\linewidth}\centering
 
@@ -799,7 +799,7 @@ LED matrix (left) mid-solve, linked by the four-bit move protocol over
 jumper wires. The 8049-based 1983 trainer streams each Hanoi move to an
 Arduino Mega 2560, which renders the disks on the panel; the program
 itself was loaded through the CP1\textquotesingle s cassette input as a
-WAV {[}40{]}.}
+WAV {[}42{]}.}
 
 \end{minipage}\end{center}
 
@@ -815,21 +815,21 @@ FSK tape format into a tool that turns a program into a \textbf{cassette
 WAV} you simply play into the CP2 (a companion decoder reads real tapes
 back, validated by a byte-exact round-trip), so programs load without
 any hand-keying. This builds on a lively CP1 community --- the
-\href{https://github.com/asig/kosmos-cp1}{asig/kosmos-cp1} {[}23{]}
+\href{https://github.com/asig/kosmos-cp1}{asig/kosmos-cp1} {[}25{]}
 emulator (with an integrated assembler and an SD-card tape emulator),
 the
 \href{https://github.com/RalphBln/kosmos-cp1-arduino-cassette-emulator}{RalphBln
-cassette emulator} {[}25{]}, and the
+cassette emulator} {[}27{]}, and the
 \href{https://github.com/moosy/kosmos-cp1-toolchain}{moosy CP1
-toolchain} {[}26{]} are all valuable companions.
+toolchain} {[}28{]} are all valuable companions.
 
 And in October 2026 the CP1, too, became something anyone can try: a
 \href{https://lambdamikel.github.io/kosmos-cp1-emulator/}{\textbf{browser-based
-Kosmos CP1 emulator}} {[}48{]}, the sister of the Microtronic emulator
+Kosmos CP1 emulator}} {[}22{]}, the sister of the Microtronic emulator
 (Figure 4). Written in plain JavaScript with Claude Code (Opus 5.5), it
 runs the original 1983 firmware on an emulated Intel 8049 with its two
 8155 RAM/IO chips --- the 8049 core and the wiring follow Andreas
-Signer\textquotesingle s emulator {[}23{]}, from whose repository the
+Signer\textquotesingle s emulator {[}25{]}, from whose repository the
 ROM image also comes. The page shows the computer with its input/output
 module (eight switches on Port 1, eight LEDs on Port 2), the
 manual\textquotesingle s contact clips and its "random number" wiring
@@ -843,7 +843,7 @@ the recursive Towers of Hanoi. There is nothing to build or install.
 \pandocbounded{\includegraphics[keepaspectratio,alt={The browser-based Kosmos CP1 emulator}]{images/cp1-emulator.png}}
 
 \emph{Figure 13. The Kosmos CP1 in the browser: the original firmware
-running in a JavaScript emulator {[}48{]}.}
+running in a JavaScript emulator {[}22{]}.}
 
 \end{minipage}\end{center}
 
@@ -876,7 +876,7 @@ firmware EPROM ("COPYRIGHT 1982,1983 (C) GAMA, E.M., \ldots"). What
 seems certain is that the MasterLab\textquotesingle s birthplace lies in
 Hamburg; more on its origins is collected on the
 \href{https://norbert.old.no/kits/6400/6400.html}{Philips/Schuco 6400
-information page} {[}31{]}.
+information page} {[}33{]}.
 
 \textbf{External attributes.} The MasterLab is a feast for the eyes ---
 a shapely silver case with a transparent Plexiglas hood, colorful keys,
@@ -954,7 +954,7 @@ microprocessor programming.
 \textbf{Recent developments (2025--2026).} Several projects have since
 appeared. Thorsten Brehm ("MacFly") built a complete
 \href{https://github.com/ThorstenBr/MasterLab-MC6400}{MasterLab
-\textbf{emulator}} {[}30{]} in JavaScript/HTML-CSS (November 2024),
+\textbf{emulator}} {[}32{]} in JavaScript/HTML-CSS (November 2024),
 playable online --- the emulator used as a reference while developing
 the vector display below. And the author collaborated with
 \textbf{Claude} (Anthropic, Opus 4.8) on a
@@ -995,7 +995,7 @@ on a real Tektronix 2335 analog scope: a perspective cube, a torus, and
 a sphere (left to right), each a rotating 3-D wireframe drawn from
 endpoints by the R-2R DAC, with an RC slew-limit turning the
 DAC\textquotesingle s steps into drawn lines {[}12{]}; see the video
-{[}41{]}.}
+{[}43{]}.}
 
 \end{minipage}\end{center}
 
@@ -1022,14 +1022,14 @@ external arcade buttons, so visitors play without touching the machine.
 \emph{Figure 17. The interactive vector shooter on the real MasterLab
 and 2335: the turret (bottom), a bullet in flight, and a wave of
 hexagonal aliens --- one column already cleared. Played from the hex
-keypad or the SA/SB console buttons {[}12{]}; see the video {[}42{]}.}
+keypad or the SA/SB console buttons {[}12{]}; see the video {[}44{]}.}
 
 \end{minipage}\end{center}
 
 Crucially, the perennial problem of \emph{getting programs into the
 machine} now has a modern solution:
 \href{https://github.com/lambdamikel/picoram-ultimate}{\textbf{PicoRAM
-Ultimate}} {[}32{]}, a Raspberry Pi Pico--based SD-card RAM emulator for
+Ultimate}} {[}34{]}, a Raspberry Pi Pico--based SD-card RAM emulator for
 the MasterLab (a sibling of the Microtronic\textquotesingle s PicoRAM
 2090). It plugs directly into the MasterLab\textquotesingle s two 2114
 SRAM sockets via a ribbon cable and stands in for the
@@ -1049,7 +1049,7 @@ way to develop for, and experiment with, the MasterLab.
 \emph{Figure 18. PicoRAM Ultimate (right) connected to the Philips
 MasterLab --- it plugs directly into the machine\textquotesingle s two
 2114 SRAM sockets via the ribbon cable; the MasterLab\textquotesingle s
-display shows its "HALLO" power-up greeting {[}32{]}.}
+display shows its "HALLO" power-up greeting {[}34{]}.}
 
 \end{minipage}\end{center}
 
@@ -1089,8 +1089,8 @@ So the MasterLab is roughly \textbf{1,290×} faster than the Microtronic
 and about \textbf{46×} faster than the CP1 --- the payoff of running
 native code instead of an interpreter. The Microtronic drops further
 still (to ≈ 40 ips) with the display switched on. The benchmark runs are
-shown on video for the Microtronic {[}35{]}, the Kosmos CP1 {[}36{]},
-and the Philips MasterLab {[}37{]}.
+shown on video for the Microtronic {[}37{]}, the Kosmos CP1 {[}38{]},
+and the Philips MasterLab {[}39{]}.
 
 \subsubsection{Overall scoring}\label{overall-scoring}
 
@@ -1258,6 +1258,16 @@ projects}\label{the-authors-projects}
 \item
   Microtronic drum computer (RetroChallenge RC 2021/10 winner) ---
   \url{https://hackaday.io/project/180252-a-retro-authentic-microtronic-rc-202110-winner}
+\item
+  Microtronic emulator for the browser, running the original firmware
+  (JavaScript) ---
+  \url{https://lambdamikel.github.io/microtronic-emulator/} · source:
+  \url{https://github.com/lambdamikel/microtronic-emulator}
+\item
+  Kosmos CP1 emulator for the browser, running the original firmware
+  (JavaScript) ---
+  \url{https://lambdamikel.github.io/kosmos-cp1-emulator/} · source:
+  \url{https://github.com/lambdamikel/kosmos-cp1-emulator}
 \end{enumerate}
 
 \subsubsection{Björn Rathje\textquotesingle s Microtronic
@@ -1265,7 +1275,7 @@ projects}\label{bjuxf6rn-rathjes-microtronic-projects}
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
-\setcounter{enumi}{20}
+\setcounter{enumi}{22}
 \tightlist
 \item
   Björn Rathje --- overview of all projects ---
@@ -1280,7 +1290,7 @@ tools}\label{kosmos-cp1-emulators-and-tools}
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
-\setcounter{enumi}{22}
+\setcounter{enumi}{24}
 \tightlist
 \item
   asig/kosmos-cp1 --- CP1 emulator with integrated assembler ---
@@ -1305,11 +1315,14 @@ tools}\label{kosmos-cp1-emulators-and-tools}
   \url{http://www.8bit-homecomputermuseum.at/computer/kosmos_computer_praxis_cp1.html}
 \end{enumerate}
 
+See also the author\textquotesingle s browser-based Kosmos CP1 emulator
+{[}22{]}.
+
 \subsubsection{Philips MasterLab}\label{philips-masterlab}
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
-\setcounter{enumi}{29}
+\setcounter{enumi}{31}
 \tightlist
 \item
   MasterLab emulator (Thorsten Brehm, "MacFly"), JavaScript/HTML ---
@@ -1328,7 +1341,7 @@ emulators}\label{other-microtronic-emulators}
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
-\setcounter{enumi}{32}
+\setcounter{enumi}{34}
 \tightlist
 \item
   micsim --- Microtronic emulator for Linux (Ingo D. Rullhusen) ---
@@ -1338,11 +1351,14 @@ emulators}\label{other-microtronic-emulators}
   \url{https://download.cnet.com/2090-emulator/3000-2072_4-47314.html}
 \end{enumerate}
 
+See also the author\textquotesingle s browser-based Microtronic emulator
+{[}21{]} and the hardware emulators {[}13{]}, {[}16{]}.
+
 \subsubsection{Videos}\label{videos}
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
-\setcounter{enumi}{34}
+\setcounter{enumi}{36}
 \tightlist
 \item
   Speed benchmark --- Busch Microtronic ("The MIPS Monster") ---
@@ -1379,7 +1395,7 @@ reading}\label{press-and-further-reading}
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
-\setcounter{enumi}{43}
+\setcounter{enumi}{45}
 \tightlist
 \item
   Microtronic Phoenix project page and build logs (Hackaday.io) ---
@@ -1392,16 +1408,6 @@ reading}\label{press-and-further-reading}
   "The Four-Bit Busch Microtronic Lives Again as the Microtronic
   Phoenix", \emph{Hackster.io} ---
   \url{https://www.hackster.io/news/the-four-bit-busch-microtronic-lives-again-as-the-microtronic-phoenix-complete-with-original-rom-2a5c7ccecba7}
-\item
-  Microtronic emulator for the browser, running the original firmware
-  (JavaScript) ---
-  \url{https://lambdamikel.github.io/microtronic-emulator/} · source:
-  \url{https://github.com/lambdamikel/microtronic-emulator}
-\item
-  Kosmos CP1 emulator for the browser, running the original firmware
-  (JavaScript) ---
-  \url{https://lambdamikel.github.io/kosmos-cp1-emulator/} · source:
-  \url{https://github.com/lambdamikel/kosmos-cp1-emulator}
 \end{enumerate}
 
 \subsection{About the author}\label{about-the-author}
@@ -1410,7 +1416,7 @@ Dr. Michael Wessel is a computer scientist and has worked in Silicon
 Valley, California, since 2010. He owes his professional career to the
 Busch Microtronic, which he received from his parents for Christmas in
 1983. He has collected home computers since 2001 and is known in the
-scene as \emph{LambdaMikel} and \emph{MicrotronicHamburg} {[}43{]}.
+scene as \emph{LambdaMikel} and \emph{MicrotronicHamburg} {[}45{]}.
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
@@ -1606,8 +1612,8 @@ Microtronic. With new hardware the Microtronic has now truly become
 "immortal", and will go on finding new fans for decades to come.
 
 \emph{The Microtronic Phoenix is documented in detail in its project
-build logs {[}44{]} and has been covered by Hackaday {[}45{]} and
-Hackster.io {[}46{]}. Credit for the ROM excavation and the Phoenix
+build logs {[}46{]} and has been covered by Hackaday {[}47{]} and
+Hackster.io {[}48{]}. Credit for the ROM excavation and the Phoenix
 hardware is shared with Jason T. Jacques and "Decle", whose work is
 referenced above.}
 
