@@ -204,11 +204,18 @@ non-German-speaking audience.
 and a [Macintosh app](https://download.cnet.com/2090-emulator/3000-2072_4-47314.html) by
 Stephan Kleinert [34]. All of these re-implement the Microtronic's behaviour. The newest one
 does not: the [**browser-based Microtronic emulator**](https://lambdamikel.github.io/microtronic-emulator/) [47]
-(2026) runs the original 1981 firmware ROM on an emulated TMS1600, in plain JavaScript, behind
-a console drawn from photographs of the real machine. Keys, display, inputs, outputs and the
-1 Hz clock all work as on the original, and a library of programs from the manuals is one
-click away — so anyone can try the Microtronic without building, loading or installing
-anything (Figure 4). It is described in more detail [at the end of the appendix](#the-microtronic-in-the-browser).
+of October 2026 (Figure 4) runs the original 1981 firmware ROM — the one recovered for the
+Microtronic Phoenix (see the appendix) — on an emulated TMS1600. Written in plain JavaScript
+with Claude Code (Opus 5.5), it models the surrounding circuit at pin level, following the
+Busch schematic: the 2114 program RAM, the multiplexed display, the keypad matrix, the inputs
+and outputs, the flag LEDs and the 1 Hz clock. Nothing in the firmware is patched or
+intercepted; like the Phoenix, it takes its CPU semantics from Jason T. Jacques' TMS1600
+emulator [18]. The console is drawn from photographs of the author's machine, and the page
+adds a library of programs from the manuals, a live view of the registers and the program
+memory, and PicoRAM's sound instruction. Anyone can now try the Microtronic: there is nothing
+to build, and nothing to load or install. The emulator's
+[project page](https://github.com/lambdamikel/microtronic-emulator) [47] documents what is
+emulated and how.
 
 **Hardware emulators.** The author's own
 [Arduino-based hardware emulators](https://github.com/lambdamikel/Busch-2090) [13] have
@@ -1016,21 +1023,6 @@ Microtronic that truly deserves the name: an emulator that could not be more aut
 name *Phoenix* therefore seemed fitting — the Microtronic ROM, all but lost in the flames of
 history, flies once more, and with it the Microtronic. With new hardware the Microtronic has
 now truly become "immortal", and will go on finding new fans for decades to come.
-
-### The Microtronic in the browser
-
-In October 2026 the original firmware took one more step — from new hardware to no hardware at
-all: a [**browser-based Microtronic emulator**](https://lambdamikel.github.io/microtronic-emulator/) [47].
-Written in plain JavaScript with Claude Code (Opus 5.5), it runs the same 1981 ROM on an emulated
-TMS1600 and models the surrounding circuit at pin level, following the Busch schematic — the 2114
-program RAM, the multiplexed display, the keypad matrix, the inputs and outputs, the flag LEDs and
-the 1 Hz clock — so nothing in the firmware is patched or intercepted; like the Phoenix, it takes
-its CPU semantics from Jason's TMS1600 emulator [18]. The console is drawn from photographs of the
-author's machine, and the page adds a library of programs from the manuals, a live view of the
-registers and the program memory, and PicoRAM's sound instruction. Anyone can now try the
-Microtronic: there is nothing to build, and nothing to load or install (see the screenshot in
-Figure 4). The emulator's [project page](https://github.com/lambdamikel/microtronic-emulator) [47]
-documents what is emulated and how.
 
 *The Microtronic Phoenix is documented in detail in its project build logs [44] and has been
 covered by Hackaday [45] and Hackster.io [46]. Credit for the ROM excavation and the Phoenix

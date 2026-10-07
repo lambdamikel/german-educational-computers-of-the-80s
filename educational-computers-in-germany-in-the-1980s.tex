@@ -388,14 +388,22 @@ emulator} by Ingo D. Rullhusen {[}33{]} and a
 app} by Stephan Kleinert {[}34{]}. All of these re-implement the
 Microtronic\textquotesingle s behaviour. The newest one does not: the
 \href{https://lambdamikel.github.io/microtronic-emulator/}{\textbf{browser-based
-Microtronic emulator}} {[}47{]} (2026) runs the original 1981 firmware
-ROM on an emulated TMS1600, in plain JavaScript, behind a console drawn
-from photographs of the real machine. Keys, display, inputs, outputs and
-the 1 Hz clock all work as on the original, and a library of programs
-from the manuals is one click away --- so anyone can try the Microtronic
-without building, loading or installing anything (Figure 4). It is
-described in more detail \hyperref[the-microtronic-in-the-browser]{at
-the end of the appendix}.
+Microtronic emulator}} {[}47{]} of October 2026 (Figure 4) runs the
+original 1981 firmware ROM --- the one recovered for the Microtronic
+Phoenix (see the appendix) --- on an emulated TMS1600. Written in plain
+JavaScript with Claude Code (Opus 5.5), it models the surrounding
+circuit at pin level, following the Busch schematic: the 2114 program
+RAM, the multiplexed display, the keypad matrix, the inputs and outputs,
+the flag LEDs and the 1 Hz clock. Nothing in the firmware is patched or
+intercepted; like the Phoenix, it takes its CPU semantics from Jason T.
+Jacques\textquotesingle{} TMS1600 emulator {[}18{]}. The console is
+drawn from photographs of the author\textquotesingle s machine, and the
+page adds a library of programs from the manuals, a live view of the
+registers and the program memory, and PicoRAM\textquotesingle s sound
+instruction. Anyone can now try the Microtronic: there is nothing to
+build, and nothing to load or install. The emulator\textquotesingle s
+\href{https://github.com/lambdamikel/microtronic-emulator}{project page}
+{[}47{]} documents what is emulated and how.
 
 \textbf{Hardware emulators.} The author\textquotesingle s own
 \href{https://github.com/lambdamikel/Busch-2090}{Arduino-based hardware
@@ -1596,28 +1604,6 @@ name: an emulator that could not be more authentic. The name
 lost in the flames of history, flies once more, and with it the
 Microtronic. With new hardware the Microtronic has now truly become
 "immortal", and will go on finding new fans for decades to come.
-
-\subsubsection{The Microtronic in the
-browser}\label{the-microtronic-in-the-browser}
-
-In October 2026 the original firmware took one more step --- from new
-hardware to no hardware at all: a
-\href{https://lambdamikel.github.io/microtronic-emulator/}{\textbf{browser-based
-Microtronic emulator}} {[}47{]}. Written in plain JavaScript with Claude
-Code (Opus 5.5), it runs the same 1981 ROM on an emulated TMS1600 and
-models the surrounding circuit at pin level, following the Busch
-schematic --- the 2114 program RAM, the multiplexed display, the keypad
-matrix, the inputs and outputs, the flag LEDs and the 1 Hz clock --- so
-nothing in the firmware is patched or intercepted; like the Phoenix, it
-takes its CPU semantics from Jason\textquotesingle s TMS1600 emulator
-{[}18{]}. The console is drawn from photographs of the
-author\textquotesingle s machine, and the page adds a library of
-programs from the manuals, a live view of the registers and the program
-memory, and PicoRAM\textquotesingle s sound instruction. Anyone can now
-try the Microtronic: there is nothing to build, and nothing to load or
-install (see the screenshot in Figure 4). The emulator\textquotesingle s
-\href{https://github.com/lambdamikel/microtronic-emulator}{project page}
-{[}47{]} documents what is emulated and how.
 
 \emph{The Microtronic Phoenix is documented in detail in its project
 build logs {[}44{]} and has been covered by Hackaday {[}45{]} and
