@@ -536,9 +536,11 @@ the sister of the Microtronic emulator (Figure 4). Written in plain JavaScript w
 chips — the 8049 core and the wiring follow Andreas Signer's emulator [25], from whose repository
 the ROM image also comes. The page shows the computer with its input/output module (eight switches on
 Port 1, eight LEDs on Port 2), the manual's contact clips and its "random number" wiring between the
-two ports, and tone generators for sound. Its library holds 55 programs, 48 of them listings from the
+two ports, and tone generators for sound. Its library holds 63 programs, 48 of them listings from the
 Kosmos manual — among them the moon landing, Nim, roulette and the melody generator — alongside the
-recursive Towers of Hanoi. There is nothing to build or install.
+recursive Towers of Hanoi. An English
+[programmer's guide](https://lambdamikel.github.io/kosmos-cp1-emulator/guide.html) explains the machine, its
+instructions and its ports with worked examples. There is nothing to build or install.
 
 <div align="center">
 
