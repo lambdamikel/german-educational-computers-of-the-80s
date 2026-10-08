@@ -213,7 +213,8 @@ intercepted; like the Phoenix, it takes its CPU semantics from Jason T. Jacques'
 emulator [18]. The console is drawn from photographs of the author's machine, and the page
 adds a library of programs from the manuals, a live view of the registers and the program
 memory, and PicoRAM's sound instruction. Anyone can now try the Microtronic: there is nothing
-to build, and nothing to load or install. The emulator's
+to build, and nothing to load or install. An English
+[programmer's guide](https://lambdamikel.github.io/microtronic-emulator/guide.html) comes with it, and the
 [project page](https://github.com/lambdamikel/microtronic-emulator) [21] documents what is
 emulated and how.
 
