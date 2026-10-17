@@ -1,5 +1,7 @@
 # Educational Computers in Germany in the 1980s
 
+#### Project Page: [www.michael-wessel.info/software.html](https://www.michael-wessel.info/software.html#educational-computers-in-germany-in-the-1980s)
+
 ### The Busch Microtronic, the Kosmos CP1, and the Philips MasterLab
 
 *Original German articles by **Michael Wessel**, published in LOAD #10 (2024) [8] and
