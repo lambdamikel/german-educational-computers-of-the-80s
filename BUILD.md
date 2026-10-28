@@ -11,7 +11,7 @@ First generate the LaTeX source, then run XeLaTeX **three times** so the
 their columns):
 
 ```sh
-ABSTRACT="We survey three German educational microcomputers of the early 1980s ... (see the PDF)."
+ABSTRACT="We survey three German educational microcomputers of the early 1980s — the Busch Microtronic 2090 (1981), the Kosmos CP1 (1983) and the Philips MasterLab MC6400 (1983): their history, architecture, programming and peripherals, and how fast they compute. For each machine, we also describe what the retro-computing community has built for it since — emulators, firmware recoveries, and modern hardware extensions."
 
 pandoc README.md --standalone --from gfm \
   --lua-filter=center-figures.lua \

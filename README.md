@@ -260,6 +260,15 @@ addressed through 64 "redundant", ineffective instructions (such as `MOV <x> →
 NOP-like register-to-self copy) that never occur in normal programs; PicoRAM repurposes
 them as new side effects. PicoRAM 2090 won the RetroChallenge 2023/10 Grand Prize.
 
+**Recognition by the manufacturer.** Busch, still based in Viernheim, keeps a page about the
+Microtronic on its official website [49], with the original manuals for download. Since 2024 it
+has also pointed its visitors to the community's work: the author's Arduino emulator, the
+SD-card interface PicoRAM 2090, and the 2095 cassette-interface emulator, together with a German
+video in which the YouTube channel *Mein Elektronik-Hobby* demonstrates the latter [50] (the same
+channel also covered PicoRAM 2090 [51]). In 2026 Busch added the browser-based emulator [21] and
+closed with a thank-you: "Vielen Dank an Michael Wessel und sein Team der Microtronic-Freunde"
+— many thanks to Michael Wessel and his team of Microtronic friends.
+
 <div align="center">
 
 ![Busch Microtronic with 2095 cassette interface and speech synthesizer](images/microtronic-2095.jpg)
@@ -873,6 +882,9 @@ See also the author's browser-based Microtronic emulator [21] and the hardware e
 46. Microtronic Phoenix project page and build logs (Hackaday.io) — <https://hackaday.io/project/202835-microtronic-phoenix>
 47. "The Microtronic Phoenix Computer System", *Hackaday* (15 Sep 2025) — <https://hackaday.com/2025/09/15/the-microtronic-phoenix-computer-system/>
 48. "The Four-Bit Busch Microtronic Lives Again as the Microtronic Phoenix", *Hackster.io* — <https://www.hackster.io/news/the-four-bit-busch-microtronic-lives-again-as-the-microtronic-phoenix-complete-with-original-rom-2a5c7ccecba7>
+49. Busch GmbH & Co. KG, "Microtronic-Computer" — the manufacturer's official Microtronic page, with the manuals and links to the community projects — <https://www.busch-modell.de/information/Microtronic-Computer.aspx>
+50. *Mein Elektronik-Hobby*, "Busch microtronic 2090 und der 2095 Kassettenrecorder Emulator" (YouTube, June 2024, in German) — <https://www.youtube.com/watch?v=0MPBtOWTzlk>
+51. *Mein Elektronik-Hobby*, "PICORam 2090 – Aufbau und Arbeit mit dem Busch microtronic 2090 Computer" (YouTube, August 2024, in German) — <https://www.youtube.com/watch?v=267T5BnslIs>
 
 ## About the author
 
