@@ -1,10 +1,12 @@
 # Building the PDF
 
 The print edition is typeset from `README.md` with [pandoc](https://pandoc.org)
-and XeLaTeX (US Letter, TeX Gyre Pagella). Two helpers are used: `latex-header.tex`
-(URL breaking, Unicode glyphs, figure sizing) and `center-figures.lua` (a small
+and XeLaTeX (US Letter, TeX Gyre Pagella). Three helpers are used: `latex-header.tex`
+(URL breaking, Unicode glyphs, figure sizing), `center-figures.lua` (a small
 pandoc filter that centers figure images and their captions in the PDF only — the
-Markdown is untouched, so the GitHub README is unaffected).
+Markdown is untouched, so the GitHub README is unaffected), and `absolute-links.lua`
+(turns the README's relative links into full GitHub addresses in the PDF; LaTeX
+would otherwise make them links to local PDF files).
 
 First generate the LaTeX source, then run XeLaTeX **three times** so the
 `longtable` column widths settle (otherwise the table headers don't line up with
@@ -14,7 +16,7 @@ their columns):
 ABSTRACT="We survey three German educational microcomputers of the early 1980s — the Busch Microtronic 2090 (1981), the Kosmos CP1 (1983) and the Philips MasterLab MC6400 (1983): their history, architecture, programming and peripherals, and how fast they compute. For each machine, we also describe what the retro-computing community has built for it since — emulators, firmware recoveries, and modern hardware extensions."
 
 pandoc README.md --standalone --from gfm \
-  --lua-filter=center-figures.lua \
+  --lua-filter=center-figures.lua --lua-filter=absolute-links.lua \
   -V documentclass=article -V papersize=letter \
   -V geometry:margin=1in -V fontsize=11pt \
   -V mainfont="TeX Gyre Pagella" -V colorlinks=true \
