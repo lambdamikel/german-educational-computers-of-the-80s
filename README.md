@@ -1059,10 +1059,12 @@ many strong projects. In the announcement of
 the winners, Jenny List notes that, unlike other Microtronic emulators, the Phoenix runs the
 original firmware, and the judges write: "The attention to detail and skill required to make it
 do its job so accurately by persuading a 1970s microcontroller to reveal its secrets is what makes
-this project special, and you can count us impressed by it." Two more of the author's projects
-received honorable mentions in the contest's "Old Iron" category: the Kosmos CP1 solving the
-Towers of Hanoi on an LED matrix (Section 2) and the MasterLab's oscilloscope vector graphics
-(Section 3) — so all three machines of this article made it into the results.
+this project special, and you can count us impressed by it." Three more of the author's projects
+received honorable mentions, all in the contest's "Old Iron" category: the Kosmos CP1 solving the
+Towers of Hanoi on an LED matrix (Section 2), the MasterLab's oscilloscope vector graphics
+(Section 3) — so all three machines of this article made it into the results — and, beyond the
+scope of this article, the [Lazarus daughter board](https://hackaday.io/project/204602-laser-vz-200-lazarus-daughter-board), which brings a Laser VZ-200 with a
+damaged PCB back to life.
 
 <div align="center">
 
