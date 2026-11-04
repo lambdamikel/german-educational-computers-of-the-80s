@@ -228,7 +228,8 @@ of 2016, built around an Arduino Mega 2560 (Figure 3), and the "Microtronic 2nd 
 built into a Busch "2070" console (Hackaday "Reinvented Retro Contest" winner, 2021). These,
 too, are re-implementations of the Microtronic's instruction set. The
 [**Microtronic Phoenix**](https://github.com/lambdamikel/microtronic-phoenix) [16] of 2025
-(Figure 19) is the first hardware emulator to run the original firmware; it is described in
+(Figure 19) is the first hardware emulator to run the original firmware; it won second place in
+the 2026 Hackaday Retrocomputing Challenge [52] and is described in
 [the appendix](#appendix-the-microtronic-phoenix).
 
 <div align="center">
@@ -512,7 +513,9 @@ streams each move over a simple four-bit GPIO protocol to an Arduino Mega 2560, 
 disks sliding between the three pegs, rainbow-coloured by size on a blue base — the very move protocol
 first built for the physical Hanoi robot, now repurposed to drive an LED panel. It makes a striking
 sight: a 1983 decimal von-Neumann trainer conducting a modern graphics display (a video of the full
-solve is available [42]).
+solve is available [42]). It received an honorable mention in the 2026 Hackaday Retrocomputing
+Challenge [52], in the "Old Iron" category, where the judges found it "a welcome sight to have
+several entries using obscure educational computers".
 
 <div align="center">
 
@@ -668,7 +671,9 @@ ramp, so the beam is *dragged* from vertex to vertex and actually draws the conn
 the RC in place the wireframes appear as solid, continuous figures. Three demos — a perspective
 **cube**, a **torus**, and a **sphere**, each rotating about two axes — were built and verified on
 real hardware. An **analog CRT scope is essential** here (the author used a Tektronix 2335);
-digital sampling scopes render X-Y vector art poorly.
+digital sampling scopes render X-Y vector art poorly. The vector graphics received an honorable
+mention in the 2026 Hackaday Retrocomputing Challenge [52], in the same "Old Iron" category as
+the CP1's LED-matrix Towers of Hanoi.
 
 <div align="center">
 
@@ -885,6 +890,7 @@ See also the author's browser-based Microtronic emulator [21] and the hardware e
 49. Busch GmbH & Co. KG, "Microtronic-Computer" — the manufacturer's official Microtronic page, with the manuals and links to the community projects — <https://www.busch-modell.de/information/Microtronic-Computer.aspx>
 50. *Mein Elektronik-Hobby*, "Busch microtronic 2090 und der 2095 Kassettenrecorder Emulator" (YouTube, June 2024, in German) — <https://www.youtube.com/watch?v=0MPBtOWTzlk>
 51. *Mein Elektronik-Hobby*, "PICORam 2090 – Aufbau und Arbeit mit dem Busch microtronic 2090 Computer" (YouTube, August 2024, in German) — <https://www.youtube.com/watch?v=267T5BnslIs>
+52. Jenny List, "Yesterday Has Never Looked This Good: Feast Your Eyes On The 2026 Retrocomputing Challenge Winners!", *Hackaday* (4 Nov 2026) — <https://hackaday.com/2026/11/04/yesterday-has-never-looked-this-good-feast-your-eyes-on-the-2026-retrocomputing-challenge-winners/>
 
 ## About the author
 
@@ -1051,6 +1057,17 @@ name *Phoenix* therefore seemed fitting — the Microtronic ROM, all but lost in
 history, flies once more, and with it the Microtronic. With new hardware the Microtronic has
 now truly become "immortal", and will go on finding new fans for decades to come.
 
+In November 2026, the Phoenix won **second place in the 2026 Hackaday Retrocomputing Challenge**
+[52]. Unlike other Microtronic emulators, the judges noted, it runs the original firmware: "The
+attention to detail and skill required to make it do its job so accurately by persuading a 1970s
+microcontroller to reveal its secrets is what makes this project special, and you can count us
+impressed by it." The prize is a testament to the collaboration behind the Phoenix: "Decle" and
+the author found how to put the TMS1600 into its test mode and read out the first version of the
+ROM, with "Decle"'s TMS1xxx dumping technique; Jason T. Jacques analyzed and corrected the dump
+and built the first breadboard Microtronic running the original firmware on his TMS1xxx
+emulator, which the Phoenix runs to this day; and the author designed the Phoenix PCB and
+integrated the software.
+
 *The Microtronic Phoenix is documented in detail in its project build logs [46] and has been
-covered by Hackaday [47] and Hackster.io [48]. Credit for the ROM excavation and the Phoenix
+covered by Hackaday [47, 52] and Hackster.io [48]. Credit for the ROM excavation and the Phoenix
 hardware is shared with Jason T. Jacques and "Decle", whose work is referenced above.*
