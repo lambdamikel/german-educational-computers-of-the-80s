@@ -93,7 +93,8 @@ category, **in historical order**, each in its own section:
 3. the **Philips MasterLab** (1983) — an INS8070 (SC/MP III)-based machine that is, of the
    three, the only "real" CPU trainer.
 
-A comparison and an overall conclusion follow at the end.
+A comparison and an overall conclusion follow; an appendix tells the story of the
+Microtronic Phoenix, and closing words end the article.
 
 ---
 
@@ -1050,23 +1051,43 @@ variant was developed that acts as a MIDI drum computer / "drum sequencer", requ
 extensive instruction-set extensions and machine-language changes; this "Microtronic drum
 computer" won a prize in the RetroChallenge RC 2021/10 [20].
 
-Despite all these extensions and advantages, nothing will be dearer to the Microtronic fan
-than the original. With the Phoenix we now have, after 44 years, a re-edition of the
-Microtronic that truly deserves the name: an emulator that could not be more authentic. The
-name *Phoenix* therefore seemed fitting — the Microtronic ROM, all but lost in the flames of
-history, flies once more, and with it the Microtronic. With new hardware the Microtronic has
-now truly become "immortal", and will go on finding new fans for decades to come.
+### Second place in the 2026 Hackaday Retrocomputing Challenge
 
 In November 2026, the Phoenix won **second place in the 2026 Hackaday Retrocomputing Challenge**
-[52]. Unlike other Microtronic emulators, the judges noted, it runs the original firmware: "The
-attention to detail and skill required to make it do its job so accurately by persuading a 1970s
-microcontroller to reveal its secrets is what makes this project special, and you can count us
-impressed by it." The prize is a testament to the collaboration behind the Phoenix: "Decle" and
-the author found how to put the TMS1600 into its test mode and read out the first version of the
-ROM, with "Decle"'s TMS1xxx dumping technique; Jason T. Jacques analyzed and corrected the dump
-and built the first breadboard Microtronic running the original firmware on his TMS1xxx
-emulator, which the Phoenix runs to this day; and the author designed the Phoenix PCB and
-integrated the software.
+[52], among the entries of a contest that ran from August to October 2026. In the announcement of
+the winners, Jenny List notes that, unlike other Microtronic emulators, the Phoenix runs the
+original firmware, and the judges write: "The attention to detail and skill required to make it
+do its job so accurately by persuading a 1970s microcontroller to reveal its secrets is what makes
+this project special, and you can count us impressed by it." Two more of the author's projects
+received honorable mentions in the contest's "Old Iron" category: the Kosmos CP1 solving the
+Towers of Hanoi on an LED matrix (Section 2) and the MasterLab's oscilloscope vector graphics
+(Section 3) — so all three machines of this article made it into the results.
+
+<div align="center">
+
+![The Microtronic Phoenix in Hackaday's announcement of the winners](images/hackaday-retro-2026.jpg)
+
+*Figure 20. The Microtronic Phoenix in Hackaday's announcement of the 2026 Retrocomputing
+Challenge winners [52].*
+
+</div>
+
+The prize is a testament to the collaboration behind the Phoenix — none of us could have done it
+alone. "Decle" and the author found how to put the TMS1600 into its test mode and read out the
+first version of the ROM, with "Decle"'s TMS1xxx dumping technique; Jason T. Jacques analyzed and
+corrected the dump and built the first breadboard Microtronic running the original firmware on
+his TMS1xxx emulator, which the Phoenix runs to this day; and the author designed the Phoenix PCB
+and integrated the software.
+
+## Closing words
+
+Despite all the extensions and advantages of the emulators and re-editions described here,
+nothing will be dearer to the Microtronic fan than the original. With the Phoenix we now have,
+after 44 years, a re-edition of the Microtronic that truly deserves the name: an emulator that
+could not be more authentic. The name *Phoenix* therefore seemed fitting — the Microtronic ROM,
+all but lost in the flames of history, flies once more, and with it the Microtronic. With new
+hardware the Microtronic has now truly become "immortal", and will go on finding new fans for
+decades to come.
 
 *The Microtronic Phoenix is documented in detail in its project build logs [46] and has been
 covered by Hackaday [47, 52] and Hackster.io [48]. Credit for the ROM excavation and the Phoenix
