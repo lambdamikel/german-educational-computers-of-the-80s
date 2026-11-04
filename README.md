@@ -229,8 +229,8 @@ of 2016, built around an Arduino Mega 2560 (Figure 3), and the "Microtronic 2nd 
 built into a Busch "2070" console (Hackaday "Reinvented Retro Contest" winner, 2021). These,
 too, are re-implementations of the Microtronic's instruction set. The
 [**Microtronic Phoenix**](https://github.com/lambdamikel/microtronic-phoenix) [16] of 2025
-(Figure 19) is the first hardware emulator to run the original firmware; it won second place in
-the 2026 Hackaday Retrocomputing Challenge [52] and is described in
+(Figure 19) is the first hardware emulator to run the original firmware; it won second place
+among 230 entries in the 2026 Hackaday Retrocomputing Challenge [52] and is described in
 [the appendix](#appendix-the-microtronic-phoenix).
 
 <div align="center">
@@ -1054,7 +1054,8 @@ computer" won a prize in the RetroChallenge RC 2021/10 [20].
 ### Second place in the 2026 Hackaday Retrocomputing Challenge
 
 In November 2026, the Phoenix won **second place in the 2026 Hackaday Retrocomputing Challenge**
-[52], among the entries of a contest that ran from August to October 2026. In the announcement of
+[52], out of 230 entries submitted between August 18 and October 27, 2026 — a large field with
+many strong projects. In the announcement of
 the winners, Jenny List notes that, unlike other Microtronic emulators, the Phoenix runs the
 original firmware, and the judges write: "The attention to detail and skill required to make it
 do its job so accurately by persuading a 1970s microcontroller to reveal its secrets is what makes
