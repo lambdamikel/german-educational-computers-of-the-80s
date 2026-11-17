@@ -169,7 +169,13 @@ nested. The biggest shortcoming is that only two addressing modes are supported 
 and register-direct); jump targets are always immediate, so they cannot be computed —
 indirect and computed jumps, and thus recursion, require relatively complicated trickery.
 (The author nonetheless succeeded in implementing a recursive Towers of Hanoi on the
-Microtronic [10].) None of this harms the overall impression of a universal computer; the
+Microtronic, using its rarely used second register bank to hold two hand-built stacks and a
+small dispatch table in place of indirect returns; a video shows it running [40]. His
+[Towers of Hanoi repository](https://github.com/lambdamikel/towers-of-hanoi) [10] explains how
+recursion works on the Microtronic and on the CP1. A robot edition of the Microtronic program
+also exists: it sends each move through the outputs over the same four-bit protocol as the CP1
+version (Section 2), but it has never been tested on real hardware.) None of this harms the
+overall impression of a universal computer; the
 manual programs are throughout quite general — the NIM game actually computes the optimal
 winning strategy. Interpreting the instruction set costs time, though: a typical maximum is
 about 114 instructions per second, dropping to about 40 with the display on; some programs
@@ -319,13 +325,7 @@ matrix showing a glider from Life2090. Photo: Björn Rathje (MIT license).*
 
 </div>
 
-**Recent developments (2025–2026).** The author has also used the Microtronic as the brain
-of larger systems: a recursive [Towers of Hanoi](https://github.com/lambdamikel/towers-of-hanoi) [10]
-solver (the author's own machine-code original) drives a physical pan/tilt **Hanoi robot** — its
-robot-control extension added later with Claude — and, most recently, animates the solution
-on a **64×32 RGB LED matrix** — via a microcontroller that reads the Microtronic's moves
-over a simple 4-bit GPIO protocol (a video of the recursive solver running on the
-Microtronic is available [40]). And, most significantly of all, the original Microtronic
+**Recent developments (2025–2026).** Most significantly of all, the original Microtronic
 firmware ROM was finally recovered and brought back to life on new hardware: the
 [**Microtronic Phoenix**](https://github.com/lambdamikel/microtronic-phoenix) [16],
 described in the appendix.
@@ -582,12 +582,15 @@ manual. From the Kosmos CP1 manual [4]; © Kosmos, reproduced for illustration.*
 
 </div>
 
-**Recent developments (2025–2026).** The same recursive Towers of Hanoi runs on the CP1 too [41] —
-and, most recently, the CP1 has been made to **paint the solution on a 64×32 RGB LED matrix**. It
-streams each move over a simple four-bit GPIO protocol to an Arduino Mega 2560, which animates the
-disks sliding between the three pegs, rainbow-coloured by size on a blue base — the very move protocol
-first built for the physical Hanoi robot, now repurposed to drive an LED panel. It makes a striking
-sight: a 1983 decimal von-Neumann trainer conducting a modern graphics display (a video of the full
+**Recent developments (2025–2026).** The author's recursive Towers of Hanoi runs on the CP1 too
+[41], here as a textbook example of recursion: indirect addressing and indirect jumps give it a
+conventional call stack ([10] compares it with the Microtronic version). The CP1 version was then
+extended, with Claude, to drive external hardware: it sends each move as a four-bit code over its
+GPIOs to an Arduino. The protocol was designed for a **Hanoi robot**, a pan/tilt arm with an
+electromagnet at its tip, meant to lift the disks from peg to peg; the arm is still under
+construction. Its first realized use is a **64×32 RGB LED matrix** on which the CP1 paints the
+solution: an Arduino Mega 2560 receives each move and animates the disks sliding between the three
+pegs, rainbow-coloured by size on a blue base. It makes a striking sight: a 1983 decimal von-Neumann trainer conducting a modern graphics display (a video of the full
 solve is available [42]). It received an honorable mention in the 2026 Hackaday Retrocomputing
 Challenge [52], in the "Old Iron" category, where the judges found it "a welcome sight to have
 several entries using obscure educational computers".
@@ -901,7 +904,7 @@ technical history that did not exist in this form in other countries.
 
 ### The author's projects
 
-10. Towers of Hanoi for educational computers (CP1, Microtronic, robot, LED matrix) — <https://github.com/lambdamikel/towers-of-hanoi>
+10. Towers of Hanoi for educational computers — recursion on the Microtronic and the CP1, and the CP1's robot protocol and LED matrix — <https://github.com/lambdamikel/towers-of-hanoi>
 11. Kosmos CP1 development toolchain (assembler + reverse-engineered CP1/CP2 cassette codec) — <https://github.com/lambdamikel/kosmos-cp1-devel-toolchain>
 12. Philips MC6400 vector graphics (X-Y oscilloscope 3-D wireframes) — <https://github.com/lambdamikel/philips-mc6400-vector-graphics>
 13. Busch-2090 Microtronic emulator for Arduino — <https://github.com/lambdamikel/Busch-2090>
