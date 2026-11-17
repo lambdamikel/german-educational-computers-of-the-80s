@@ -229,7 +229,7 @@ of 2016, built around an Arduino Mega 2560 (Figure 3), and the "Microtronic 2nd 
 built into a Busch "2070" console (Hackaday "Reinvented Retro Contest" winner, 2021). These,
 too, are re-implementations of the Microtronic's instruction set. The
 [**Microtronic Phoenix**](https://github.com/lambdamikel/microtronic-phoenix) [16] of 2025
-(Figure 19) is the first hardware emulator to run the original firmware; it won second place
+(Figure 20) is the first hardware emulator to run the original firmware; it won second place
 among 230 entries in the 2026 Hackaday Retrocomputing Challenge [52] and is described in
 [the appendix](#appendix-the-microtronic-phoenix).
 
@@ -262,6 +262,29 @@ addressed through 64 "redundant", ineffective instructions (such as `MOV <x> →
 NOP-like register-to-self copy) that never occur in normal programs; PicoRAM repurposes
 them as new side effects. PicoRAM 2090 won the RetroChallenge 2023/10 Grand Prize.
 
+**The ESP2090.** A second modern extension comes from Björn Rathje [23]: the
+[**ESP2090**](https://github.com/rab-berlin/ESP2090) [53], or "ESP2090 Studio", developed since
+April 2026. Where PicoRAM 2090 replaces the RAM chip inside the machine, the ESP2090 stays
+outside. It is a small board with a two-euro ESP32-C3 SuperMini running MicroPython, connected
+only to the Microtronic's four inputs, four outputs and ground. Level shifters bridge the 2090's
+5 V and the ESP32's 3.3 V, and CD4071 OR gates and a 74HCT244 buffer decouple the two machines,
+so Busch's own peripherals can stay connected alongside. Rathje wanted two microcontrollers
+talking "at eye level" (*auf Augenhöhe*), 45 years apart, rather than a full Linux computer
+attached to the Microtronic, and to do as much as possible with as little as possible: the
+parts cost about 20 euros, plus the PCB (Gerber files are in the repository) and an optional
+3D-printed carrier in the style of Busch's component blocks.
+
+A web interface over Wi-Fi uploads programs straight into the 2090, instead of typing in up to
+256 steps by hand. It also starts Python *userscripts* on the ESP32 at runtime, without
+reflashing; they act as peripherals such as a random-number generator, a tone generator,
+sensors, or an Internet connection. The most visible feature is an **8×8 RGB LED matrix as a
+screen**, driven by a protocol built into the firmware. The Microtronic sends either a whole
+picture (16 registers × 4 bits = 64 pixels, "block mode") or short drawing commands with
+coordinates: point, rectangle, frame, line, color, shift ("drawing mode"). Because the 2090 has
+no clock the ESP32 could see, the two agree on a starting point with a request/acknowledge
+handshake, and from then on the ESP32 simply counts along: with the display switched off, every
+Microtronic instruction takes almost exactly 9.3 ms (Figure 7).
+
 **Recognition by the manufacturer.** Busch, still based in Viernheim, keeps a page about the
 Microtronic on its official website [49], with the original manuals for download. Since 2024 it
 has also pointed its visitors to the community's work: the author's Arduino emulator, the
@@ -284,6 +307,15 @@ closed with a thank-you: "Vielen Dank an Michael Wessel und sein Team der Microt
 ![The Arduino-based 2095 SD-card emulator connected to the Microtronic](images/microtronic-2095-sd-emulator.jpg)
 
 *Figure 6. The Arduino-based 2095 SD-card emulator [15], connected to the Microtronic in place of the cassette interface: PGM 1 loads from, and PGM 2 saves to, the SD card.*
+
+</div>
+
+<div align="center">
+
+![Björn Rathje's ESP2090 connected to the Microtronic, its LED matrix showing Game of Life](images/esp2090-life.jpg)
+
+*Figure 7. Björn Rathje's ESP2090 [53] wired to the Microtronic's outputs and inputs, its 8×8 LED
+matrix showing a glider from Life2090. Photo: Björn Rathje (MIT license).*
 
 </div>
 
@@ -318,8 +350,10 @@ work that pushes the little 4-bit machine far beyond what its 1981 manuals imagi
   clock" (Mengenlehre-Uhr) rendered on the Microtronic.
 - [**Film2090**](https://github.com/rab-berlin/Film2090) — "the Microtronic goes to
   Hollywood": a playful animation/film project.
-- [**ESP2090**](https://github.com/rab-berlin/ESP2090) — a modern take pairing the
-  Microtronic world with an ESP32 and MicroPython.
+- [**ESP2090**](https://github.com/rab-berlin/ESP2090) [53] — his ESP32 and MicroPython
+  extension with an 8×8 LED-matrix screen (see *The ESP2090* above). Life2090, BerlinUhr2090
+  and Film2090 show their pictures on its matrix, and since November 2026 it has been the
+  platform for his AI-assisted programs (see below).
 
 That a 4-bit, 500 kHz machine with 1 KB of program memory can host a slot-machine
 simulation, several board and arcade games, and Game of Life is a testament both to the
@@ -375,7 +409,7 @@ machine code for a 45-year-old 4-bit computer.
 
 ![Tic-Tac-Toe on the Microtronic + PicoRAM 2090](images/ttt-picoram.jpg)
 
-*Figure 7. The first working Tic-Tac-Toe for the Microtronic, running on the PicoRAM
+*Figure 8. The first working Tic-Tac-Toe for the Microtronic, running on the PicoRAM
 2090-extended machine: the 3×3 grid is drawn on PicoRAM's OLED display (top left), with
 spoken moves and — for the human-first game — a new from-scratch board-scanning AI [14].*
 
@@ -385,11 +419,51 @@ spoken moves and — for the human-first game — a new from-scratch board-scann
 
 ![Lunar Lander on the Microtronic + PicoRAM 2090](images/lander-picoram.jpg)
 
-*Figure 8. Lunar Lander — a wholly original game written from scratch for the PicoRAM
+*Figure 9. Lunar Lander — a wholly original game written from scratch for the PicoRAM
 2090-extended Microtronic. The OLED (top left) is the cockpit window showing the descending
 lander; the red LED below shows the ALT / VEL / FUEL instruments [14].*
 
 </div>
+
+**Björn Rathje's AI-assisted programs for the ESP2090.** Following the example of the programs
+above, Björn Rathje now also writes his Microtronic programs together with Claude Code (his
+commits credit Claude Fable 5.2 and Claude Opus 5.5 as co-authors), and at a remarkable pace:
+eleven new repositories between November 9 and 16, 2026. All but one of the games use the
+ESP2090's 8×8 LED matrix [53] as their screen, and most fill the Microtronic's 256 program steps
+to within a few:
+
+- [**Microtris2090**](https://github.com/rab-berlin/Microtris2090) — Tetris in a four-column
+  well with a preview of the next piece; the whole playfield lives in registers R0–R7, one
+  register per row (248 steps).
+- [**Snake2090**](https://github.com/rab-berlin/Snake2090) — Snake with four buttons; reaching
+  length 12 wins (246 steps).
+- [**Pong2090**](https://github.com/rab-berlin/Pong2090) — Pong against the computer in 15
+  difficulty levels, or alone against the wall, with two buttons; the edges of the paddle return
+  the ball steeply (237 steps).
+- [**Springer2090**](https://github.com/rab-berlin/Springer2090) — the knight's tour: visit
+  every square of the matrix exactly once; an invalid key shows all possible moves in green
+  (211 steps).
+- [**Mole2090**](https://github.com/rab-berlin/Mole2090) — Whac-a-Mole on sixteen 2×2 fields,
+  played on an extra 4×4 keypad (243 steps).
+- [**Frogger2090**](https://github.com/rab-berlin/Frogger2090) — Frogger: across the road and the
+  river into one of four bays, in color thanks to an ESP2090 userscript (all 256 steps).
+- [**Maze2090**](https://github.com/rab-berlin/Maze2090) — a first-person 3D maze in the style of
+  *3D Monster Maze*: 8×8 rooms, newly generated for every game (all 256 steps).
+- [**Senso2090**](https://github.com/rab-berlin/Senso2090) — *Senso* (Simon): the ESP2090 plays
+  the colors and tones, and the player repeats the sequence on the Microtronic's keypad (all 256
+  steps).
+- [**StarTrek2090**](https://github.com/rab-berlin/StarTrek2090) — *Star Trek* in the style of
+  1971: find and destroy eight Klingons in a wrap-around galaxy of 16 quadrants before energy or
+  time runs out (252 steps).
+- [**Blackjack2090**](https://github.com/rab-berlin/Blackjack2090) — Blackjack under casino
+  rules, and the exception: it needs no extension at all, only the six-digit display, the hex
+  keypad and the four output LEDs (254 steps).
+
+The eleventh is a development tool, [**Emulator2090**](https://github.com/rab-berlin/Emulator2090)
+[54]: a Python terminal emulator with the instruction timing measured on the real machine, a
+model of its not-quite-random `RND` counter, and the ESP2090's matrix protocol and userscripts.
+Programs can be written and tried out on the PC before they go into the 2090; Frogger, Maze and
+Senso have so far been tested only in the emulator, not yet on the real machine.
 
 ---
 
@@ -399,7 +473,7 @@ lander; the red LED below shows the ALT / VEL / FUEL instruments [14].*
 
 ![Kosmos CP1 with manual and quick-reference card](images/cp1.jpg)
 
-*Figure 9. The Kosmos CP1, with its spiral-bound manual and the green quick-reference card.
+*Figure 10. The Kosmos CP1, with its spiral-bound manual and the green quick-reference card.
 The two expansion modules connected along the top are the CP3 memory expansion and the CP2
 cassette interface.*
 
@@ -442,7 +516,7 @@ breakpoint facility — one inserts HALT manually. The decimal scheme and the cu
 
 ![Inside the Kosmos CP1: main board, memory expansion, and cassette interface](images/cp1-internals.jpg)
 
-*Figure 10. Inside the CP1 and its two stacked expansion modules (on the Kosmos construction
+*Figure 11. Inside the CP1 and its two stacked expansion modules (on the Kosmos construction
 rails). **Bottom** — the CP1 main board: the mask-programmed **Intel 8049** microcontroller (here
 an M5L8049, marked "KOSMOS B") and an **8155** (M5L8155P) for RAM and I/O, above the orange
 keypad-matrix PCB and the shielded six-digit LED display. **Middle** — the CP3 **memory
@@ -503,7 +577,7 @@ been developed. Further background on the CP1 is collected at the
 
 ![Computron, the Kosmos CP1 mascot](images/computron.png)
 
-*Figure 11. Computron, the Kosmos CP1's mascot, who "carries out" the CPU operations in the
+*Figure 12. Computron, the Kosmos CP1's mascot, who "carries out" the CPU operations in the
 manual. From the Kosmos CP1 manual [4]; © Kosmos, reproduced for illustration.*
 
 </div>
@@ -522,7 +596,7 @@ several entries using obscure educational computers".
 
 ![The Kosmos CP1 driving a 64×32 RGB LED matrix with the Towers of Hanoi solution](images/cp1-hanoi-matrix.jpg)
 
-*Figure 12. The real rig: a Kosmos CP1 (right) driving a 64×32 RGB LED matrix (left) mid-solve, linked
+*Figure 13. The real rig: a Kosmos CP1 (right) driving a 64×32 RGB LED matrix (left) mid-solve, linked
 by the four-bit move protocol over jumper wires. The 8049-based 1983 trainer streams each Hanoi move
 to an Arduino Mega 2560, which renders the disks on the panel; the program itself was loaded through
 the CP1's cassette input as a WAV [42].*
@@ -562,7 +636,7 @@ instructions and its ports with worked examples. There is nothing to build or in
 
 ![The browser-based Kosmos CP1 emulator](images/cp1-emulator.png)
 
-*Figure 13. The Kosmos CP1 in the browser: the original firmware running in a JavaScript emulator [22].*
+*Figure 14. The Kosmos CP1 in the browser: the original firmware running in a JavaScript emulator [22].*
 
 </div>
 
@@ -574,7 +648,7 @@ instructions and its ports with worked examples. There is nothing to build or in
 
 ![Philips MasterLab and its manual](images/masterlab.jpg)
 
-*Figure 14. The Philips MasterLab and its "Microcomputer Master Lab" manual.*
+*Figure 15. The Philips MasterLab and its "Microcomputer Master Lab" manual.*
 
 </div>
 
@@ -644,7 +718,7 @@ programming.
 
 ![Philips MasterLab with an attached experiment box](images/masterlab-expbox.jpg)
 
-*Figure 15. The Philips MasterLab with an attached experiment box.*
+*Figure 16. The Philips MasterLab with an attached experiment box.*
 
 </div>
 
@@ -680,7 +754,7 @@ the CP1's LED-matrix Towers of Hanoi.
 
 ![Cube, torus and sphere on a real Tektronix 2335](images/masterlab-vector-scope.jpg)
 
-*Figure 16. The MasterLab's vector-graphics engine on a real Tektronix 2335 analog scope: a
+*Figure 17. The MasterLab's vector-graphics engine on a real Tektronix 2335 analog scope: a
 perspective cube, a torus, and a sphere (left to right), each a rotating 3-D wireframe drawn from
 endpoints by the R-2R DAC, with an RC slew-limit turning the DAC's steps into drawn lines [12]; see
 the video [43].*
@@ -703,7 +777,7 @@ without touching the machine.
 
 ![The vector shooter on a real Tektronix 2335](images/masterlab-shooter.jpg)
 
-*Figure 17. The interactive vector shooter on the real MasterLab and 2335: the turret (bottom), a
+*Figure 18. The interactive vector shooter on the real MasterLab and 2335: the turret (bottom), a
 bullet in flight, and a wave of hexagonal aliens — one column already cleared. Played from the hex
 keypad or the SA/SB console buttons [12]; see the video [44].*
 
@@ -726,7 +800,7 @@ MasterLab.
 
 ![PicoRAM Ultimate connected to the Philips MasterLab](images/picoram-ultimate-masterlab.jpg)
 
-*Figure 18. PicoRAM Ultimate (right) connected to the Philips MasterLab — it plugs directly
+*Figure 19. PicoRAM Ultimate (right) connected to the Philips MasterLab — it plugs directly
 into the machine's two 2114 SRAM sockets via the ribbon cable; the MasterLab's display
 shows its "HALLO" power-up greeting [34].*
 
@@ -893,6 +967,11 @@ See also the author's browser-based Microtronic emulator [21] and the hardware e
 51. *Mein Elektronik-Hobby*, "PICORam 2090 – Aufbau und Arbeit mit dem Busch microtronic 2090 Computer" (YouTube, August 2024, in German) — <https://www.youtube.com/watch?v=267T5BnslIs>
 52. Jenny List, "Yesterday Has Never Looked This Good: Feast Your Eyes On The 2026 Retrocomputing Challenge Winners!", *Hackaday* (4 Nov 2026) — <https://hackaday.com/2026/11/04/yesterday-has-never-looked-this-good-feast-your-eyes-on-the-2026-retrocomputing-challenge-winners/>
 
+### Björn Rathje's ESP2090 and his 2026 programs
+
+53. ESP2090 ("ESP2090 Studio") — ESP32-C3 and MicroPython I/O extension for the Microtronic, with an 8×8 LED-matrix screen and runtime Python userscripts — <https://github.com/rab-berlin/ESP2090>
+54. Emulator2090 — Python terminal emulator for the Microtronic, including the ESP2090 matrix protocol and userscripts — <https://github.com/rab-berlin/Emulator2090>
+
 ## About the author
 
 Dr. Michael Wessel is a computer scientist and has worked in Silicon Valley, California,
@@ -908,7 +987,7 @@ in the scene as *LambdaMikel* and *MicrotronicHamburg* [45].
 
 ![The Microtronic Phoenix, running the original firmware](images/phoenix.jpg)
 
-*Figure 19. A new build running the original firmware: the Microtronic Phoenix [16].*
+*Figure 20. A new build running the original firmware: the Microtronic Phoenix [16].*
 
 </div>
 
@@ -1070,7 +1149,7 @@ damaged PCB back to life.
 
 ![The Microtronic Phoenix in Hackaday's announcement of the winners](images/hackaday-retro-2026.jpg)
 
-*Figure 20. The Microtronic Phoenix in Hackaday's announcement of the 2026 Retrocomputing
+*Figure 21. The Microtronic Phoenix in Hackaday's announcement of the 2026 Retrocomputing
 Challenge winners [52].*
 
 </div>
