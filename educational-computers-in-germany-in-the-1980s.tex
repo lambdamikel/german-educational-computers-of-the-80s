@@ -999,6 +999,20 @@ the recursive Towers of Hanoi. An English
 guide} explains the machine, its instructions and its ports with worked
 examples. There is nothing to build or install.
 
+In November 2026 the CP1 followed the Microtronic onto the MiSTer FPGA
+(see the Microtronic section): its
+\href{https://github.com/lambdamikel/KosmosCP1_MiSTer}{\textbf{MiSTer
+core}} {[}56{]}, again written with Claude Code (Opus 5.5), is a port of
+the browser emulator. The original firmware runs on an Intel 8049
+described in Verilog, with the two 8155s, the keypad, the six-digit
+display, Port 1 and Port 2 and the CP3 memory expansion wired as in the
+browser emulator. As for the Microtronic core, a lockstep test drives
+the Verilog and the JavaScript with the same key presses, port levels
+and program loads, and compares a hash of the CPU and timer state after
+every instruction --- they agree in all six test scenarios, about 12.6
+million instructions in all. Programs load as \texttt{.CP1} files from
+the MiSTer menu, and the same 63 programs come with the core.
+
 \begin{center}\begin{minipage}{\linewidth}\centering
 
 \pandocbounded{\includegraphics[keepaspectratio,alt={The browser-based Kosmos CP1 emulator}]{images/cp1-emulator.png}}
@@ -1481,7 +1495,7 @@ tools}\label{kosmos-cp1-emulators-and-tools}
 \end{enumerate}
 
 See also the author\textquotesingle s browser-based Kosmos CP1 emulator
-{[}22{]}.
+{[}22{]} and its MiSTer FPGA core {[}56{]}.
 
 \subsubsection{Philips MasterLab}\label{philips-masterlab}
 
@@ -1611,8 +1625,7 @@ programs}\label{bjuxf6rn-rathjes-esp2090-and-his-2026-programs}
   \url{https://github.com/rab-berlin/Emulator2090}
 \end{enumerate}
 
-\subsubsection{The Microtronic on the MiSTer
-FPGA}\label{the-microtronic-on-the-mister-fpga}
+\subsubsection{The MiSTer FPGA cores}\label{the-mister-fpga-cores}
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -1624,6 +1637,11 @@ FPGA}\label{the-microtronic-on-the-mister-fpga}
   browser emulator {[}21{]} ---
   \url{https://github.com/lambdamikel/Microtronic_MiSTer} · about the
   MiSTer: \url{https://github.com/MiSTer-devel/Main_MiSTer/wiki}
+\item
+  Kosmos CP1 core for the MiSTer FPGA, running the original firmware on
+  an Intel 8049 in Verilog, checked in lockstep against the browser
+  emulator {[}22{]} ---
+  \url{https://github.com/lambdamikel/KosmosCP1_MiSTer}
 \end{enumerate}
 
 \subsection{About the author}\label{about-the-author}

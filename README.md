@@ -647,6 +647,17 @@ recursive Towers of Hanoi. An English
 [programmer's guide](https://lambdamikel.github.io/kosmos-cp1-emulator/guide.html) explains the machine, its
 instructions and its ports with worked examples. There is nothing to build or install.
 
+In November 2026 the CP1 followed the Microtronic onto the MiSTer FPGA (see the Microtronic
+section): its [**MiSTer core**](https://github.com/lambdamikel/KosmosCP1_MiSTer) [56], again
+written with Claude Code (Opus 5.5), is a port of the browser emulator. The original firmware
+runs on an Intel 8049 described in Verilog, with the two 8155s, the keypad, the six-digit
+display, Port 1 and Port 2 and the CP3 memory expansion wired as in the browser emulator. As
+for the Microtronic core, a lockstep test drives the Verilog and the JavaScript with the same
+key presses, port levels and program loads, and compares a hash of the CPU and timer state
+after every instruction — they agree in all six test scenarios, about 12.6 million
+instructions in all. Programs load as `.CP1` files from the MiSTer menu, and the same 63
+programs come with the core.
+
 <div align="center">
 
 ![The browser-based Kosmos CP1 emulator](images/cp1-emulator.png)
@@ -945,7 +956,7 @@ technical history that did not exist in this form in other countries.
 30. cp1-sim — Java CP1 emulator — <https://sourceforge.net/projects/cp1-sim/>
 31. Kosmos CP1 at the 8-bit Home Computer Museum — <http://www.8bit-homecomputermuseum.at/computer/kosmos_computer_praxis_cp1.html>
 
-See also the author's browser-based Kosmos CP1 emulator [22].
+See also the author's browser-based Kosmos CP1 emulator [22] and its MiSTer FPGA core [56].
 
 ### Philips MasterLab
 
@@ -987,9 +998,10 @@ See also the author's browser-based Microtronic emulator [21], its MiSTer FPGA c
 53. ESP2090 ("ESP2090 Studio") — ESP32-C3 and MicroPython I/O extension for the Microtronic, with an 8×8 LED-matrix screen and runtime Python userscripts — <https://github.com/rab-berlin/ESP2090>
 54. Emulator2090 — Python terminal emulator for the Microtronic, including the ESP2090 matrix protocol and userscripts — <https://github.com/rab-berlin/Emulator2090>
 
-### The Microtronic on the MiSTer FPGA
+### The MiSTer FPGA cores
 
 55. Busch Microtronic 2090 core for the MiSTer FPGA, running the original firmware on a TMS1600 in Verilog, checked in lockstep against the browser emulator [21] — <https://github.com/lambdamikel/Microtronic_MiSTer> · about the MiSTer: <https://github.com/MiSTer-devel/Main_MiSTer/wiki>
+56. Kosmos CP1 core for the MiSTer FPGA, running the original firmware on an Intel 8049 in Verilog, checked in lockstep against the browser emulator [22] — <https://github.com/lambdamikel/KosmosCP1_MiSTer>
 
 ## About the author
 
