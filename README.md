@@ -227,18 +227,6 @@ to build, and nothing to load or install. An English
 [project page](https://github.com/lambdamikel/microtronic-emulator) [21] documents what is
 emulated and how.
 
-**On the MiSTer FPGA.** In November 2026 the browser emulator became a
-[**Microtronic core**](https://github.com/lambdamikel/Microtronic_MiSTer) [55] for the
-[MiSTer](https://github.com/MiSTer-devel/Main_MiSTer/wiki), the open-source FPGA platform for
-retro computers and consoles; it, too, was written with Claude Code (Opus 5.5). The original
-firmware ROM now runs on a TMS1600 described in Verilog, and the 2114, the keypad, the six-digit
-display, the inputs and outputs and the 1 Hz clock are wired as on the real board. The core was
-checked against the browser emulator in lockstep: the same key presses, input levels and program
-loads drive both, and a hash of the CPU state is compared after every instruction — they agree
-in all six test scenarios, about five million instructions in all. Programs load as `.MIC` files
-from the MiSTer menu; 37 of them, from the manuals, the programmer's guide and Björn Rathje's
-games, come with the core.
-
 **Hardware emulators.** The author's own
 [Arduino-based hardware emulators](https://github.com/lambdamikel/Busch-2090) [13] have
 appeared from 2016 onward — among them the
@@ -250,6 +238,18 @@ too, are re-implementations of the Microtronic's instruction set. The
 (Figure 20) is the first hardware emulator to run the original firmware; it won second place
 among 230 entries in the 2026 Hackaday Retrocomputing Challenge [52] and is described in
 [the appendix](#appendix-the-microtronic-phoenix).
+
+**On the MiSTer FPGA.** In November 2026 the browser emulator became a
+[**Microtronic core**](https://github.com/lambdamikel/Microtronic_MiSTer) [55] for the
+[MiSTer](https://github.com/MiSTer-devel/Main_MiSTer/wiki), the open-source FPGA platform for
+retro computers and consoles; it, too, was written with Claude Code (Opus 5.5). The original
+firmware ROM now runs on a TMS1600 described in Verilog, and the 2114, the keypad, the six-digit
+display, the inputs and outputs and the 1 Hz clock are wired as on the real board. The core was
+checked against the browser emulator in lockstep: the same key presses, input levels and program
+loads drive both, and a hash of the CPU state is compared after every instruction — they agree
+in all six test scenarios, about five million instructions in all. Programs load as `.MIC` files
+from the MiSTer menu; 37 of them, from the manuals, the programmer's guide and Björn Rathje's
+games, come with the core.
 
 <div align="center">
 
