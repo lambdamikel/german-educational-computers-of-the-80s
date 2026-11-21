@@ -420,6 +420,24 @@ guide} comes with it, and the
 \href{https://github.com/lambdamikel/microtronic-emulator}{project page}
 {[}21{]} documents what is emulated and how.
 
+\textbf{On the MiSTer FPGA.} In November 2026 the browser emulator
+became a
+\href{https://github.com/lambdamikel/Microtronic_MiSTer}{\textbf{Microtronic
+core}} {[}55{]} for the
+\href{https://github.com/MiSTer-devel/Main_MiSTer/wiki}{MiSTer}, the
+open-source FPGA platform for retro computers and consoles; it, too, was
+written with Claude Code (Opus 5.5). The original firmware ROM now runs
+on a TMS1600 described in Verilog, and the 2114, the keypad, the
+six-digit display, the inputs and outputs and the 1 Hz clock are wired
+as on the real board. The core was checked against the browser emulator
+in lockstep: the same key presses, input levels and program loads drive
+both, and a hash of the CPU state is compared after every instruction
+--- they agree in all six test scenarios, about five million
+instructions in all. Programs load as \texttt{.MIC} files from the
+MiSTer menu; 37 of them, from the manuals, the
+programmer\textquotesingle s guide and Björn Rathje\textquotesingle s
+games, come with the core.
+
 \textbf{Hardware emulators.} The author\textquotesingle s own
 \href{https://github.com/lambdamikel/Busch-2090}{Arduino-based hardware
 emulators} {[}13{]} have appeared from 2016 onward --- among them the
@@ -1499,7 +1517,8 @@ emulators}\label{other-microtronic-emulators}
 \end{enumerate}
 
 See also the author\textquotesingle s browser-based Microtronic emulator
-{[}21{]} and the hardware emulators {[}13{]}, {[}16{]}.
+{[}21{]}, its MiSTer FPGA core {[}55{]}, and the hardware emulators
+{[}13{]}, {[}16{]}.
 
 \subsubsection{Videos}\label{videos}
 
@@ -1590,6 +1609,21 @@ programs}\label{bjuxf6rn-rathjes-esp2090-and-his-2026-programs}
   Emulator2090 --- Python terminal emulator for the Microtronic,
   including the ESP2090 matrix protocol and userscripts ---
   \url{https://github.com/rab-berlin/Emulator2090}
+\end{enumerate}
+
+\subsubsection{The Microtronic on the MiSTer
+FPGA}\label{the-microtronic-on-the-mister-fpga}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{54}
+\tightlist
+\item
+  Busch Microtronic 2090 core for the MiSTer FPGA, running the original
+  firmware on a TMS1600 in Verilog, checked in lockstep against the
+  browser emulator {[}21{]} ---
+  \url{https://github.com/lambdamikel/Microtronic_MiSTer} · about the
+  MiSTer: \url{https://github.com/MiSTer-devel/Main_MiSTer/wiki}
 \end{enumerate}
 
 \subsection{About the author}\label{about-the-author}

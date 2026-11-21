@@ -227,6 +227,18 @@ to build, and nothing to load or install. An English
 [project page](https://github.com/lambdamikel/microtronic-emulator) [21] documents what is
 emulated and how.
 
+**On the MiSTer FPGA.** In November 2026 the browser emulator became a
+[**Microtronic core**](https://github.com/lambdamikel/Microtronic_MiSTer) [55] for the
+[MiSTer](https://github.com/MiSTer-devel/Main_MiSTer/wiki), the open-source FPGA platform for
+retro computers and consoles; it, too, was written with Claude Code (Opus 5.5). The original
+firmware ROM now runs on a TMS1600 described in Verilog, and the 2114, the keypad, the six-digit
+display, the inputs and outputs and the 1 Hz clock are wired as on the real board. The core was
+checked against the browser emulator in lockstep: the same key presses, input levels and program
+loads drive both, and a hash of the CPU state is compared after every instruction — they agree
+in all six test scenarios, about five million instructions in all. Programs load as `.MIC` files
+from the MiSTer menu; 37 of them, from the manuals, the programmer's guide and Björn Rathje's
+games, come with the core.
+
 **Hardware emulators.** The author's own
 [Arduino-based hardware emulators](https://github.com/lambdamikel/Busch-2090) [13] have
 appeared from 2016 onward — among them the
@@ -946,7 +958,7 @@ See also the author's browser-based Kosmos CP1 emulator [22].
 35. micsim — Microtronic emulator for Linux (Ingo D. Rullhusen) — <https://freeshell.de/~d01c/micsim_0.1.0.tar.xz>
 36. 2090 Emulator for Mac (Stephan Kleinert) — <https://download.cnet.com/2090-emulator/3000-2072_4-47314.html>
 
-See also the author's browser-based Microtronic emulator [21] and the hardware emulators [13], [16].
+See also the author's browser-based Microtronic emulator [21], its MiSTer FPGA core [55], and the hardware emulators [13], [16].
 
 ### Videos
 
@@ -974,6 +986,10 @@ See also the author's browser-based Microtronic emulator [21] and the hardware e
 
 53. ESP2090 ("ESP2090 Studio") — ESP32-C3 and MicroPython I/O extension for the Microtronic, with an 8×8 LED-matrix screen and runtime Python userscripts — <https://github.com/rab-berlin/ESP2090>
 54. Emulator2090 — Python terminal emulator for the Microtronic, including the ESP2090 matrix protocol and userscripts — <https://github.com/rab-berlin/Emulator2090>
+
+### The Microtronic on the MiSTer FPGA
+
+55. Busch Microtronic 2090 core for the MiSTer FPGA, running the original firmware on a TMS1600 in Verilog, checked in lockstep against the browser emulator [21] — <https://github.com/lambdamikel/Microtronic_MiSTer> · about the MiSTer: <https://github.com/MiSTer-devel/Main_MiSTer/wiki>
 
 ## About the author
 
